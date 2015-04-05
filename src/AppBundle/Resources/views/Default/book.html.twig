@@ -1,0 +1,57 @@
+{% extends 'AppBundle:Layouts:default.html.twig' %}
+
+{% block styles %}
+    {{ parent() }}
+
+    .navbar-brand {
+        padding-top: 5px;
+    }
+
+    #brand {
+        margin-left: -5px;
+        font-size: 20px;
+    }
+
+    img.LBookFoto {
+        width: 400px;
+        height: 600px;
+    }
+
+    #main {
+        padding-top: 60px;
+    }
+
+    div.imgCol {
+        overflow: hidden;
+        text-align: center;
+    }
+{% endblock %}
+
+{% block slider %}{% endblock %}
+
+{% block body %}
+    <div class="row">
+        <div class="col-md-4 imgCol">
+            <img src="{{ asset('bundles/app/img/a.jpg') }}" class="LBookFoto" id="test" />
+        </div>
+
+        <div class="col-md-4">
+            <h1>Text Editing</h1>
+
+            <h3>John Frusciante</h3>
+
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam ut lectus ac tortor fringilla tristique.
+                Phasellus condimentum sem velit. Suspendisse vel odio eget augue bibendum tincidunt. Maecenas auctor
+                eros at tellus accumsan, a venenatis lectus luctus. Vivamus ultricies elit vulputate lacus mollis
+                placerat. Curabitur fermentum mauris eget velit faucibus, et posuere sem feugiat. Vivamus efficitur
+                metus in massa porttitor, sollicitudin viverra odio feugiat. Morbi dui mi, fermentum sed convallis ac,
+                ultricies vestibulum nibh. Vivamus efficitur porttitor placerat. Quisque venenatis imperdiet nisl a
+                efficitur. Aenean convallis, libero vel dictum venenatis, enim erat ullamcorper turpis, quis aliquam
+                velit lectus id mauris. </p>
+
+            <p><a href="#" class="btn btn-primary">Take book</a> <a href="#" class="btn">Action</a></p>
+        </div>
+
+
+    </div>
+{% endblock %}
