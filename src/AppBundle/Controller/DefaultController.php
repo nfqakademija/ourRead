@@ -12,7 +12,7 @@ class DefaultController extends Controller
      */
     public function indexAction()
     {
-        return $this->render('AppBundle:Default:index.html.twig');
+        return $this->render('index.html');
     }
     
     /**
@@ -20,7 +20,7 @@ class DefaultController extends Controller
     */
         public function bookAction()
     {
-        return $this->render('AppBundle:Default:book.html.twig');
+        return $this->render('book.html');
     }
     
 }
