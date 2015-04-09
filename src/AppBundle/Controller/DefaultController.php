@@ -8,19 +8,13 @@ use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 class DefaultController extends Controller
 {
     /**
-     * @Route("/", name="homepage")
+     * @Route("/home", name="homepage")
      */
     public function indexAction()
     {
         return $this->render('index.html');
     }
     
-    /**
-    * @Route("/book", name="book")
-    */
-        public function bookAction()
-    {
-        return $this->render('book.html');
-    }
+
     
 }

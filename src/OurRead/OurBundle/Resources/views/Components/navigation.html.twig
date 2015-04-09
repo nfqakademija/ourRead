@@ -1,0 +1,154 @@
+<nav class="navbar navbar-default navbar-fixed-top">
+    <div class="container">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header">
+
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse"
+                    data-target="#bs-example-navbar-collapse-1">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+
+            <a class="navbar-brand" href="#">
+                <div class="navbar-brand-name">
+                    <img alt="Brand" src="{{ asset('bundles/our/img/a2.png') }}">
+                </div>
+            </a>
+
+        </div>
+
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+
+            <ul class="nav navbar-nav">
+                <li><a href="#" id="brand">Our Reads</a></li>
+                <li class="dropdown">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Books
+                        <span class="caret"></span></a>
+                    <ul class="dropdown-menu" role="menu">
+                        <li><a href="#">Fiction</a></li>
+                        <li><a href="#">Mystery</a></li>
+                        <li><a href="#">Romance</a></li>
+                        <li><a href="#">Technical</a></li>
+                        <li><a href="#">Classic</a></li>
+                        <li><a href="#">Biography</a></li>
+                    </ul>
+                </li>
+            </ul>
+
+            <div class="navbar-right">
+                <button type="button" class="btn btn-default navbar-btn" data-toggle="modal"
+                        data-target=".sign-up-modal-sm">Sign-up
+                </button>
+                <div class="modal fade sign-up-modal-sm" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel"
+                     aria-hidden="true">
+                    <div class="modal-dialog modal-sm">
+                        <div class="modal-content">
+
+                            <div class="modal-header">
+                                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span
+                                            aria-hidden="true">&times;</span></button>
+                                <h4 class="modal-title">Sign-up</h4>
+                            </div>
+
+                            <div class="modal-body">
+                                <form>
+                                    <div class="form-group">
+                                        <label for="recipient-name" class="control-label">E-mail:</label>
+                                        <input type="text" class="form-control" id="email">
+                                    </div>
+
+                                    <div class="form-group">
+                                        <label for="message-text" class="control-label">Password:</label>
+                                        <input type="password" class="form-control" id="password">
+                                    </div>
+
+                                    <div class="form-group">
+                                        <label for="message-text" class="control-label">Repeat password:</label>
+                                        <input type="password" class="form-control" id="password2">
+                                    </div>
+                                </form>
+
+
+                                <a class="btn btn-block btn-social btn-facebook">
+                                    <i class="fa fa-facebook"></i> Sign in with Facebook
+                                </a>
+
+                            </div>
+
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                                <button type="button" class="btn btn-primary">Register</button>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+
+                <button type="button" class="btn btn-primary navbar-btn" data-toggle="modal"
+                        data-target=".sign-in-modal-sm">Sign-in
+                </button>
+                <div class="modal fade sign-in-modal-sm" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel"
+                     aria-hidden="true">
+                    <div class="modal-dialog modal-sm">
+                        <div class="modal-content">
+
+
+                            <div class="modal-header">
+                                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span
+                                            aria-hidden="true">&times;</span></button>
+                                <h4 class="modal-title">Sign-in</h4>
+                            </div>
+
+                            <div class="modal-body">
+                                <form>
+                                    <div class="form-group">
+                                        <label for="recipient-name" class="control-label">E-mail:</label>
+                                        <input type="text" class="form-control" id="email">
+                                    </div>
+
+                                    <div class="form-group">
+                                        <label for="message-text" class="control-label">Password:</label>
+                                        <input type="password" class="form-control" id="password">
+                                    </div>
+
+                                </form>
+
+                                <div class="checkbox">
+                                    <label><input type="checkbox"> Remember me</label>
+                                </div>
+
+                                <a class="btn btn-block btn-social btn-facebook">
+                                    <i class="fa fa-facebook"></i> Sign in with Facebook
+                                </a>
+
+                                </br>
+                                <a href="#">Forgotten password?</a>
+
+                            </div>
+
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                                <button type="button" class="btn btn-primary">Sign in</button>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+
+
+                <form class="navbar-form navbar-right" role="search">
+                    <div class="form-group">
+                        <input type="text" class="form-control" placeholder="Tile / Author / ISBN">
+                    </div>
+                    <button type="submit" class="btn btn-default">Search</button>
+                </form>
+            </div>
+
+        </div>
+        <!-- /.navbar-collapse -->
+    </div>
+    <!-- /.container-fluid -->
+</nav>
