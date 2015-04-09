@@ -1,0 +1,6 @@
+OurHomepage:
+    path:     /
+    defaults: { _controller: OurBundle:MainPage:index }
+BookPage:
+    path:     /book/{id}
+    defaults: { _controller: OurBundle:BookPage:index }
