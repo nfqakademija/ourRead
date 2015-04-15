@@ -1,0 +1,25 @@
+OurRead\OurBundle\Entity\user2:
+    properties:
+        email:
+            - NotBlank: ~
+            - Email:
+                 message: The email "{{ value }}" is not a valid email.
+                 checkMX: true
+            - Length:
+                 min: 2
+                 max: 50
+                 minMessage: "Your email must be at least 2 characters long"
+                 maxMessage: "Your email cannot be longer than 50 characters"
+
+        password:
+            - NotBlank: ~
+            - Length:
+                 min: 2
+                 max: 50
+                 minMessage: "Your email must be at least 2 characters long"
+                 maxMessage: "Your email cannot be longer than 50 characters"
+        test:
+            - NotBlank: ~
+    getters:
+        passwordLegal:
+            - "True": { message: "The password ... validation" }

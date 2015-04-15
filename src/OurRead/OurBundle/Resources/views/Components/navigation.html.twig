@@ -1,5 +1,4 @@
 
-
 <nav class="navbar navbar-default navbar-fixed-top">
     <div class="container">
         <!-- Brand and toggle get grouped for better mobile display -->
@@ -55,102 +54,110 @@
                                 <h4 class="modal-title">Sign-up</h4>
                             </div>
 
-                            <div class="modal-body">
-                                <form>
-                                    <div class="form-group">
-                                        <label for="recipient-name" class="control-label">E-mail:</label>
-                                        <input type="text" class="form-control" id="email">
+                            {{ form_start(rForm) }}
+
+                                <div class="modal-body">
+
+                                    <div>
+                                        {{ form_label(rForm.email, null, {'label_attr': {'class': "control-label\"" }}) }}
+                                        {{ form_errors(rForm.email) }}
+                                        {{ form_widget(rForm.email, {'attr': {'class': 'form-control'}}) }}
                                     </div>
 
-                                    <div class="form-group">
-                                        <label for="message-text" class="control-label">Password:</label>
-                                        <input type="password" class="form-control" id="password">
+                                    <div>
+                                        {{ form_label(rForm.password, null, {'label_attr': {'class': "control-label\"" }}) }}
+                                        {{ form_errors(rForm.password) }}
+                                        {{ form_widget(rForm.password, {'attr': {'class': 'form-control'}}) }}
                                     </div>
 
-                                    <div class="form-group">
-                                        <label for="message-text" class="control-label">Repeat password:</label>
-                                        <input type="password" class="form-control" id="password2">
+                                    <div>
+                                        {{ form_label(rForm.test, null, {'label_attr': {'class': 'control-label'}}) }}
+                                        {{ form_errors(rForm.test) }}
+                                        {{ form_widget(rForm.test, {'attr': {'class': 'form-control'}}) }}
                                     </div>
-                                </form>
-
-
-                                <a class="btn btn-block btn-social btn-facebook">
-                                    <i class="fa fa-facebook"></i> Sign in with Facebook
-                                </a>
-
-                            </div>
-
-                            <div class="modal-footer">
-                                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-                                <button type="button" class="btn btn-primary">Register</button>
-                            </div>
-
-                        </div>
-                    </div>
-                </div>
-
-                <button type="button" class="btn btn-primary navbar-btn" data-toggle="modal"
-                        data-target=".sign-in-modal-sm">Sign-in
-                </button>
-                <div class="modal fade sign-in-modal-sm" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel"
-                     aria-hidden="true">
-                    <div class="modal-dialog modal-sm">
-                        <div class="modal-content">
-
-
-                            <div class="modal-header">
-                                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span
-                                            aria-hidden="true">&times;</span></button>
-                                <h4 class="modal-title">Sign-in</h4>
-                            </div>
-
-                            <div class="modal-body">
-                                <form>
-                                    <div class="form-group">
-                                        <label for="recipient-name" class="control-label">E-mail:</label>
-                                        <input type="text" class="form-control" id="email">
-                                    </div>
-
-                                    <div class="form-group">
-                                        <label for="message-text" class="control-label">Password:</label>
-                                        <input type="password" class="form-control" id="password">
-                                    </div>
-
-                                </form>
-
-                                <div class="checkbox">
-                                    <label><input type="checkbox"> Remember me</label>
+                                    </br>
+                                    <a class="btn btn-block btn-social btn-facebook">
+                                        <i class="fa fa-facebook"></i> Sign in with Facebook
+                                    </a>
+                                    {{ form_errors(rForm) }}
                                 </div>
 
-                                <a class="btn btn-block btn-social btn-facebook">
-                                    <i class="fa fa-facebook"></i> Sign in with Facebook
-                                </a>
+                                <div class="modal-footer">
+                                    <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
 
-                                </br>
-                                <a href="#">Forgotten password?</a>
+                                        {{ form_widget(rForm.register, {'attr': {'class': 'btn btn-primary'}}) }}
 
-                            </div>
+                                </div>
+                            {{ form_end(rForm) }}
 
-                            <div class="modal-footer">
-                                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-                                <button type="button" class="btn btn-primary">Sign in</button>
-                            </div>
 
-                        </div>
+
                     </div>
                 </div>
-
-
-                <form class="navbar-form navbar-right" role="search">
-                    <div class="form-group">
-                        <input type="text" class="form-control" placeholder="Tile / Author / ISBN">
-                    </div>
-                    <button type="submit" class="btn btn-default">Search</button>
-                </form>
             </div>
 
+            <button type="button" class="btn btn-primary navbar-btn" data-toggle="modal"
+                    data-target=".sign-in-modal-sm">Sign-in
+            </button>
+            <div class="modal fade sign-in-modal-sm" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel"
+                 aria-hidden="true">
+                <div class="modal-dialog modal-sm">
+                    <div class="modal-content">
+
+
+                        <div class="modal-header">
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span
+                                        aria-hidden="true">&times;</span></button>
+                            <h4 class="modal-title">Sign-in</h4>
+                        </div>
+
+                        <div class="modal-body">
+                            <form>
+                                <div class="form-group">
+                                    <label for="recipient-name" class="control-label">E-mail:</label>
+                                    <input type="text" class="form-control" id="email">
+                                </div>
+
+                                <div class="form-group">
+                                    <label for="message-text" class="control-label">Password:</label>
+                                    <input type="password" class="form-control" id="password">
+                                </div>
+
+                            </form>
+
+                            <div class="checkbox">
+                                <label><input type="checkbox"> Remember me</label>
+                            </div>
+
+                            <a class="btn btn-block btn-social btn-facebook">
+                                <i class="fa fa-facebook"></i> Sign in with Facebook
+                            </a>
+
+                            </br>
+                            <a href="#">Forgotten password?</a>
+
+                        </div>
+
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                            <button type="button" class="btn btn-primary">Sign in</button>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+
+
+            <form class="navbar-form navbar-right" role="search">
+                <div class="form-group">
+                    <input type="text" class="form-control" placeholder="Tile / Author / ISBN">
+                </div>
+                <button type="submit" class="btn btn-default">Search</button>
+            </form>
         </div>
-        <!-- /.navbar-collapse -->
+
+    </div>
+    <!-- /.navbar-collapse -->
     </div>
     <!-- /.container-fluid -->
 </nav>

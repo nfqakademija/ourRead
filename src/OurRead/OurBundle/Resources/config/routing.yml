@@ -4,3 +4,10 @@ OurHomepage:
 BookPage:
     path:     /book/{id}
     defaults: { _controller: OurBundle:BookPage:index }
+db:
+    path: /db
+    defaults: { _controller: OurBundle:MainPage:db }
+
+db2:
+    path: /db2
+    defaults: { _controller: OurBundle:MainPage:db2 }
