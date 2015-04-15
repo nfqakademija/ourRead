@@ -1,0 +1,6 @@
+remote_library_homepage:
+    path:     /hello/{name}
+    defaults: { _controller: RemoteLibraryBundle:Default:index }
+nu:
+    path:     /nu
+    defaults: { _controller: RemoteLibraryBundle:Default:nu }

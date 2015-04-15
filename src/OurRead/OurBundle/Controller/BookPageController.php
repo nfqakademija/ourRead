@@ -10,6 +10,10 @@ namespace OurRead\OurBundle\Controller;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 class BookPageController extends Controller
 {
+    /**
+     * @param $id
+     * @return \Symfony\Component\HttpFoundation\Response
+     */
     public function indexAction($id)
     {
         return $this->render('OurBundle:BookPage:book.html.twig',array('book_id' => $id));
