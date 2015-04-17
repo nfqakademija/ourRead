@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>{% block title %}OurReads{% endblock %}</title>
+    <!-- Bootstrap -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    {% block stylesheets %}
+        <link href="{{ asset('bundles/our/css/bootstrap.min.css') }}" rel="stylesheet">
+        <link href="{{ asset('bundles/our/css/bootstrap-social.css') }}" rel="stylesheet">
+        <link href="{{ asset('bundles/our/css/font-awesome.min.css') }}" rel="stylesheet">
+        <link href="{{ asset('bundles/our/css/CUSTOM.css') }}" rel="stylesheet">
+        <link href="{{ asset('bundles/our/css/star-rating.min.css') }}" rel="stylesheet">
+        <link rel="stylesheet" href="{{ asset('bundles/our/css/index.css') }}" type="text/css" media="screen"/>
+    {% endblock %}
+
+    <style type="text/css">
+        {% block styles %}
+        .navbar-brand {
+            padding-top: 5px;
+
+        }
+        #brand {
+            margin-left: -5px;
+            font-size: 20px;
+        }
+        {% endblock %}
+    </style>
+
+    <script>
+        {% block inline_scripts %}
+        {% endblock %}
+    </script>
+</head>
+
+<body class="pull_top">
+
+
+<div id="main" class="container">
+    {% block body %}{% endblock %}
+</div>
+
+
+{% block scripts %}
+    <script src="{{ asset('bundles/our/js/jquery.min.js') }}"></script>
+    <script src="{{ asset('bundles/our/js/bootstrap.min.js') }}"></script>
+    <script src="{{ asset('bundles/our/js/index-slider.js') }}"></script>
+{% endblock %}
+
+
+
+<div>
+
+    {% if is_granted("IS_AUTHENTICATED_REMEMBERED") %}
+        {{ 'layout.logged_in_as'|trans({'%username%': app.user.username}, 'FOSUserBundle') }} |
+        <a href="{{ path('fos_user_security_logout') }}">
+            {{ 'layout.logout'|trans({}, 'FOSUserBundle') }}
+        </a>
+    {% else %}
+        <a href="{{ path('fos_user_security_login') }}">{{ 'layout.login'|trans({}, 'FOSUserBundle') }}</a>
+    {% endif %}
+</div>
+
+{% for type, messages in app.session.flashbag.all() %}
+    {% for message in messages %}
+        <div class="flash-{{ type }}">
+            {{ message }}
+        </div>
+    {% endfor %}
+{% endfor %}
+
+<div>
+    {% block fos_user_content %}
+
+    {% endblock fos_user_content %}
+</div>
+
+
+
+
+
+</body>
+</html>

@@ -1,6 +1,8 @@
+{% trans_default_domain 'FOSUserBundle' %}
 
 
 <nav class="navbar navbar-default navbar-fixed-top">
+
     <div class="container">
         <!-- Brand and toggle get grouped for better mobile display -->
         <div class="navbar-header">
@@ -41,6 +43,16 @@
             </ul>
 
             <div class="navbar-right">
+
+                {% if is_granted("IS_AUTHENTICATED_REMEMBERED") %}
+
+                    <ul class="nav navbar-nav">
+                        <li><a href="{{ path('fos_user_security_logout') }}">Logout</a></li>
+                        <li><a href="#">{{ app.user.username}}</a></li>
+                    </ul>
+
+                {% else %}
+
                 <button type="button" class="btn btn-default navbar-btn" data-toggle="modal"
                         data-target=".sign-up-modal-sm">Sign-up
                 </button>
@@ -48,7 +60,8 @@
                      aria-hidden="true">
                     <div class="modal-dialog modal-sm">
                         <div class="modal-content">
-
+                            <form action="{{ path('fos_user_registration_register') }}" {{ form_enctype(registerForm) }} method="POST" class="fos_user_registration_register">
+                            <input type="hidden" name="_csrf_token" value="{{ loginForm.csrf_token }}" />
                             <div class="modal-header">
                                 <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span
                                             aria-hidden="true">&times;</span></button>
@@ -56,23 +69,35 @@
                             </div>
 
                             <div class="modal-body">
-                                <form>
-                                    <div class="form-group">
-                                        <label for="recipient-name" class="control-label">E-mail:</label>
-                                        <input type="text" class="form-control" id="email">
-                                    </div>
 
-                                    <div class="form-group">
-                                        <label for="message-text" class="control-label">Password:</label>
-                                        <input type="password" class="form-control" id="password">
-                                    </div>
+                                <div>
+                                    {{ form_label(registerForm.email, null, {'label_attr': {'class': "control-label\"" }}) }}
+                                    {{ form_errors(registerForm.email) }}
+                                    {{ form_widget(registerForm.email, {'attr': {'class': 'form-control'}}) }}
+                                </div>
 
-                                    <div class="form-group">
-                                        <label for="message-text" class="control-label">Repeat password:</label>
-                                        <input type="password" class="form-control" id="password2">
-                                    </div>
-                                </form>
+                                <div>
+                                    {{ form_label(registerForm.username, null, {'label_attr': {'class': "control-label\"" }}) }}
+                                    {{ form_errors(registerForm.username) }}
+                                    {{ form_widget(registerForm.username, {'attr': {'class': 'form-control'}}) }}
+                                </div>
 
+                                <div>
+                                    {{ form_label(registerForm.plainPassword.first, null, {'label_attr': {'class': "control-label\"" }}) }}
+                                    {{ form_errors(registerForm.plainPassword.first) }}
+                                    {{ form_widget(registerForm.plainPassword.first, {'attr': {'class': 'form-control'}}) }}
+                                </div>
+
+                                <div>
+                                    {{ form_label(registerForm.plainPassword.second, null, {'label_attr': {'class': 'control-label'}}) }}
+                                    {{ form_errors(registerForm.plainPassword.second) }}
+                                    {{ form_widget(registerForm.plainPassword.second, {'attr': {'class': 'form-control'}}) }}
+                                </div>
+
+
+                                {{ form_row (registerForm._token) }}
+
+                                </br>
 
                                 <a class="btn btn-block btn-social btn-facebook">
                                     <i class="fa fa-facebook"></i> Sign in with Facebook
@@ -82,21 +107,23 @@
 
                             <div class="modal-footer">
                                 <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-                                <button type="button" class="btn btn-primary">Register</button>
+                                <input class="btn btn-primary" type="submit" value="{{ 'registration.submit'|trans }}" />
                             </div>
-
+                            </form>
                         </div>
                     </div>
                 </div>
-
+                </form>
                 <button type="button" class="btn btn-primary navbar-btn" data-toggle="modal"
                         data-target=".sign-in-modal-sm">Sign-in
                 </button>
                 <div class="modal fade sign-in-modal-sm" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel"
                      aria-hidden="true">
+
                     <div class="modal-dialog modal-sm">
                         <div class="modal-content">
-
+                            <form action="{{ path("fos_user_security_check") }}" method="post">
+                                <input type="hidden" name="_csrf_token" value="{{ loginForm.csrf_token }}" />
 
                             <div class="modal-header">
                                 <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span
@@ -105,22 +132,23 @@
                             </div>
 
                             <div class="modal-body">
-                                <form>
-                                    <div class="form-group">
-                                        <label for="recipient-name" class="control-label">E-mail:</label>
-                                        <input type="text" class="form-control" id="email">
-                                    </div>
 
-                                    <div class="form-group">
-                                        <label for="message-text" class="control-label">Password:</label>
-                                        <input type="password" class="form-control" id="password">
-                                    </div>
 
-                                </form>
 
-                                <div class="checkbox">
-                                    <label><input type="checkbox"> Remember me</label>
+                                <div class="form-group">
+                                    <label class="control-label"  for="username"> {{ 'security.login.username'|trans }}  </label>
+                                    <input class="form-control" type="text" id="username" name="_username" value="{{ loginForm.last_username }}" required="required" />
                                 </div>
+
+                                <div class="form-group">
+                                    <label class="control-label" for="password">{{ 'security.login.password'|trans }}</label>
+                                    <input class="form-control" type="password" id="password" name="_password" required="required" />
+                                </div>
+
+                                <input type="checkbox" id="remember_me" name="_remember_me" value="on" />
+                                <label for="remember_me">{{ 'security.login.remember_me'|trans }}</label>
+
+                                </br>
 
                                 <a class="btn btn-block btn-social btn-facebook">
                                     <i class="fa fa-facebook"></i> Sign in with Facebook
@@ -133,13 +161,17 @@
 
                             <div class="modal-footer">
                                 <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-                                <button type="button" class="btn btn-primary">Sign in</button>
+                                <input class="btn btn-primary" type="submit" id="_submit" name="_submit" value="{{ 'security.login.submit'|trans }}" />
                             </div>
+
+                            </form>
 
                         </div>
                     </div>
+
                 </div>
 
+                {% endif %}
 
                 <form class="navbar-form navbar-right" role="search">
                     <div class="form-group">
