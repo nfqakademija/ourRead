@@ -3,7 +3,13 @@ imports:
     - { resource: security.yml }
     - { resource: services.yml }
 
+fos_user:
+    db_driver: orm # other valid values are 'mongodb', 'couchdb' and 'propel'
+    firewall_name: main
+    user_class: OurRead\OurBundle\Entity\Users
+
 framework:
+    translator: ~
     #esi:             ~
     #translator:      { fallbacks: ["%locale%"] }
     secret:          "%secret%"

@@ -18,7 +18,7 @@ img.fotos{
 
 }
 
-@import url('//maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css')
+@import url('//maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css');
 
 .knygom{
 border: 1px solid #DDD;
@@ -26,6 +26,9 @@ border-radius: 4px;
 margin-left:18px
 }
 
+#panele{
+    margin-top: 150px;
+}
 .row.kn {
   margin-left: -15px;
   margin-right: -15px;
