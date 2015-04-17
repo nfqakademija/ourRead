@@ -1,83 +1,123 @@
-<!DOCTYPE html>
-<html>
-<head>
-    <title>{% block title %}OurReads{% endblock %}</title>
-    <!-- Bootstrap -->
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+{% trans_default_domain 'FOSUserBundle' %}
+{% extends "OurBundle:Layouts:default.html.twig" %}
 
-    {% block stylesheets %}
-        <link href="{{ asset('bundles/our/css/bootstrap.min.css') }}" rel="stylesheet">
-        <link href="{{ asset('bundles/our/css/bootstrap-social.css') }}" rel="stylesheet">
-        <link href="{{ asset('bundles/our/css/font-awesome.min.css') }}" rel="stylesheet">
-        <link href="{{ asset('bundles/our/css/CUSTOM.css') }}" rel="stylesheet">
-        <link href="{{ asset('bundles/our/css/star-rating.min.css') }}" rel="stylesheet">
-        <link rel="stylesheet" href="{{ asset('bundles/our/css/index.css') }}" type="text/css" media="screen"/>
+{% block errors %}
+
+    {% block slider %}
+
     {% endblock %}
 
-    <style type="text/css">
-        {% block styles %}
-        .navbar-brand {
-            padding-top: 5px;
+    <div class="row">
 
-        }
-        #brand {
-            margin-left: -5px;
-            font-size: 20px;
-        }
-        {% endblock %}
-    </style>
+        <div class="col-md-6 col-md-offset-3">
+            <div class="panel panel-default" id="panele">
+                <div class="panel-heading">
+                    <h3 class="panel-title">Sign-in</h3>
+                </div>
+                <div class="panel-body">
 
-    <script>
-        {% block inline_scripts %}
-        {% endblock %}
-    </script>
-</head>
-
-<body class="pull_top">
+                    {% if error is defined %}
+                        {% if error %}
+                            <div class="alert alert-danger">{{ error.messageKey|trans(error.messageData, 'security') }}</div>
+                        {% endif %}
 
 
-<div id="main" class="container">
-    {% block body %}{% endblock %}
-</div>
+                        <form action="{{ path("fos_user_security_check") }}" method="post">
+                            <input type="hidden" name="_csrf_token" value="{{ csrf_token }}"/>
+
+                            <div class="form-group">
+                                <label class="control-label"
+                                       for="username"> {{ 'security.login.username'|trans }}  </label>
+                                <input class="form-control" type="text" id="username" name="_username"
+                                       value="{{ last_username }}" required="required"/>
+                            </div>
+
+                            <div class="form-group">
+                                <label class="control-label"
+                                       for="password">{{ 'security.login.password'|trans }}</label>
+                                <input class="form-control" type="password" id="password" name="_password"
+                                       required="required"/>
+                            </div>
+
+                            <input type="checkbox" id="remember_me" name="_remember_me" value="on"/>
+                            <label for="remember_me">{{ 'security.login.remember_me'|trans }}</label>
+                            <a href="#"> Forgotten password?</a>
+
+                            </br>
+
+                            <div class="col-md-6" id="btn-fb">
+                                <a class="btn btn-block btn-social btn-facebook col-lg-4">
+                                    <i class="fa fa-facebook"></i> Sign in with Facebook
+                                </a>
+                            </div>
+                            </br>
+                            </br>
+                            </br>
 
 
-{% block scripts %}
-    <script src="{{ asset('bundles/our/js/jquery.min.js') }}"></script>
-    <script src="{{ asset('bundles/our/js/bootstrap.min.js') }}"></script>
-    <script src="{{ asset('bundles/our/js/index-slider.js') }}"></script>
-{% endblock %}
+                            <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                            <input class="btn btn-primary" type="submit" id="_submit" name="_submit"
+                                   value="{{ 'security.login.submit'|trans }}"/>
+                        </form>
+                    {% endif %}
+
+                    {% if form is defined %}
+                        <form action="{{ path('fos_user_registration_register') }}" {{ form_enctype(form) }}
+                              method="POST" class="fos_user_registration_register">
 
 
+                            <div class="row">
+                                <div class="col-md-6">
 
-<div>
+                                    <div>
+                                        {{ form_label(form.email, null, {'label_attr': {'class': 'control-label lol' }})
+                                        }}
+                                        {{ form_widget(form.email, {'attr': {'class': 'form-control' }}) }}
+                                    </div>
 
-    {% if is_granted("IS_AUTHENTICATED_REMEMBERED") %}
-        {{ 'layout.logged_in_as'|trans({'%username%': app.user.username}, 'FOSUserBundle') }} |
-        <a href="{{ path('fos_user_security_logout') }}">
-            {{ 'layout.logout'|trans({}, 'FOSUserBundle') }}
-        </a>
-    {% else %}
-        <a href="{{ path('fos_user_security_login') }}">{{ 'layout.login'|trans({}, 'FOSUserBundle') }}</a>
-    {% endif %}
-</div>
+                                    <div>
+                                        {{ form_label(form.username, null, {'label_attr': {'class': 'control-label lol' }}
+                                        ) }}
+                                        {{ form_widget(form.username, {'attr': {'class': 'form-control' }}) }}
+                                    </div>
 
-{% for type, messages in app.session.flashbag.all() %}
-    {% for message in messages %}
-        <div class="flash-{{ type }}">
-            {{ message }}
+                                    <div>
+                                        {{ form_label(form.plainPassword.first, null, {'label_attr': {'class': 'control-label lol'}}
+                                        ) }}
+                                        {{ form_widget(form.plainPassword.first, {'attr': {'class': 'form-control' }})
+                                        }}
+                                    </div>
+
+                                    <div>
+                                        {{ form_label(form.plainPassword.second, null, {'label_attr': {'class': 'control-label lol' }}
+                                        ) }}
+                                        {{ form_widget(form.plainPassword.second, {'attr': {'class': 'form-control' }})
+                                        }}
+                                    </div>
+                                </div>
+
+                                <div class="col-md-6">
+                                <div class="alert alert-danger " id="reg-info">
+                                    {{ form_errors(form.email) }}
+                                    {{ form_errors(form.username) }}
+                                    {{ form_errors(form.plainPassword.first) }}
+                                </div>
+                                </div>
+                            </div>
+                            {{ form_row (form._token) }}
+                            </br>
+                            <input class="btn btn-primary" type="submit" value="{{ 'registration.submit'|trans }}"/>
+
+                            <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+
+
+                        </form>
+                    {% endif %}
+
+
+                </div>
+            </div>
+
         </div>
-    {% endfor %}
-{% endfor %}
-
-<div>
-    {% block fos_user_content %}
-
-    {% endblock fos_user_content %}
-</div>
-
-
-
-
-
-</body>
-</html>
+    </div>
+{% endblock %}

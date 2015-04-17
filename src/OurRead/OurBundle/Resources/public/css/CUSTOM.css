@@ -25,7 +25,7 @@ img.fotos{
 
 }
 
-@import url('//maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css')
+@import url('//maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css');
 
 .knygom{
 border: 1px solid #DDD;
@@ -41,7 +41,9 @@ margin-left:18px
 img.LBookFoto{
 	width:400px;
 	height:600px;
-
+}
+#panele{
+    margin-top: 150px;
 }
 
 #test{

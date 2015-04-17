@@ -1,12 +1,9 @@
 {% trans_default_domain 'FOSUserBundle' %}
 
-
 <nav class="navbar navbar-default navbar-fixed-top">
-
     <div class="container">
         <!-- Brand and toggle get grouped for better mobile display -->
         <div class="navbar-header">
-
             <button type="button" class="navbar-toggle collapsed" data-toggle="collapse"
                     data-target="#bs-example-navbar-collapse-1">
                 <span class="sr-only">Toggle navigation</span>
@@ -53,6 +50,9 @@
 
                 {% else %}
 
+                    {% if loginForm is defined %}
+                        {% if registerForm is defined %}
+
                 <button type="button" class="btn btn-default navbar-btn" data-toggle="modal"
                         data-target=".sign-up-modal-sm">Sign-up
                 </button>
@@ -71,25 +71,25 @@
                             <div class="modal-body">
 
                                 <div>
-                                    {{ form_label(registerForm.email, null, {'label_attr': {'class': "control-label\"" }}) }}
+                                    {{ form_label(registerForm.email, null, {'label_attr': {'class': 'control-label lol'}}) }}
                                     {{ form_errors(registerForm.email) }}
                                     {{ form_widget(registerForm.email, {'attr': {'class': 'form-control'}}) }}
                                 </div>
 
                                 <div>
-                                    {{ form_label(registerForm.username, null, {'label_attr': {'class': "control-label\"" }}) }}
+                                    {{ form_label(registerForm.username, null, {'label_attr': {'class': 'control-label lol' }}) }}
                                     {{ form_errors(registerForm.username) }}
                                     {{ form_widget(registerForm.username, {'attr': {'class': 'form-control'}}) }}
                                 </div>
 
                                 <div>
-                                    {{ form_label(registerForm.plainPassword.first, null, {'label_attr': {'class': "control-label\"" }}) }}
+                                    {{ form_label(registerForm.plainPassword.first, null, {'label_attr': {'class': 'control-label lol' }}) }}
                                     {{ form_errors(registerForm.plainPassword.first) }}
                                     {{ form_widget(registerForm.plainPassword.first, {'attr': {'class': 'form-control'}}) }}
                                 </div>
 
                                 <div>
-                                    {{ form_label(registerForm.plainPassword.second, null, {'label_attr': {'class': 'control-label'}}) }}
+                                    {{ form_label(registerForm.plainPassword.second, null, {'label_attr': {'class': 'control-label lol'}}) }}
                                     {{ form_errors(registerForm.plainPassword.second) }}
                                     {{ form_widget(registerForm.plainPassword.second, {'attr': {'class': 'form-control'}}) }}
                                 </div>
@@ -133,8 +133,6 @@
 
                             <div class="modal-body">
 
-
-
                                 <div class="form-group">
                                     <label class="control-label"  for="username"> {{ 'security.login.username'|trans }}  </label>
                                     <input class="form-control" type="text" id="username" name="_username" value="{{ loginForm.last_username }}" required="required" />
@@ -160,8 +158,8 @@
                             </div>
 
                             <div class="modal-footer">
-                                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-                                <input class="btn btn-primary" type="submit" id="_submit" name="_submit" value="{{ 'security.login.submit'|trans }}" />
+                                    <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                                    <input class="btn btn-primary" type="submit" id="_submit" name="_submit" value="{{ 'security.login.submit'|trans }}" />
                             </div>
 
                             </form>
@@ -171,6 +169,8 @@
 
                 </div>
 
+                        {% endif %}
+                    {% endif %}
                 {% endif %}
 
                 <form class="navbar-form navbar-right" role="search">
