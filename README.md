@@ -6,11 +6,11 @@ NFQ Academy Vilnius 2015 project
 What's new?
 --------------
 
-2015-03-30
-  *Uploaded index, book page template
-2015-04-17
+2015-03-30 <br />
+  *Uploaded index, book page template <br />
+2015-04-17 <br />
   *Integrated FOSUserBundle with login/registration functions <br />
-  *RemoteLibraryBundle for getting books by ISBN from server
+  *RemoteLibraryBundle for getting books by ISBN from server <br />
   
 how to see it?
 ---------------
