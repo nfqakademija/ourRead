@@ -1,23 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="1a151e2b-407d-464e-8598-5fc252c96fd4" name="Default" comment="front-end fix, buttons">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/bundles/our/js/CUSTOM.js" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/LICENSE" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/UPGRADE-2.2.md" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/UPGRADE-2.3.md" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/UPGRADE-2.4.md" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/UPGRADE.md" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/akademija-demo" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/Resources/FOSUserBundle/views/layout2.html.twig" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/hello.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/bundles/our/img/a.png" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/bundles/our/img/a2.png" afterPath="$PROJECT_DIR$/web/bundles/our/img/a2.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/bundles/our/css/CUSTOM.css" afterPath="$PROJECT_DIR$/web/bundles/our/css/CUSTOM.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/OurRead/OurBundle/Resources/views/Layouts/default.html.twig" afterPath="$PROJECT_DIR$/src/OurRead/OurBundle/Resources/views/Layouts/default.html.twig" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Resources/FOSUserBundle/views/layout.html.twig" afterPath="$PROJECT_DIR$/app/Resources/FOSUserBundle/views/layout.html.twig" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/OurRead/OurBundle/Resources/views/Components/navigation.html.twig" afterPath="$PROJECT_DIR$/src/OurRead/OurBundle/Resources/views/Components/navigation.html.twig" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/vcs.xml" afterPath="$PROJECT_DIR$/.idea/vcs.xml" />
+    <list default="true" id="1a151e2b-407d-464e-8598-5fc252c96fd4" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="nfqakademija.iws" />
@@ -111,7 +95,7 @@
       <file leaf-file-name="CUSTOM.css" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/web/bundles/our/css/CUSTOM.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="24" column="0" selection-start="276" selection-end="276" vertical-scroll-proportion="0.20812182" vertical-offset="309" max-vertical-offset="1224">
+            <state line="8" column="22" selection-start="137" selection-end="137" vertical-scroll-proportion="0.24365482" vertical-offset="0" max-vertical-offset="1224">
               <folding />
             </state>
           </provider>
@@ -759,6 +743,11 @@
       <created>1427220014934</created>
       <updated>1427220014934</updated>
     </task>
+    <task id="LOCAL-00001" summary="front-end fix, buttons">
+      <created>1429390210167</created>
+      <updated>1429390210168</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -1097,7 +1086,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/web/bundles/our/css/CUSTOM.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="24" column="0" selection-start="276" selection-end="276" vertical-scroll-proportion="0.20812182" vertical-offset="309" max-vertical-offset="1224">
+        <state line="8" column="22" selection-start="137" selection-end="137" vertical-scroll-proportion="0.24365482" vertical-offset="0" max-vertical-offset="1224">
           <folding />
         </state>
       </provider>
