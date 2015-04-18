@@ -12,7 +12,7 @@
         <div class="col-md-6 col-md-offset-3">
             <div class="panel panel-default" id="panele">
                 <div class="panel-heading">
-                    <h3 class="panel-title">Sign-in</h3>
+                    <h3 class="panel-title" id="reg-title">Sign-in</h3>
                 </div>
                 <div class="panel-body">
 
@@ -55,7 +55,8 @@
                             </br>
 
 
-                            <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                            <a class="btn btn-default" href="/">Close</a>
+
                             <input class="btn btn-primary" type="submit" id="_submit" name="_submit"
                                    value="{{ 'security.login.submit'|trans }}"/>
                         </form>
@@ -97,7 +98,9 @@
                                 </div>
 
                                 <div class="col-md-6">
-                                <div class="alert alert-danger " id="reg-info">
+
+
+                                <div class="alert alert-danger " id="reg-info" >
                                     {{ form_errors(form.email) }}
                                     {{ form_errors(form.username) }}
                                     {{ form_errors(form.plainPassword.first) }}
@@ -108,10 +111,12 @@
                             </br>
                             <input class="btn btn-primary" type="submit" value="{{ 'registration.submit'|trans }}"/>
 
-                            <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                            <a class="btn btn-default" href="/">Close</a>
+
 
 
                         </form>
+
                     {% endif %}
 
 
