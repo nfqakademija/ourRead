@@ -3,73 +3,73 @@
   <component name="ChangeListManager">
     <list default="true" id="1a151e2b-407d-464e-8598-5fc252c96fd4" name="Default" comment="">
       <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/OurRead/OurBundle/Controller/CategoriesPageController.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/OurRead/OurBundle/Controller/UserPageController.php" />
       <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/OurRead/OurBundle/Resources/views/MyBooksPage/MyBooks.html.twig" />
       <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/OurRead/OurBundle/Controller/MyBooksPageController.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/OurRead/OurBundle/Controller/UserPageController.php" />
       <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/OurRead/OurBundle/Resources/views/CategoriesPage/categories.html.twig" />
       <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/OurRead/OurBundle/Resources/views/UserPage/user.html.twig" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/OurRead/OurBundle/Controller/BookPageController.php" afterPath="$PROJECT_DIR$/src/OurRead/OurBundle/Controller/BookPageController.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/OurRead/OurBundle/Resources/public/css/CUSTOM.css" afterPath="$PROJECT_DIR$/src/OurRead/OurBundle/Resources/public/css/CUSTOM.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/bundles/our/css/CUSTOM.css" afterPath="$PROJECT_DIR$/web/bundles/our/css/CUSTOM.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/OurRead/RemoteLibraryBundle/Parser/GoogleLibraryParser.php" afterPath="$PROJECT_DIR$/src/OurRead/RemoteLibraryBundle/Parser/GoogleLibraryParser.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/OurRead/OurBundle/Controller/MainPageController.php" afterPath="$PROJECT_DIR$/src/OurRead/OurBundle/Controller/MainPageController.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/OurRead/RemoteLibraryBundle/Parser/OpenLibraryParser.php" afterPath="$PROJECT_DIR$/src/OurRead/RemoteLibraryBundle/Parser/OpenLibraryParser.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/OurRead/OurBundle/DependencyInjection/OurExtension.php" afterPath="$PROJECT_DIR$/src/OurRead/OurBundle/DependencyInjection/OurExtension.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/OurRead/RemoteLibraryBundle/Parser/Parser.php" afterPath="$PROJECT_DIR$/src/OurRead/RemoteLibraryBundle/Parser/Parser.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/OurRead/RemoteLibraryBundle/DependencyInjection/RemoteLibraryExtension.php" afterPath="$PROJECT_DIR$/src/OurRead/RemoteLibraryBundle/DependencyInjection/RemoteLibraryExtension.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/OurRead/RemoteLibraryBundle/RemoteLibraryInterface.php" afterPath="$PROJECT_DIR$/src/OurRead/RemoteLibraryBundle/RemoteLibraryInterface.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/OurRead/RemoteLibraryBundle/RemoteLibraryService.php" afterPath="$PROJECT_DIR$/src/OurRead/RemoteLibraryBundle/RemoteLibraryService.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/OurRead/OurBundle/Entity/Users.php" afterPath="$PROJECT_DIR$/src/OurRead/OurBundle/Entity/Users.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/OurRead/OurBundle/Resources/public/scss/_animated.scss" afterPath="$PROJECT_DIR$/src/OurRead/OurBundle/Resources/public/scss/_animated.scss" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/OurRead/OurBundle/Resources/public/scss/_bordered-pulled.scss" afterPath="$PROJECT_DIR$/src/OurRead/OurBundle/Resources/public/scss/_bordered-pulled.scss" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/OurRead/OurBundle/Resources/public/scss/_icons.scss" afterPath="$PROJECT_DIR$/src/OurRead/OurBundle/Resources/public/scss/_icons.scss" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/OurRead/OurBundle/Resources/public/scss/_larger.scss" afterPath="$PROJECT_DIR$/src/OurRead/OurBundle/Resources/public/scss/_larger.scss" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/OurRead/OurBundle/Resources/public/scss/_list.scss" afterPath="$PROJECT_DIR$/src/OurRead/OurBundle/Resources/public/scss/_list.scss" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/OurRead/OurBundle/Resources/public/scss/_mixins.scss" afterPath="$PROJECT_DIR$/src/OurRead/OurBundle/Resources/public/scss/_mixins.scss" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Resources/FOSUserBundle/Security/login.html.twig" afterPath="$PROJECT_DIR$/app/Resources/FOSUserBundle/Security/login.html.twig" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/OurRead/OurBundle/Resources/public/scss/_path.scss" afterPath="$PROJECT_DIR$/src/OurRead/OurBundle/Resources/public/scss/_path.scss" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/OurRead/OurBundle/Resources/public/scss/_rotated-flipped.scss" afterPath="$PROJECT_DIR$/src/OurRead/OurBundle/Resources/public/scss/_rotated-flipped.scss" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/OurRead/OurBundle/Resources/public/scss/_stacked.scss" afterPath="$PROJECT_DIR$/src/OurRead/OurBundle/Resources/public/scss/_stacked.scss" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/OurRead/OurBundle/Resources/public/scss/_variables.scss" afterPath="$PROJECT_DIR$/src/OurRead/OurBundle/Resources/public/scss/_variables.scss" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/OurRead/OurBundle/Resources/public/less/animated.less" afterPath="$PROJECT_DIR$/src/OurRead/OurBundle/Resources/public/less/animated.less" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/OurRead/OurBundle/Resources/views/BookPage/book.html.twig" afterPath="$PROJECT_DIR$/src/OurRead/OurBundle/Resources/views/BookPage/book.html.twig" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/OurRead/OurBundle/Resources/views/Default/book.html.twig" afterPath="$PROJECT_DIR$/src/OurRead/OurBundle/Resources/views/Default/book.html.twig" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/OurRead/OurBundle/Resources/public/css/bootstrap-social.css" afterPath="$PROJECT_DIR$/src/OurRead/OurBundle/Resources/public/css/bootstrap-social.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/OurRead/OurBundle/Resources/public/css/bootstrap-theme.css.map" afterPath="$PROJECT_DIR$/src/OurRead/OurBundle/Resources/public/css/bootstrap-theme.css.map" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/OurRead/OurBundle/Resources/public/css/bootstrap-theme.css" afterPath="$PROJECT_DIR$/src/OurRead/OurBundle/Resources/public/css/bootstrap-theme.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/OurRead/OurBundle/Resources/public/css/bootstrap-theme.min.css" afterPath="$PROJECT_DIR$/src/OurRead/OurBundle/Resources/public/css/bootstrap-theme.min.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/OurRead/OurBundle/Resources/public/css/bootstrap.css.map" afterPath="$PROJECT_DIR$/src/OurRead/OurBundle/Resources/public/css/bootstrap.css.map" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/OurRead/OurBundle/Resources/public/css/bootstrap.css" afterPath="$PROJECT_DIR$/src/OurRead/OurBundle/Resources/public/css/bootstrap.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/OurRead/OurBundle/Resources/public/js/bootstrap.js" afterPath="$PROJECT_DIR$/src/OurRead/OurBundle/Resources/public/js/bootstrap.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/OurRead/OurBundle/Resources/public/css/bootstrap.min.css" afterPath="$PROJECT_DIR$/src/OurRead/OurBundle/Resources/public/css/bootstrap.min.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/OurRead/OurBundle/Resources/public/js/bootstrap.min.js" afterPath="$PROJECT_DIR$/src/OurRead/OurBundle/Resources/public/js/bootstrap.min.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/OurRead/OurBundle/Resources/public/less/bordered-pulled.less" afterPath="$PROJECT_DIR$/src/OurRead/OurBundle/Resources/public/less/bordered-pulled.less" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Resources/FOSUserBundle/Registration/confirmed.html.twig" afterPath="$PROJECT_DIR$/app/Resources/FOSUserBundle/Registration/confirmed.html.twig" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/OurRead/OurBundle/Resources/views/Layouts/default.html.twig" afterPath="$PROJECT_DIR$/src/OurRead/OurBundle/Resources/views/Layouts/default.html.twig" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/OurRead/OurBundle/Resources/public/css/font-awesome.css" afterPath="$PROJECT_DIR$/src/OurRead/OurBundle/Resources/public/css/font-awesome.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/OurRead/OurBundle/Resources/public/less/variables.less" afterPath="$PROJECT_DIR$/src/OurRead/OurBundle/Resources/public/less/variables.less" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/OurRead/OurBundle/Resources/views/Components/slider.html.twig" afterPath="$PROJECT_DIR$/src/OurRead/OurBundle/Resources/views/Components/slider.html.twig" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/OurRead/RemoteLibraryBundle/Parser/GoogleLibraryParser.php" afterPath="$PROJECT_DIR$/src/OurRead/RemoteLibraryBundle/Parser/GoogleLibraryParser.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/OurRead/OurBundle/Resources/public/less/font-awesome.less" afterPath="$PROJECT_DIR$/src/OurRead/OurBundle/Resources/public/less/font-awesome.less" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/OurRead/OurBundle/Resources/public/css/font-awesome.min.css" afterPath="$PROJECT_DIR$/src/OurRead/OurBundle/Resources/public/css/font-awesome.min.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/OurRead/OurBundle/Resources/public/scss/font-awesome.scss" afterPath="$PROJECT_DIR$/src/OurRead/OurBundle/Resources/public/scss/font-awesome.scss" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/OurRead/OurBundle/Resources/public/less/icons.less" afterPath="$PROJECT_DIR$/src/OurRead/OurBundle/Resources/public/less/icons.less" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/OurRead/OurBundle/Resources/public/js/index-slider.js" afterPath="$PROJECT_DIR$/src/OurRead/OurBundle/Resources/public/js/index-slider.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/OurRead/OurBundle/Resources/public/css/index.css" afterPath="$PROJECT_DIR$/src/OurRead/OurBundle/Resources/public/css/index.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/OurRead/RemoteLibraryBundle/RemoteLibraryInterface.php" afterPath="$PROJECT_DIR$/src/OurRead/RemoteLibraryBundle/RemoteLibraryInterface.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/OurRead/OurBundle/Resources/views/MainPage/index.html.twig" afterPath="$PROJECT_DIR$/src/OurRead/OurBundle/Resources/views/MainPage/index.html.twig" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/OurRead/OurBundle/Resources/public/js/jquery.min.js" afterPath="$PROJECT_DIR$/src/OurRead/OurBundle/Resources/public/js/jquery.min.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/OurRead/OurBundle/Resources/public/less/larger.less" afterPath="$PROJECT_DIR$/src/OurRead/OurBundle/Resources/public/less/larger.less" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Resources/FOSUserBundle/views/layout.html.twig" afterPath="$PROJECT_DIR$/app/Resources/FOSUserBundle/views/layout.html.twig" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/OurRead/OurBundle/Resources/public/less/list.less" afterPath="$PROJECT_DIR$/src/OurRead/OurBundle/Resources/public/less/list.less" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Resources/FOSUserBundle/Security/login.html.twig" afterPath="$PROJECT_DIR$/app/Resources/FOSUserBundle/Security/login.html.twig" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/OurRead/OurBundle/Resources/public/less/mixins.less" afterPath="$PROJECT_DIR$/src/OurRead/OurBundle/Resources/public/less/mixins.less" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/OurRead/OurBundle/Resources/views/Components/navigation.html.twig" afterPath="$PROJECT_DIR$/src/OurRead/OurBundle/Resources/views/Components/navigation.html.twig" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/OurRead/OurBundle/Resources/public/less/path.less" afterPath="$PROJECT_DIR$/src/OurRead/OurBundle/Resources/public/less/path.less" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/OurRead/OurBundle/Resources/public/less/rotated-flipped.less" afterPath="$PROJECT_DIR$/src/OurRead/OurBundle/Resources/public/less/rotated-flipped.less" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/OurRead/OurBundle/Resources/config/routing.yml" afterPath="$PROJECT_DIR$/src/OurRead/OurBundle/Resources/config/routing.yml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/OurRead/OurBundle/Resources/views/Components/slider.html.twig" afterPath="$PROJECT_DIR$/src/OurRead/OurBundle/Resources/views/Components/slider.html.twig" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/OurRead/OurBundle/Resources/public/less/stacked.less" afterPath="$PROJECT_DIR$/src/OurRead/OurBundle/Resources/public/less/stacked.less" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/OurRead/OurBundle/Resources/public/css/bootstrap.min.css" afterPath="$PROJECT_DIR$/src/OurRead/OurBundle/Resources/public/css/bootstrap.min.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/OurRead/OurBundle/Resources/public/css/bootstrap-theme.css" afterPath="$PROJECT_DIR$/src/OurRead/OurBundle/Resources/public/css/bootstrap-theme.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/OurRead/OurBundle/Controller/MainPageController.php" afterPath="$PROJECT_DIR$/src/OurRead/OurBundle/Controller/MainPageController.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/OurRead/OurBundle/Resources/public/js/bootstrap.min.js" afterPath="$PROJECT_DIR$/src/OurRead/OurBundle/Resources/public/js/bootstrap.min.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/OurRead/OurBundle/Resources/public/css/font-awesome.css" afterPath="$PROJECT_DIR$/src/OurRead/OurBundle/Resources/public/css/font-awesome.css" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/OurRead/OurBundle/Resources/public/css/star-rating.css" afterPath="$PROJECT_DIR$/src/OurRead/OurBundle/Resources/public/css/star-rating.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Resources/FOSUserBundle/Registration/confirmed.html.twig" afterPath="$PROJECT_DIR$/app/Resources/FOSUserBundle/Registration/confirmed.html.twig" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/OurRead/OurBundle/Resources/public/less/mixins.less" afterPath="$PROJECT_DIR$/src/OurRead/OurBundle/Resources/public/less/mixins.less" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/OurRead/OurBundle/Resources/public/css/bootstrap.css.map" afterPath="$PROJECT_DIR$/src/OurRead/OurBundle/Resources/public/css/bootstrap.css.map" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/OurRead/OurBundle/DependencyInjection/OurExtension.php" afterPath="$PROJECT_DIR$/src/OurRead/OurBundle/DependencyInjection/OurExtension.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/OurRead/OurBundle/Resources/public/scss/_icons.scss" afterPath="$PROJECT_DIR$/src/OurRead/OurBundle/Resources/public/scss/_icons.scss" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/OurRead/RemoteLibraryBundle/DependencyInjection/RemoteLibraryExtension.php" afterPath="$PROJECT_DIR$/src/OurRead/RemoteLibraryBundle/DependencyInjection/RemoteLibraryExtension.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/OurRead/OurBundle/Resources/public/css/CUSTOM.css" afterPath="$PROJECT_DIR$/src/OurRead/OurBundle/Resources/public/css/CUSTOM.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/OurRead/OurBundle/Resources/public/scss/_variables.scss" afterPath="$PROJECT_DIR$/src/OurRead/OurBundle/Resources/public/scss/_variables.scss" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Resources/FOSUserBundle/views/layout.html.twig" afterPath="$PROJECT_DIR$/app/Resources/FOSUserBundle/views/layout.html.twig" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/OurRead/RemoteLibraryBundle/Parser/OpenLibraryParser.php" afterPath="$PROJECT_DIR$/src/OurRead/RemoteLibraryBundle/Parser/OpenLibraryParser.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/OurRead/RemoteLibraryBundle/Parser/Parser.php" afterPath="$PROJECT_DIR$/src/OurRead/RemoteLibraryBundle/Parser/Parser.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/OurRead/OurBundle/Resources/public/js/jquery.min.js" afterPath="$PROJECT_DIR$/src/OurRead/OurBundle/Resources/public/js/jquery.min.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/OurRead/RemoteLibraryBundle/RemoteLibraryService.php" afterPath="$PROJECT_DIR$/src/OurRead/RemoteLibraryBundle/RemoteLibraryService.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/OurRead/OurBundle/Resources/public/scss/_rotated-flipped.scss" afterPath="$PROJECT_DIR$/src/OurRead/OurBundle/Resources/public/scss/_rotated-flipped.scss" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/OurRead/OurBundle/Resources/public/scss/_animated.scss" afterPath="$PROJECT_DIR$/src/OurRead/OurBundle/Resources/public/scss/_animated.scss" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/OurRead/OurBundle/Resources/public/css/bootstrap-theme.min.css" afterPath="$PROJECT_DIR$/src/OurRead/OurBundle/Resources/public/css/bootstrap-theme.min.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/OurRead/OurBundle/Resources/views/BookPage/book.html.twig" afterPath="$PROJECT_DIR$/src/OurRead/OurBundle/Resources/views/BookPage/book.html.twig" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/OurRead/OurBundle/Resources/public/js/bootstrap.js" afterPath="$PROJECT_DIR$/src/OurRead/OurBundle/Resources/public/js/bootstrap.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/OurRead/OurBundle/Resources/config/routing.yml" afterPath="$PROJECT_DIR$/src/OurRead/OurBundle/Resources/config/routing.yml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/OurRead/OurBundle/Entity/Users.php" afterPath="$PROJECT_DIR$/src/OurRead/OurBundle/Entity/Users.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/OurRead/OurBundle/Resources/public/less/bordered-pulled.less" afterPath="$PROJECT_DIR$/src/OurRead/OurBundle/Resources/public/less/bordered-pulled.less" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/OurRead/OurBundle/Resources/views/Components/navigation.html.twig" afterPath="$PROJECT_DIR$/src/OurRead/OurBundle/Resources/views/Components/navigation.html.twig" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/OurRead/OurBundle/Resources/public/css/bootstrap-social.css" afterPath="$PROJECT_DIR$/src/OurRead/OurBundle/Resources/public/css/bootstrap-social.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/OurRead/OurBundle/Resources/public/less/larger.less" afterPath="$PROJECT_DIR$/src/OurRead/OurBundle/Resources/public/less/larger.less" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/OurRead/OurBundle/Resources/public/scss/_stacked.scss" afterPath="$PROJECT_DIR$/src/OurRead/OurBundle/Resources/public/scss/_stacked.scss" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/OurRead/OurBundle/Resources/public/scss/_larger.scss" afterPath="$PROJECT_DIR$/src/OurRead/OurBundle/Resources/public/scss/_larger.scss" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/OurRead/OurBundle/Resources/public/css/star-rating.min.css" afterPath="$PROJECT_DIR$/src/OurRead/OurBundle/Resources/public/css/star-rating.min.css" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/OurRead/OurBundle/Resources/public/js/star-rating.min.js" afterPath="$PROJECT_DIR$/src/OurRead/OurBundle/Resources/public/js/star-rating.min.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/OurRead/OurBundle/Resources/public/less/variables.less" afterPath="$PROJECT_DIR$/src/OurRead/OurBundle/Resources/public/less/variables.less" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/OurRead/OurBundle/Resources/public/less/list.less" afterPath="$PROJECT_DIR$/src/OurRead/OurBundle/Resources/public/less/list.less" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/OurRead/OurBundle/Resources/public/css/bootstrap-theme.css.map" afterPath="$PROJECT_DIR$/src/OurRead/OurBundle/Resources/public/css/bootstrap-theme.css.map" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/OurRead/OurBundle/Resources/public/css/index.css" afterPath="$PROJECT_DIR$/src/OurRead/OurBundle/Resources/public/css/index.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/OurRead/OurBundle/Resources/public/css/bootstrap.css" afterPath="$PROJECT_DIR$/src/OurRead/OurBundle/Resources/public/css/bootstrap.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/OurRead/OurBundle/Resources/public/scss/_bordered-pulled.scss" afterPath="$PROJECT_DIR$/src/OurRead/OurBundle/Resources/public/scss/_bordered-pulled.scss" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/OurRead/OurBundle/Resources/public/less/path.less" afterPath="$PROJECT_DIR$/src/OurRead/OurBundle/Resources/public/less/path.less" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/OurRead/OurBundle/Resources/views/Default/book.html.twig" afterPath="$PROJECT_DIR$/src/OurRead/OurBundle/Resources/views/Default/book.html.twig" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/OurRead/OurBundle/Resources/public/less/animated.less" afterPath="$PROJECT_DIR$/src/OurRead/OurBundle/Resources/public/less/animated.less" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/OurRead/OurBundle/Resources/public/less/rotated-flipped.less" afterPath="$PROJECT_DIR$/src/OurRead/OurBundle/Resources/public/less/rotated-flipped.less" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/OurRead/OurBundle/Resources/public/scss/font-awesome.scss" afterPath="$PROJECT_DIR$/src/OurRead/OurBundle/Resources/public/scss/font-awesome.scss" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/OurRead/OurBundle/Resources/public/scss/_mixins.scss" afterPath="$PROJECT_DIR$/src/OurRead/OurBundle/Resources/public/scss/_mixins.scss" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/OurRead/OurBundle/Controller/BookPageController.php" afterPath="$PROJECT_DIR$/src/OurRead/OurBundle/Controller/BookPageController.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/OurRead/OurBundle/Resources/views/Layouts/default.html.twig" afterPath="$PROJECT_DIR$/src/OurRead/OurBundle/Resources/views/Layouts/default.html.twig" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/OurRead/OurBundle/Resources/public/scss/_list.scss" afterPath="$PROJECT_DIR$/src/OurRead/OurBundle/Resources/public/scss/_list.scss" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/OurRead/OurBundle/Resources/public/less/icons.less" afterPath="$PROJECT_DIR$/src/OurRead/OurBundle/Resources/public/less/icons.less" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/bundles/our/css/CUSTOM.css" afterPath="$PROJECT_DIR$/web/bundles/our/css/CUSTOM.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/OurRead/OurBundle/Resources/public/less/stacked.less" afterPath="$PROJECT_DIR$/src/OurRead/OurBundle/Resources/public/less/stacked.less" />
     </list>
     <ignored path="nfqakademija.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -95,7 +95,7 @@
       <file leaf-file-name="user.html.twig" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/OurRead/OurBundle/Resources/views/UserPage/user.html.twig">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="9" column="0" selection-start="199" selection-end="199" vertical-scroll-proportion="-0.0" vertical-offset="162" max-vertical-offset="2952">
+            <state line="9" column="0" selection-start="199" selection-end="199" vertical-scroll-proportion="0.0" vertical-offset="162" max-vertical-offset="2952">
               <folding />
             </state>
           </provider>
@@ -104,10 +104,8 @@
       <file leaf-file-name="UserPageController.php" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/OurRead/OurBundle/Controller/UserPageController.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="6" column="0" selection-start="0" selection-end="476" vertical-scroll-proportion="-1.3333334" vertical-offset="0" max-vertical-offset="396">
-              <folding>
-                <element signature="e#115#172#0" expanded="true" />
-              </folding>
+            <state line="6" column="0" selection-start="0" selection-end="476" vertical-scroll-proportion="0.0" vertical-offset="108" max-vertical-offset="468">
+              <folding />
             </state>
           </provider>
         </entry>
@@ -115,11 +113,8 @@
       <file leaf-file-name="CategoriesPageController.php" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/OurRead/OurBundle/Controller/CategoriesPageController.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="18" column="65" selection-start="473" selection-end="473" vertical-scroll-proportion="-12.0" vertical-offset="0" max-vertical-offset="468">
-              <folding>
-                <element signature="e#6#73#0" expanded="true" />
-                <element signature="e#115#172#0" expanded="true" />
-              </folding>
+            <state line="18" column="65" selection-start="473" selection-end="473" vertical-scroll-proportion="0.0" vertical-offset="324" max-vertical-offset="468">
+              <folding />
             </state>
           </provider>
         </entry>
@@ -127,7 +122,7 @@
       <file leaf-file-name="MainPageController.php" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/OurRead/OurBundle/Controller/MainPageController.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="32" column="8" selection-start="993" selection-end="1050" vertical-scroll-proportion="-14.666667" vertical-offset="0" max-vertical-offset="1764">
+            <state line="32" column="8" selection-start="993" selection-end="1050" vertical-scroll-proportion="0.0" vertical-offset="576" max-vertical-offset="1944">
               <folding />
             </state>
           </provider>
@@ -136,7 +131,7 @@
       <file leaf-file-name="default.html.twig" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/OurRead/OurBundle/Resources/views/Layouts/default.html.twig">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="51" column="38" selection-start="1636" selection-end="1636" vertical-scroll-proportion="-11.148149" vertical-offset="617" max-vertical-offset="1224">
+            <state line="51" column="38" selection-start="1636" selection-end="1636" vertical-scroll-proportion="0.0" vertical-offset="918" max-vertical-offset="1224">
               <folding />
             </state>
           </provider>
@@ -145,7 +140,7 @@
       <file leaf-file-name="MyBooks.html.twig" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/OurRead/OurBundle/Resources/views/MyBooksPage/MyBooks.html.twig">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="0" column="29" selection-start="0" selection-end="52" vertical-scroll-proportion="-0.0" vertical-offset="0" max-vertical-offset="2070">
+            <state line="0" column="29" selection-start="0" selection-end="52" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="2070">
               <folding />
             </state>
           </provider>
@@ -154,7 +149,7 @@
       <file leaf-file-name="MyBooksPageController.php" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/OurRead/OurBundle/Controller/MyBooksPageController.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="21" column="56" selection-start="473" selection-end="473" vertical-scroll-proportion="-8.666667" vertical-offset="0" max-vertical-offset="432">
+            <state line="21" column="56" selection-start="473" selection-end="473" vertical-scroll-proportion="0.0" vertical-offset="378" max-vertical-offset="576">
               <folding />
             </state>
           </provider>
@@ -163,7 +158,7 @@
       <file leaf-file-name="routing.yml" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/OurRead/OurBundle/Resources/config/routing.yml">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="14" column="43" selection-start="442" selection-end="442" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="360">
+            <state line="14" column="43" selection-start="442" selection-end="442" vertical-scroll-proportion="0.0" vertical-offset="252" max-vertical-offset="360">
               <folding />
             </state>
           </provider>
@@ -172,7 +167,7 @@
       <file leaf-file-name="BookPageController.php" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/OurRead/OurBundle/Controller/BookPageController.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="0" column="0" selection-start="0" selection-end="466" vertical-scroll-proportion="-0.0" vertical-offset="0" max-vertical-offset="396">
+            <state line="0" column="0" selection-start="0" selection-end="466" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="486">
               <folding />
             </state>
           </provider>
@@ -181,7 +176,7 @@
       <file leaf-file-name="categories.html.twig" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/OurRead/OurBundle/Resources/views/CategoriesPage/categories.html.twig">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="10" column="19" selection-start="171" selection-end="171" vertical-scroll-proportion="0.31914893" vertical-offset="0" max-vertical-offset="564">
+            <state line="10" column="19" selection-start="171" selection-end="171" vertical-scroll-proportion="0.0" vertical-offset="180" max-vertical-offset="324">
               <folding />
             </state>
           </provider>
@@ -263,9 +258,10 @@
   </component>
   <component name="PhpWorkspaceProjectConfiguration" backward_compatibility_performed="true" />
   <component name="ProjectFrameBounds">
-    <option name="y" value="24" />
-    <option name="width" value="1366" />
-    <option name="height" value="744" />
+    <option name="x" value="65" />
+    <option name="y" value="-4" />
+    <option name="width" value="1301" />
+    <option name="height" value="772" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
     <OptionsSetting value="true" id="Add" />
@@ -888,8 +884,8 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="24" width="1366" height="744" extended-state="6" />
-    <editor active="true" />
+    <frame x="65" y="-4" width="1301" height="772" extended-state="6" />
+    <editor active="false" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32935917" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32935917" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
@@ -905,12 +901,12 @@
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32935917" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32935917" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32935917" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Command Line Tools Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32935917" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
@@ -1128,55 +1124,22 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/Resources/FOSUserBundle/views/layout.html.twig">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="5" column="0" selection-start="116" selection-end="158" vertical-scroll-proportion="0.0" vertical-offset="90" max-vertical-offset="2556">
-          <folding>
-            <marker date="1429819238513" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1429819238513" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1429819238513" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1429819238513" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1429819238513" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1429819238513" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1429819238513" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1429819238513" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1429819238513" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1429819238513" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1429819238513" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1429819238513" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1429819238513" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1429819238513" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1429819238513" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1429819238513" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1429819238513" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1429819238513" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1429819238513" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1429819238513" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1429819238513" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1429819238513" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1429819238513" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1429819238513" expanded="true" signature="-1:-1" placeholder="..." />
-          </folding>
-        </state>
+        <state line="5" column="0" selection-start="116" selection-end="158" vertical-scroll-proportion="0.0" vertical-offset="90" max-vertical-offset="2556" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/web/bundles/our/css/CUSTOM.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="64" column="19" selection-start="775" selection-end="775" vertical-scroll-proportion="0.0" vertical-offset="608" max-vertical-offset="1314">
-          <folding />
-        </state>
+        <state line="64" column="19" selection-start="775" selection-end="775" vertical-scroll-proportion="0.0" vertical-offset="608" max-vertical-offset="1314" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/OurRead/OurBundle/Resources/views/MainPage/index.html.twig">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="38" column="81" selection-start="1407" selection-end="1429" vertical-scroll-proportion="0.0" vertical-offset="684" max-vertical-offset="1062">
-          <folding />
-        </state>
+        <state line="38" column="81" selection-start="1407" selection-end="1429" vertical-scroll-proportion="0.0" vertical-offset="684" max-vertical-offset="1062" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/OurRead/OurBundle/Resources/views/Components/navigation.html.twig">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="29" column="47" selection-start="1276" selection-end="1276" vertical-scroll-proportion="-10.0" vertical-offset="252" max-vertical-offset="3762">
-          <folding />
-        </state>
+        <state line="29" column="47" selection-start="1276" selection-end="1276" vertical-scroll-proportion="-10.0" vertical-offset="252" max-vertical-offset="3762" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/OurRead/OurBundle/Resources/views/UserPage/user.html.twig">
@@ -1188,31 +1151,29 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/OurRead/OurBundle/Resources/views/Layouts/default.html.twig">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="51" column="38" selection-start="1636" selection-end="1636" vertical-scroll-proportion="-11.148149" vertical-offset="617" max-vertical-offset="1224">
+        <state line="51" column="38" selection-start="1636" selection-end="1636" vertical-scroll-proportion="0.0" vertical-offset="918" max-vertical-offset="1224">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/OurRead/OurBundle/Controller/MainPageController.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="32" column="8" selection-start="993" selection-end="1050" vertical-scroll-proportion="-14.666667" vertical-offset="0" max-vertical-offset="1764">
+        <state line="32" column="8" selection-start="993" selection-end="1050" vertical-scroll-proportion="0.0" vertical-offset="576" max-vertical-offset="1944">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/OurRead/OurBundle/Controller/MyBooksPageController.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="21" column="56" selection-start="473" selection-end="473" vertical-scroll-proportion="-8.666667" vertical-offset="0" max-vertical-offset="432">
+        <state line="21" column="56" selection-start="473" selection-end="473" vertical-scroll-proportion="0.0" vertical-offset="378" max-vertical-offset="576">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/OurRead/OurBundle/Controller/UserPageController.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="6" column="0" selection-start="0" selection-end="476" vertical-scroll-proportion="-1.3333334" vertical-offset="0" max-vertical-offset="396">
-          <folding>
-            <element signature="e#115#172#0" expanded="true" />
-          </folding>
+        <state line="6" column="0" selection-start="0" selection-end="476" vertical-scroll-proportion="0.0" vertical-offset="108" max-vertical-offset="468">
+          <folding />
         </state>
       </provider>
     </entry>
@@ -1232,11 +1193,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/OurRead/OurBundle/Controller/CategoriesPageController.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="18" column="65" selection-start="473" selection-end="473" vertical-scroll-proportion="-12.0" vertical-offset="0" max-vertical-offset="468">
-          <folding>
-            <element signature="e#6#73#0" expanded="true" />
-            <element signature="e#115#172#0" expanded="true" />
-          </folding>
+        <state line="18" column="65" selection-start="473" selection-end="473" vertical-scroll-proportion="0.0" vertical-offset="324" max-vertical-offset="468">
+          <folding />
         </state>
       </provider>
     </entry>
@@ -1249,7 +1207,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/OurRead/OurBundle/Resources/views/CategoriesPage/categories.html.twig">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="10" column="19" selection-start="171" selection-end="171" vertical-scroll-proportion="0.31914893" vertical-offset="0" max-vertical-offset="564">
+        <state line="10" column="19" selection-start="171" selection-end="171" vertical-scroll-proportion="0.0" vertical-offset="180" max-vertical-offset="324">
           <folding />
         </state>
       </provider>
