@@ -9,7 +9,6 @@
 namespace OurRead\RemoteLibraryBundle\Parser;
 
 
-
 class GoogleLibraryParser extends Parser
 {
     const URL = 'https://www.googleapis.com/books/v1/volumes?';
@@ -36,7 +35,7 @@ class GoogleLibraryParser extends Parser
 
     function getResponseFromGoogleLibrary()
     {
-        $this->unprocessedResponse = json_decode(file_get_contents(self::URL.'q='.$this->ISBN));
+        $this->unprocessedResponse = json_decode(file_get_contents(self::URL . 'q=' . $this->ISBN));
         $this->constructBookInfo();
     }
 

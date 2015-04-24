@@ -15,34 +15,40 @@
     </br>
 
     {% for rows in 0..3 %}
-    <div class="row">
-        <div class="col-sm-6">
-            <div class="thumbnail right-caption span4">
-                {% if rows == 0 %}
-                    {% set book_id = 1 %}
-                {% endif %}
-                <img src="{{ asset('bundles/our/img/' ~ book_id ~ '.jpg') }}" alt="pirma" class="fotos">
-                <div class="caption">
-                    <h4><b>Text Editing</b></h4>
-                    <h5>John Frusciante</h5>
-                    <p>Book about Microsoft Office programs. Teaches everything</p>
-                    <p><a href="/book/{{ book_id }}" class="btn btn-primary">Take a Look</a></p>
+        <div class="row">
+            <div class="col-sm-6">
+                <div class="thumbnail right-caption span4">
+                    {% if rows == 0 %}
+                        {% set book_id = 1 %}
+                    {% endif %}
+                    <img src="{{ asset('bundles/our/img/' ~ book_id ~ '.jpg') }}" alt="pirma" class="fotos">
+
+                    <div class="caption">
+                        <h4><b>Text Editing</b></h4>
+                        <h5>John Frusciante</h5>
+
+                        <p>Book about Microsoft Office programs. Teaches everything</p>
+
+                        <p><a href="/book/{{ book_id }}" class="btn btn-primary">Take a Look</a></p>
+                    </div>
                 </div>
             </div>
-        </div>
-        <div class="col-sm-6">
-            <div class="thumbnail right-caption span4">
-                {% set book_id = book_id + 1 %}
-                <img src="{{ asset('bundles/our/img/' ~ book_id ~ '.jpg') }}" alt="" class="fotos">
-                <div class="caption">
-                    <h4><b>Mind Speed</b></h4>
-                    <h5>Bill Gates</h5>
-                    <p>Book about bussines principles. It shows how to make 100 dollars </p>
-                    <p><a href="/book/{{ book_id }}" class="btn btn-primary">Take a Look</a></p>
+            <div class="col-sm-6">
+                <div class="thumbnail right-caption span4">
                     {% set book_id = book_id + 1 %}
+                    <img src="{{ asset('bundles/our/img/' ~ book_id ~ '.jpg') }}" alt="" class="fotos">
+
+                    <div class="caption">
+                        <h4><b>Mind Speed</b></h4>
+                        <h5>Bill Gates</h5>
+
+                        <p>Book about bussines principles. It shows how to make 100 dollars </p>
+
+                        <p><a href="/book/{{ book_id }}" class="btn btn-primary">Take a Look</a></p>
+                        {% set book_id = book_id + 1 %}
+                    </div>
                 </div>
             </div>
         </div>
-    </div>
     {% endfor %}
 {% endblock %}

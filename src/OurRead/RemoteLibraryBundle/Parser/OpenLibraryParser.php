@@ -21,8 +21,9 @@ class OpenLibraryParser extends Parser
         return $this->bookInfo;
     }
 
-    function getResponseFromOpenLibrary(){
-        $unprocessedResponse = json_decode(file_get_contents(self::URL.
-            'bibkeys=ISBN:'.$this->ISBN.'&format=json'));
+    function getResponseFromOpenLibrary()
+    {
+        $unprocessedResponse = json_decode(file_get_contents(self::URL .
+            'bibkeys=ISBN:' . $this->ISBN . '&format=json'));
     }
 }

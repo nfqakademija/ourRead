@@ -18,7 +18,7 @@ class Users extends BaseUser
      * @ORM\Id
      * @ORM\GeneratedValue(strategy="AUTO")
      */
-    protected  $id;
+    protected $id;
 
     /**
      * Get id

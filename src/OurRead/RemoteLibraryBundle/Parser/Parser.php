@@ -15,7 +15,8 @@ abstract class Parser
 
     abstract function parsedBookInfo();
 
-    function getBookInfoFromWS ($ISBN) {
+    function getBookInfoFromWS($ISBN)
+    {
         $this->ISBN = $ISBN;
         return $this->parsedBookInfo();
     }

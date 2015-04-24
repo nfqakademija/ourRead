@@ -233,6 +233,7 @@ $(document).ready(function () {
             })
         }, 800)
     }
+
     function c() {
         $("#feature_slider").addClass("disabled").append('<ul id="pagination" /><a href="" id="slide-left" /><a href="" id="slide-right" />');
         $("#feature_slider article").each(function () {
@@ -282,6 +283,7 @@ $(document).ready(function () {
                 })
             }, 600)
         }
+
         function g() {
             $(".slide.active").removeClass("active").addClass("previous");
             $(".slide.previous img").not(".fade").each(function () {
@@ -306,6 +308,7 @@ $(document).ready(function () {
                 })
             })
         }
+
         $(".slide:first").addClass("active").fadeIn(500, "easeInOutQuad", function () {
             $("#slide-left, #slide-right, #pagination").fadeIn(200, "easeInOutQuad", function () {
                 j()
@@ -357,6 +360,7 @@ $(document).ready(function () {
                 g()
             }
         }
+
         $("#slide-right").click(function () {
             clearInterval(f);
             i();
@@ -366,6 +370,7 @@ $(document).ready(function () {
             i()
         }, 5000)
     }
+
     c();
     $(window).resize(function () {
         $("#pagination").css({

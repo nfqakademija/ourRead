@@ -2,6 +2,7 @@
 namespace OurRead\OurBundle\Controller;
 
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
+use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\HttpKernel\Bundle\Bundle;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\Security\Core\SecurityContextInterface;
@@ -12,8 +13,13 @@ use FOS\UserBundle\Event\GetResponseUserEvent;
 use FOS\UserBundle\Event\FilterUserResponseEvent;
 use Symfony\Component\HttpFoundation\RedirectResponse;
 
-class MainPageController extends  Controller
+class MainPageController extends Controller
 {
+
+    public function testAction()
+    {
+        return new Response('Hello world!');
+    }
 
     /**
      * @return \Symfony\Component\HttpFoundation\Response
@@ -21,16 +27,17 @@ class MainPageController extends  Controller
     public function indexAction()
     {
         $request = new Request();
-        $login=$this->loginAction($request);
-        $form=$this->registrationAction($request);
+        $login = $this->loginAction($request);
+        $form = $this->registrationAction($request);
 
         return $this->render('OurBundle:MainPage:index.html.twig', array(
-            'loginForm'=>$login,
-            'registerForm'=>$form
+            'loginForm' => $login,
+            'registerForm' => $form
         ));
     }
 
-    public function loginAction(Request $request){
+    public function loginAction(Request $request)
+    {
         /** @var $session \Symfony\Component\HttpFoundation\Session\Session */
         $session = $request->getSession();
 
@@ -57,7 +64,7 @@ class MainPageController extends  Controller
 
         return (array(
             'last_username' => $lastUsername,
-            'error'         => $error,
+            'error' => $error,
             'csrf_token' => $csrfToken,
         ));
     }

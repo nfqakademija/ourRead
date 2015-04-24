@@ -9,6 +9,7 @@
 namespace OurRead\RemoteLibraryBundle;
 
 
-interface RemoteLibraryInterface {
+interface RemoteLibraryInterface
+{
     function getBookInfoByISBN();
 } 

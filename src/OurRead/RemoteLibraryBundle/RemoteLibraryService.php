@@ -7,7 +7,9 @@
  */
 
 namespace OurRead\RemoteLibraryBundle;
+
 use OurRead\RemoteLibraryBundle\Parser\GoogleLibraryParser;
+
 class RemoteLibraryService
 {
     private $parser;
