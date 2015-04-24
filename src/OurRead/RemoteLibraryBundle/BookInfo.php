@@ -12,14 +12,31 @@ namespace OurRead\RemoteLibraryBundle;
 class BookInfo
 {
     private $title;
-    private $author;
+    private $author = array();
     private $publisher;
     private $publishedDate;
     private $description;
     private $pageCount;
-    private $category;
+    private $category = array();
     private $language;
     private $imageLink;
+    private $isbn;
+
+    /**
+     * @param mixed $isbn
+     */
+    public function setIsbn($isbn)
+    {
+        $this->isbn = $isbn;
+    }
+
+    /**
+     * @return mixed
+     */
+    public function getIsbn()
+    {
+        return $this->isbn;
+    }
 
     /**
      * @param mixed $author
@@ -34,7 +51,7 @@ class BookInfo
      */
     public function getAuthor()
     {
-        return $this->author;
+        return $this->author[0];
     }
 
     /**
@@ -162,7 +179,7 @@ class BookInfo
      */
     public function getCategory()
     {
-        return $this->category;
+        return $this->category[0];
     }
 
 

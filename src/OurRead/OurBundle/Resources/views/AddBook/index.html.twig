@@ -1,0 +1,19 @@
+{% extends 'OurBundle:Layouts:AddBook.html.twig' %}
+{% form_theme form1 'bootstrap_3_layout.html.twig' %}
+{% form_theme form2 'bootstrap_3_layout.html.twig' %}
+
+{% block body %}
+    </br></br></br></br>
+    {{ form_start(form1) }}
+    {% for flashMessage in app.session.flashbag.get('notice') %}
+        <div class="alert alert-success">
+            {{ flashMessage }}
+        </div>
+
+    {% endfor %}
+    {{ form_errors(form1) }}
+    {{ form_end(form1) }}
+    {{ form_start(form2) }}
+    {{ form_errors(form2) }}
+    {{ form_end(form2) }}
+{% endblock %}

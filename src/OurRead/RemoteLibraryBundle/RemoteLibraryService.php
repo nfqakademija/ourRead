@@ -31,6 +31,10 @@ class RemoteLibraryService
      */
     function getBookInfoByISBN($ISBN)
     {
+        if(!$this->parser->getBookInfoFromWS($ISBN))
+        {
+            return false;
+        }
         $this->bookInfo->setAuthor($this->parser->getBookInfoFromWS($ISBN)->author);
         $this->bookInfo->setTitle($this->parser->getBookInfoFromWS($ISBN)->title);
         $this->bookInfo->setPublisher($this->parser->getBookInfoFromWS($ISBN)->publisher);
@@ -40,6 +44,7 @@ class RemoteLibraryService
         $this->bookInfo->setPageCount($this->parser->getBookInfoFromWS($ISBN)->pageCount);
         $this->bookInfo->setLanguage($this->parser->getBookInfoFromWS($ISBN)->language);
         $this->bookInfo->setImageLink($this->parser->getBookInfoFromWS($ISBN)->imageLink);
+        $this->bookInfo->setIsbn($ISBN);
 
         return $this->bookInfo;
     }

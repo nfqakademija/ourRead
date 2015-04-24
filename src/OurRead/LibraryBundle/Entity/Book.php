@@ -1,0 +1,358 @@
+<?php
+/**
+ * Created by PhpStorm.
+ * User: povilas
+ * Date: 4/18/15
+ * Time: 10:11 PM
+ */
+
+namespace OurRead\LibraryBundle\Entity;
+
+use Doctrine\ORM\Mapping as ORM;
+use Doctrine\Common\Collections\ArrayCollection;
+/**
+ * @ORM\Entity
+ * @ORM\Table(name="book")
+ */
+class Book
+{
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="id", type="integer")
+     * @ORM\Id
+     * @ORM\GeneratedValue(strategy="AUTO")
+     */
+    private $id;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="title", type="string", length=50)
+     */
+    private $title;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="author", type="string", length=20)
+     */
+    private $author;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="publisher", type="string", length=15)
+     */
+    private $publisher;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="publishedDate", type="date")
+     */
+
+    private $publishedDate;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="description", type="string", length=255)
+     */
+    private $description;
+
+    /**
+     * @ORM\ManyToMany(targetEntity="Category")
+     * @ORM\JoinTable(name="book_category",
+     *      joinColumns={@ORM\JoinColumn(name="book_id", referencedColumnName="id")},
+     *      inverseJoinColumns={@ORM\JoinColumn(name="category_id", referencedColumnName="id", unique=true)}
+     *      )
+     **/
+    private $category;
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="pageCount", type="integer")
+     */
+    private $pageCount;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="language", type="string", length=15)
+     */
+    private $language;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="isbn", type="string", length=20)
+     */
+    private $isbn;
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="owner", type="string", length=15)
+     */
+    private $owner;
+
+    /**
+     * Constructor
+     */
+    public function __construct()
+    {
+        $this->category = new \Doctrine\Common\Collections\ArrayCollection();
+    }
+
+    /**
+     * Get id
+     *
+     * @return integer 
+     */
+    public function getId()
+    {
+        return $this->id;
+    }
+
+    /**
+     * Set title
+     *
+     * @param string $title
+     * @return Book
+     */
+    public function setTitle($title)
+    {
+        $this->title = $title;
+
+        return $this;
+    }
+
+    /**
+     * Get title
+     *
+     * @return string 
+     */
+    public function getTitle()
+    {
+        return $this->title;
+    }
+
+    /**
+     * Set author
+     *
+     * @param string $author
+     * @return Book
+     */
+    public function setAuthor($author)
+    {
+        $this->author = $author;
+
+        return $this;
+    }
+
+    /**
+     * Get author
+     *
+     * @return string 
+     */
+    public function getAuthor()
+    {
+        return $this->author;
+    }
+
+    /**
+     * Set publisher
+     *
+     * @param string $publisher
+     * @return Book
+     */
+    public function setPublisher($publisher)
+    {
+        $this->publisher = $publisher;
+
+        return $this;
+    }
+
+    /**
+     * Get publisher
+     *
+     * @return string 
+     */
+    public function getPublisher()
+    {
+        return $this->publisher;
+    }
+
+    /**
+     * Set publishedDate
+     *
+     * @param \DateTime $publishedDate
+     * @return Book
+     */
+    public function setPublishedDate($publishedDate)
+    {
+        $this->publishedDate = $publishedDate;
+
+        return $this;
+    }
+
+    /**
+     * Get publishedDate
+     *
+     * @return \DateTime 
+     */
+    public function getPublishedDate()
+    {
+        return $this->publishedDate;
+    }
+
+    /**
+     * Set description
+     *
+     * @param string $description
+     * @return Book
+     */
+    public function setDescription($description)
+    {
+        $this->description = $description;
+
+        return $this;
+    }
+
+    /**
+     * Get description
+     *
+     * @return string 
+     */
+    public function getDescription()
+    {
+        return $this->description;
+    }
+
+    /**
+     * Set pageCount
+     *
+     * @param integer $pageCount
+     * @return Book
+     */
+    public function setPageCount($pageCount)
+    {
+        $this->pageCount = $pageCount;
+
+        return $this;
+    }
+
+    /**
+     * Get pageCount
+     *
+     * @return integer 
+     */
+    public function getPageCount()
+    {
+        return $this->pageCount;
+    }
+
+    /**
+     * Set language
+     *
+     * @param string $language
+     * @return Book
+     */
+    public function setLanguage($language)
+    {
+        $this->language = $language;
+
+        return $this;
+    }
+
+    /**
+     * Get language
+     *
+     * @return string 
+     */
+    public function getLanguage()
+    {
+        return $this->language;
+    }
+
+    /**
+     * Set isbn
+     *
+     * @param string $isbn
+     * @return Book
+     */
+    public function setIsbn($isbn)
+    {
+        $this->isbn = $isbn;
+
+        return $this;
+    }
+
+    /**
+     * Get isbn
+     *
+     * @return string 
+     */
+    public function getIsbn()
+    {
+        return $this->isbn;
+    }
+
+    /**
+     * Set owner
+     *
+     * @param string $owner
+     * @return Book
+     */
+    public function setOwner($owner)
+    {
+        $this->owner = $owner;
+
+        return $this;
+    }
+
+    /**
+     * Get owner
+     *
+     * @return string 
+     */
+    public function getOwner()
+    {
+        return $this->owner;
+    }
+
+    /**
+     * Add category
+     *
+     * @param \OurRead\LibraryBundle\Entity\Category $category
+     * @return Book
+     */
+    public function addCategory(\OurRead\LibraryBundle\Entity\Category $category)
+    {
+        $this->category[] = $category;
+
+        return $this;
+    }
+
+    /**
+     * Remove category
+     *
+     * @param \OurRead\LibraryBundle\Entity\Category $category
+     */
+    public function removeCategory(\OurRead\LibraryBundle\Entity\Category $category)
+    {
+        $this->category->removeElement($category);
+    }
+
+    /**
+     * Get category
+     *
+     * @return \Doctrine\Common\Collections\Collection 
+     */
+    public function getCategory()
+    {
+        return $this->category;
+    }
+}

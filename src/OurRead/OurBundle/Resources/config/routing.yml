@@ -4,6 +4,7 @@ OurHomepage:
 BookPage:
     path:     /book/{id}
     defaults: { _controller: OurBundle:BookPage:index }
+<<<<<<< HEAD
 UserPage:
     path:     /user
     defaults: { _controller: OurBundle:UserPage:index }
@@ -13,3 +14,14 @@ MyBooksPage:
 CategoriesPage:
     path:     /categories
     defaults: { _controller: OurBundle:CategoriesPage:index }
+=======
+saveBook:
+    path:     /save/{id}
+    defaults: { _controller: OurBundle:BookPage:saveBook }
+acttco:
+    path:     /contact
+    defaults: { _controller: OurBundle:Contact:contact }
+addBook:
+    path:     /addBook
+    defaults: { _controller: OurBundle:AddBook:save }
+>>>>>>> Entities

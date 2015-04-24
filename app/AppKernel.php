@@ -20,6 +20,8 @@ class AppKernel extends Kernel
             new OurRead\OurBundle\OurBundle(),
             new OurRead\RemoteLibraryBundle\RemoteLibraryBundle(),
             new FOS\UserBundle\FOSUserBundle(),
+            new OurRead\LibraryBundle\LibraryBundle(),
+            new Doctrine\Bundle\FixturesBundle\DoctrineFixturesBundle(),
         );
 
         if (in_array($this->getEnvironment(), array('dev', 'test'))) {
