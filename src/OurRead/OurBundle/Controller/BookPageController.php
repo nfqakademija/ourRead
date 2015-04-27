@@ -8,11 +8,10 @@
 namespace OurRead\OurBundle\Controller;
 
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
-<<<<<<< HEAD
-=======
+
 use OurRead\LibraryBundle\Entity\Book;
 use Symfony\Component\HttpFoundation\Response;
->>>>>>> Entities
+
 
 class BookPageController extends Controller
 {
