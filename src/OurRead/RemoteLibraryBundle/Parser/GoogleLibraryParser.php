@@ -36,11 +36,12 @@ class GoogleLibraryParser extends Parser
 
     private function getResponseFromGoogleLibrary()
     {
-<<<<<<< HEAD
-        $this->unprocessedResponse = json_decode(file_get_contents(self::URL . 'q=' . $this->ISBN));
-        $this->constructBookInfo();
-=======
-        $this->unprocessedResponse = json_decode(file_get_contents(self::URL.'q='.$this->ISBN));
+        $content = file_get_contents(self::URL.'q='.$this->ISBN);
+        if($content === false)
+        {
+            return false;
+        }
+        $this->unprocessedResponse = json_decode($content);
         return $this->constructBookInfo();
     }
 
@@ -58,7 +59,6 @@ class GoogleLibraryParser extends Parser
             if(!empty($this->unprocessedResponse->items[0]))
             {
                 $this->volumeInfo = $this->unprocessedResponse->items[0]->volumeInfo;
-                var_dump( $this->volumeInfo);
                 $this->title = $this->parseTitle();
                 $this->author = $this->parseAuthor();
                 $this->publisher = $this->parsePublisher();
@@ -75,7 +75,6 @@ class GoogleLibraryParser extends Parser
             }
         }
         return $this;
->>>>>>> Entities
     }
 
     private function parseTitle ()

@@ -13,9 +13,8 @@ use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
 use OurRead\LibraryBundle\Entity\Book;
-use OurRead\LibraryBundle\Entity\BookCover;
 use OurRead\LibraryBundle\Form\BookType;
-use OurRead\LibraryBundle\Form\BookCoverType;
+use OurRead\LibraryBundle\Form\IsbnType;
 
 
 class AddBookController extends Controller
@@ -35,16 +34,8 @@ var_dump($allBook);
 
     public function saveAction(Request $request)
     {
-        $form1 = $this->createFormBuilder()
-            ->add('isbn', 'text', array(
-                'label' => 'Fill book data by ISBN'
-            ))
-            ->add('search', 'submit', array(
-                'attr' => array(
-                    'class'=>'btn-info'
-                )
-            ))
-            ->getForm();
+
+        $form1 = $this->createForm(new IsbnType($bookInfo));
         $form1->handleRequest($request);
 
         $bookInfo = null;

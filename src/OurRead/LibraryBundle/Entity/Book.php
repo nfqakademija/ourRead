@@ -62,13 +62,15 @@ class Book
     private $description;
 
     /**
+     * @var ArrayCollection
+     *
      * @ORM\ManyToMany(targetEntity="Category")
      * @ORM\JoinTable(name="book_category",
      *      joinColumns={@ORM\JoinColumn(name="book_id", referencedColumnName="id")},
      *      inverseJoinColumns={@ORM\JoinColumn(name="category_id", referencedColumnName="id", unique=true)}
      *      )
      **/
-    private $category;
+    private $categories;
 
     /**
      * @var integer
@@ -97,13 +99,12 @@ class Book
      * @ORM\Column(name="owner", type="string", length=15)
      */
     private $owner;
-
     /**
      * Constructor
      */
     public function __construct()
     {
-        $this->category = new \Doctrine\Common\Collections\ArrayCollection();
+        $this->categories = new \Doctrine\Common\Collections\ArrayCollection();
     }
 
     /**
@@ -324,35 +325,35 @@ class Book
     }
 
     /**
-     * Add category
+     * Add categories
      *
-     * @param \OurRead\LibraryBundle\Entity\Category $category
+     * @param \OurRead\LibraryBundle\Entity\Category $categories
      * @return Book
      */
-    public function addCategory(\OurRead\LibraryBundle\Entity\Category $category)
+    public function addCategory(\OurRead\LibraryBundle\Entity\Category $categories)
     {
-        $this->category[] = $category;
+        $this->categories[] = $categories;
 
         return $this;
     }
 
     /**
-     * Remove category
+     * Remove categories
      *
-     * @param \OurRead\LibraryBundle\Entity\Category $category
+     * @param \OurRead\LibraryBundle\Entity\Category $categories
      */
-    public function removeCategory(\OurRead\LibraryBundle\Entity\Category $category)
+    public function removeCategory(\OurRead\LibraryBundle\Entity\Category $categories)
     {
-        $this->category->removeElement($category);
+        $this->categories->removeElement($categories);
     }
 
     /**
-     * Get category
+     * Get categories
      *
      * @return \Doctrine\Common\Collections\Collection 
      */
-    public function getCategory()
+    public function getCategories()
     {
-        return $this->category;
+        return $this->categories;
     }
 }
