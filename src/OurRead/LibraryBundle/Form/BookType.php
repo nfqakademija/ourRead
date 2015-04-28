@@ -12,6 +12,7 @@ namespace OurRead\LibraryBundle\Form;
 use Symfony\Component\Form\AbstractType;
 use Symfony\Component\Form\FormBuilderInterface;
 use Symfony\Component\OptionsResolver\OptionsResolverInterface;
+use Doctrine\ORM\EntityRepository;
 
 class BookType extends AbstractType
 {
@@ -48,6 +49,10 @@ class BookType extends AbstractType
                 'class' => 'OurRead\LibraryBundle\Entity\Category',
                 'property' => 'category',
                 'multiple' => true,
+                'query_builder' => function (EntityRepository $er) {
+                        return $er->createQueryBuilder('c')
+                            ->orderBy('c.category', 'ASC');
+                    },
             ))
             ->add('pageCount','text', array(
                 'data' => (is_object($this->bookInfo))?$this->bookInfo->getPageCount():''
