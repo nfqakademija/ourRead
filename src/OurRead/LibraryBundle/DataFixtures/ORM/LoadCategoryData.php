@@ -19,11 +19,47 @@ class LoadCategoryData implements FixtureInterface
      */
     public function load(ObjectManager $manager)
     {
-        $category = new Category();
-        
-        $category->setCategory('Fiction');
-        $manager->persist($category);
-        $manager->flush();
+        foreach ($this->getCategoriesList() as $row) {
+            $category = new Category();
+            $category->setCategory($row);
+            $manager->persist($category);
+            $manager->flush();
+        }
+    }
+
+    private function getCategoriesList()
+    {
+        $categoriesList = array (
+            'Science fiction',
+            'Satire',
+            'Drama',
+            'Action',
+            'Adventure',
+            'Romance',
+            'Mystery',
+            'Horror',
+            'Self help',
+            'Guide',
+            'Travel',
+            'Children',
+            'Religious',
+            'Science',
+            'History',
+            'Math',
+            'Anthology',
+            'Poetry',
+            'Encyclopedia',
+            'Dictionary',
+            'Comic',
+            'Art',
+            'Cookbook',
+            'Diary',
+            'Biography',
+            'Autobiography',
+            'Fantasy'
+        );
+
+        return $categoriesList;
 
     }
 

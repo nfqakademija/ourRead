@@ -9,9 +9,6 @@ img.fotos {
     margin-right: 9px;
 }
 
-.navbar-brand {
-    margin-top: -10px;
-}
 
 #brand {
     margin-left: -5px;
@@ -25,8 +22,6 @@ img.fotos {
 .caption > h3 {
 
 }
-
-@import url('//maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css');
 
 .knygom {
     border: 1px solid #DDD;
@@ -49,14 +44,8 @@ img.LBookFoto {
     margin-top: 150px;
 }
 
-<<<<<<< HEAD
-#test {
-    width: 260x;
-    height: 450px;
-=======
 #test{
 	width:260px;
 	height:450px;
->>>>>>> Entities
 
 }

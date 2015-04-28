@@ -44,8 +44,10 @@ class BookType extends AbstractType
             ->add('description','text', array(
                 'data' => (is_object($this->bookInfo))?$this->bookInfo->getDescription():''
             ))
-            ->add('category','text', array(
-                'data' => (is_object($this->bookInfo))?$this->bookInfo->getCategory():''
+            ->add('categories','entity', array(
+                'class' => 'OurRead\LibraryBundle\Entity\Category',
+                'property' => 'category',
+                'multiple' => true,
             ))
             ->add('pageCount','text', array(
                 'data' => (is_object($this->bookInfo))?$this->bookInfo->getPageCount():''

@@ -26,7 +26,6 @@
             <ul class="nav navbar-nav">
                 <li><a href="/" id="brand">Our Reads</a></li>
                 <li><a href="/categories">Categories</a> </li>
-                <li><a href="/mybooks">My Books</a></li>
                 <li class="dropdown">
                     <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Books
                         <span class="caret"></span></a>
@@ -39,7 +38,14 @@
                         <li><a href="#">Biography</a></li>
                     </ul>
                 </li>
+
+                {% if is_granted("IS_AUTHENTICATED_REMEMBERED") %}
+
+                <li><a href="/mybooks">My Books</a></li>
                 <li><a href="addBook" id="add_book">Add Book</a></li>
+
+                {% endif %}
+
             </ul>
 
             <div class="navbar-right">
@@ -52,6 +58,7 @@
                     </ul>
 
                 {% else %}
+
 
                     {% if loginForm is defined %}
                         {% if registerForm is defined %}
@@ -197,7 +204,12 @@
 
                             </div>
 
+
                         {% endif %}
+
+                        {% else %}
+                            <a href="/login" role="button" class="btn btn-default navbar-btn">Sign-up</a>
+                            <a href="/register" role="button" class="btn btn-primary navbar-btn">Sign-in</a>
                     {% endif %}
                 {% endif %}
 
@@ -205,7 +217,10 @@
                     <div class="form-group">
                         <input type="text" class="form-control" placeholder="Tile / Author / ISBN">
                     </div>
+
                     <button type="submit" class="btn btn-default">Search</button>
+
+
                 </form>
             </div>
 
