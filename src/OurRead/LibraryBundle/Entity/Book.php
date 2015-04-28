@@ -67,7 +67,7 @@ class Book
      * @ORM\ManyToMany(targetEntity="Category")
      * @ORM\JoinTable(name="book_category",
      *      joinColumns={@ORM\JoinColumn(name="book_id", referencedColumnName="id")},
-     *      inverseJoinColumns={@ORM\JoinColumn(name="category_id", referencedColumnName="id", unique=true)}
+     *      inverseJoinColumns={@ORM\JoinColumn(name="category_id", referencedColumnName="id")}
      *      )
      **/
     private $categories;

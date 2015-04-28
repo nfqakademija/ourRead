@@ -44,6 +44,7 @@ class AddBookController extends Controller
         {
             $bookInfo = $this->get('remote_library_service')
                 ->getBookInfoByISBN(str_replace('-','',$form1["isbn"]->getData()));
+            var_dump($bookInfo);
             if(!$bookInfo)
             {
                 $this->get('session')->getFlashBag()->add(

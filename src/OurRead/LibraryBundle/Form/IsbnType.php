@@ -26,7 +26,8 @@ class IsbnType extends AbstractType
     {
         $builder
             ->add('isbn', 'text', array(
-                'label' => 'Fill book data by ISBN'
+                'label' => 'Fill book data by ISBN',
+                'attr' => array('style' => 'width: 300px')
             ))
             ->add('search', 'submit', array(
                 'attr' => array(
