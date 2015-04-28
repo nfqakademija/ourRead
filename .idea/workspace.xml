@@ -2,26 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="1a151e2b-407d-464e-8598-5fc252c96fd4" name="Default" comment="">
-<<<<<<< HEAD
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/OurRead/LibraryBundle/Form/CategoryType.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/OurRead/LibraryBundle/Form/IsbnType.php" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/test/1" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/OurRead/OurBundle/Resources/public/img/a2.png" afterPath="$PROJECT_DIR$/src/OurRead/OurBundle/Resources/public/img/a2.png" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/OurRead/OurBundle/Controller/AddBookController.php" afterPath="$PROJECT_DIR$/src/OurRead/OurBundle/Controller/AddBookController.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/OurRead/LibraryBundle/Entity/Book.php" afterPath="$PROJECT_DIR$/src/OurRead/LibraryBundle/Entity/Book.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/OurRead/LibraryBundle/Form/BookType.php" afterPath="$PROJECT_DIR$/src/OurRead/LibraryBundle/Form/BookType.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/OurRead/OurBundle/Resources/public/css/CUSTOM.css" afterPath="$PROJECT_DIR$/src/OurRead/OurBundle/Resources/public/css/CUSTOM.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/OurRead/RemoteLibraryBundle/Parser/GoogleLibraryParser.php" afterPath="$PROJECT_DIR$/src/OurRead/RemoteLibraryBundle/Parser/GoogleLibraryParser.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/OurRead/LibraryBundle/DataFixtures/ORM/LoadCategoryData.php" afterPath="$PROJECT_DIR$/src/OurRead/LibraryBundle/DataFixtures/ORM/LoadCategoryData.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/OurRead/RemoteLibraryBundle/RemoteLibraryInterface.php" afterPath="$PROJECT_DIR$/src/OurRead/RemoteLibraryBundle/RemoteLibraryInterface.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/OurRead/OurBundle/Resources/views/Components/navigation.html.twig" afterPath="$PROJECT_DIR$/src/OurRead/OurBundle/Resources/views/Components/navigation.html.twig" />
-=======
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/OurRead/OurBundle/Resources/public/img/slides/aqua.jpg" afterPath="$PROJECT_DIR$/src/OurRead/OurBundle/Resources/public/img/slides/aqua.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/images/slides/aqua.jpg" afterPath="$PROJECT_DIR$/web/images/slides/aqua.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/AppBundle/Resources/public/fonts/fontawesome-webfont.ttf" afterPath="$PROJECT_DIR$/src/AppBundle/Resources/public/fonts/fontawesome-webfont.ttf" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/OurRead/LibraryBundle/Form/BookType.php" afterPath="$PROJECT_DIR$/src/OurRead/LibraryBundle/Form/BookType.php" />
->>>>>>> 5bb9d41aa197dd1f4fc61ddb492b3b80a3f30413
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/OurRead/OurBundle/Controller/UserPageController.php" afterPath="$PROJECT_DIR$/src/OurRead/OurBundle/Controller/UserPageController.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/OurRead/OurBundle/Resources/views/UserPage/user.html.twig" afterPath="$PROJECT_DIR$/src/OurRead/OurBundle/Resources/views/UserPage/user.html.twig" />
     </list>
     <ignored path="nfqakademija.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -44,10 +28,28 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="RemoteLibraryInterface.php" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/OurRead/RemoteLibraryBundle/RemoteLibraryInterface.php">
+      <file leaf-file-name="LibraryBundle.php" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/OurRead/LibraryBundle/LibraryBundle.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="10" column="0" selection-start="129" selection-end="129" vertical-scroll-proportion="-3.3333333" vertical-offset="0" max-vertical-offset="324">
+            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="-0.0" vertical-offset="0" max-vertical-offset="288">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="DefaultController.php" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/OurRead/RemoteLibraryBundle/Controller/DefaultController.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="-0.0" vertical-offset="0" max-vertical-offset="342">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="routing.yml" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/OurRead/RemoteLibraryBundle/Resources/config/routing.yml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="198">
               <folding />
             </state>
           </provider>
@@ -56,54 +58,7 @@
       <file leaf-file-name="AddBookController.php" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/OurRead/OurBundle/Controller/AddBookController.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="35" column="0" selection-start="801" selection-end="801" vertical-scroll-proportion="-16.666666" vertical-offset="0" max-vertical-offset="1260">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="BookPageController.php" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/OurRead/OurBundle/Controller/BookPageController.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="10" column="0" selection-start="187" selection-end="187" vertical-scroll-proportion="-0.6666667" vertical-offset="72" max-vertical-offset="936">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="CategoriesPageController.php" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/OurRead/OurBundle/Controller/CategoriesPageController.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="18" column="65" selection-start="473" selection-end="473" vertical-scroll-proportion="-7.3333335" vertical-offset="0" max-vertical-offset="342">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-<<<<<<< HEAD
-      <file leaf-file-name="MainPageController.php" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/OurRead/OurBundle/Controller/MainPageController.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="34" column="27" selection-start="1125" selection-end="1125" vertical-scroll-proportion="-13.296296" vertical-offset="73" max-vertical-offset="1764">
-              <folding />
-=======
-      <file leaf-file-name="BookType.php" pinned="false" current="true" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/OurRead/LibraryBundle/Form/BookType.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="53" column="49" selection-start="1806" selection-end="1806" vertical-scroll-proportion="0.47727272" vertical-offset="702" max-vertical-offset="1854">
-              <folding>
-                <element signature="e#7#90#0" expanded="true" />
-                <element signature="e#131#171#0" expanded="true" />
-              </folding>
->>>>>>> 5bb9d41aa197dd1f4fc61ddb492b3b80a3f30413
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="MyBooksPageController.php" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/OurRead/OurBundle/Controller/MyBooksPageController.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="21" column="56" selection-start="473" selection-end="473" vertical-scroll-proportion="-8.666667" vertical-offset="0" max-vertical-offset="432">
+            <state line="14" column="0" selection-start="283" selection-end="321" vertical-scroll-proportion="-6.0" vertical-offset="0" max-vertical-offset="1404">
               <folding />
             </state>
           </provider>
@@ -112,44 +67,27 @@
       <file leaf-file-name="UserPageController.php" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/OurRead/OurBundle/Controller/UserPageController.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="6" column="0" selection-start="0" selection-end="476" vertical-scroll-proportion="-1.3333334" vertical-offset="0" max-vertical-offset="342">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-<<<<<<< HEAD
-      <file leaf-file-name="navigation.html.twig" pinned="false" current="true" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/OurRead/OurBundle/Resources/views/Components/navigation.html.twig">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="211" column="32" selection-start="11946" selection-end="11946" vertical-scroll-proportion="0.41197821" vertical-offset="3571" max-vertical-offset="4248">
-              <folding />
-=======
-      <file leaf-file-name="LoadCategoryData.php" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/OurRead/LibraryBundle/DataFixtures/ORM/LoadCategoryData.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="23" column="39" selection-start="579" selection-end="579" vertical-scroll-proportion="-2.0370371" vertical-offset="323" max-vertical-offset="1242">
+            <state line="21" column="90" selection-start="582" selection-end="582" vertical-scroll-proportion="-11.333333" vertical-offset="0" max-vertical-offset="504">
               <folding>
-                <element signature="e#6#89#0" expanded="true" />
+                <element signature="e#115#172#0" expanded="true" />
               </folding>
->>>>>>> 5bb9d41aa197dd1f4fc61ddb492b3b80a3f30413
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="CUSTOM.css" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/web/bundles/our/css/CUSTOM.css">
+      <file leaf-file-name="user.html.twig" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/OurRead/OurBundle/Resources/views/UserPage/user.html.twig">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="48" column="17" selection-start="567" selection-end="567" vertical-scroll-proportion="0.0" vertical-offset="435" max-vertical-offset="1026">
+            <state line="82" column="20" selection-start="1854" selection-end="1854" vertical-scroll-proportion="0.54159594" vertical-offset="1157" max-vertical-offset="3600">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="GoogleLibraryParser.php" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/OurRead/RemoteLibraryBundle/Parser/GoogleLibraryParser.php">
+      <file leaf-file-name="Book.php" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/OurRead/LibraryBundle/Entity/Book.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="78" column="0" selection-start="2014" selection-end="2014" vertical-scroll-proportion="0.0" vertical-offset="1404" max-vertical-offset="3564">
+            <state line="98" column="47" selection-start="1910" selection-end="1910" vertical-scroll-proportion="22.666666" vertical-offset="2268" max-vertical-offset="6462">
               <folding />
             </state>
           </provider>
@@ -202,8 +140,6 @@
         <option value="$PROJECT_DIR$/app/Resources/FOSUserBundle/Security/login.html.twig" />
         <option value="$PROJECT_DIR$/app/Resources/FOSUserBundle/Registration/confirmed.html.twig" />
         <option value="$PROJECT_DIR$/app/Resources/FOSUserBundle/views/layout.html.twig" />
-        <option value="$PROJECT_DIR$/src/OurRead/OurBundle/Controller/UserPageController.php" />
-        <option value="$PROJECT_DIR$/src/OurRead/OurBundle/Resources/views/UserPage/user.html.twig" />
         <option value="$PROJECT_DIR$/src/OurRead/OurBundle/Controller/MyBooksPageController.php" />
         <option value="$PROJECT_DIR$/src/OurRead/OurBundle/Resources/views/MyBooksPage/MyBooks.html.twig" />
         <option value="$PROJECT_DIR$/src/OurRead/OurBundle/Controller/CategoriesPageController" />
@@ -218,21 +154,16 @@
         <option value="$PROJECT_DIR$/src/OurRead/OurBundle/Resources/views/AddBook/index.html.twig" />
         <option value="$PROJECT_DIR$/app/AppKernel.php" />
         <option value="$PROJECT_DIR$/src/OurRead/LibraryBundle/DataFixtures/ORM/LoadCategoryData.php" />
-        <option value="$PROJECT_DIR$/src/OurRead/LibraryBundle/Entity/Book.php" />
-<<<<<<< HEAD
         <option value="$PROJECT_DIR$/src/OurRead/RemoteLibraryBundle/BookInfo.php" />
         <option value="$PROJECT_DIR$/src/OurRead/RemoteLibraryBundle/RemoteLibraryService.php" />
         <option value="$PROJECT_DIR$/src/OurRead/RemoteLibraryBundle/Parser/GoogleLibraryParser.php" />
         <option value="$PROJECT_DIR$/src/OurRead/RemoteLibraryBundle/RemoteLibraryInterface.php" />
-        <option value="$PROJECT_DIR$/src/OurRead/OurBundle/Controller/AddBookController.php" />
         <option value="$PROJECT_DIR$/web/bundles/our/css/CUSTOM.css" />
         <option value="$PROJECT_DIR$/src/OurRead/OurBundle/Resources/views/Components/navigation.html.twig" />
-=======
+        <option value="$PROJECT_DIR$/src/OurRead/LibraryBundle/Entity/Book.php" />
         <option value="$PROJECT_DIR$/src/OurRead/OurBundle/Controller/AddBookController.php" />
-        <option value="$PROJECT_DIR$/src/OurRead/LibraryBundle/Form/IsbnType.php" />
-        <option value="$PROJECT_DIR$/src/OurRead/LibraryBundle/DataFixtures/ORM/LoadCategoryData.php" />
-        <option value="$PROJECT_DIR$/src/OurRead/LibraryBundle/Form/BookType.php" />
->>>>>>> 5bb9d41aa197dd1f4fc61ddb492b3b80a3f30413
+        <option value="$PROJECT_DIR$/src/OurRead/OurBundle/Controller/UserPageController.php" />
+        <option value="$PROJECT_DIR$/src/OurRead/OurBundle/Resources/views/UserPage/user.html.twig" />
       </list>
     </option>
   </component>
@@ -297,60 +228,6 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="web" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="nfqakademija" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="nfqakademija" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="web" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="bundles" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="nfqakademija" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="nfqakademija" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="web" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="bundles" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="our" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="nfqakademija" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="nfqakademija" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
               <option name="myItemId" value="src" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
@@ -370,6 +247,10 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="OurRead" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="RemoteLibraryBundle" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -392,6 +273,40 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="OurBundle" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="nfqakademija" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="nfqakademija" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="OurRead" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="OurBundle" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Resources" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="views" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="UserPage" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -450,14 +365,6 @@
               <option name="myItemId" value="Resources" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="views" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Components" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
           </PATH>
           <PATH>
             <PATH_ELEMENT>
@@ -481,7 +388,7 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="Resources" />
+              <option name="myItemId" value="Controller" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -495,25 +402,11 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="app" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="nfqakademija" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="nfqakademija" />
+              <option name="myItemId" value="src" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="app" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Resources" />
+              <option name="myItemId" value="OurRead" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -609,7 +502,7 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="24" width="1366" height="744" extended-state="6" />
-    <editor active="false" />
+    <editor active="true" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32935917" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32935917" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
@@ -617,7 +510,7 @@
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Framework" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.31405565" sideWeight="0.49925485" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.31405565" sideWeight="0.49925485" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.24963397" sideWeight="0.5007452" order="3" side_tool="true" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32935917" sideWeight="0.5" order="8" side_tool="true" content_ui="tabs" />
@@ -651,36 +544,10 @@
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="php">
-          <url>file://$PROJECT_DIR$/src/OurRead/OurBundle/Controller/UserPageController.php</url>
-          <line>8</line>
-        </line-breakpoint>
-      </breakpoints>
       <option name="time" value="1" />
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/vendor/friendsofsymfony/user-bundle/Controller/SecurityController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="63" column="48" selection-start="2379" selection-end="2379" vertical-scroll-proportion="1.375" vertical-offset="162" max-vertical-offset="1296" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/vendor/friendsofsymfony/user-bundle/Controller/ProfileController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1584" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/vendor/friendsofsymfony/user-bundle/Controller/ChangePasswordController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="-1.2163062" vertical-offset="731" max-vertical-offset="1332" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/vendor/friendsofsymfony/user-bundle/Resources/views/Registration/confirmed.html.twig">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="10" column="31" selection-start="484" selection-end="516" vertical-scroll-proportion="0.30560273" vertical-offset="0" max-vertical-offset="589" />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/vendor/friendsofsymfony/user-bundle/Controller/RegistrationController.php">
       <provider selected="true" editor-type-id="text-editor">
         <state line="12" column="0" selection-start="298" selection-end="298" vertical-scroll-proportion="-2.8935108" vertical-offset="1829" max-vertical-offset="2430" />
@@ -719,11 +586,6 @@
     <entry file="file://$PROJECT_DIR$/app/Resources/FOSUserBundle/Security/login.html.twig">
       <provider selected="true" editor-type-id="text-editor">
         <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="541" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/OurRead/OurBundle/Resources/views/UserPage/user.html.twig">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="9" column="0" selection-start="199" selection-end="199" vertical-scroll-proportion="-1.2585895" vertical-offset="858" max-vertical-offset="2952" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/OurRead/OurBundle/Resources/views/Default/index.html.twig">
@@ -825,13 +687,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/OurRead/LibraryBundle/Entity/Book.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="67" column="30" selection-start="1149" selection-end="1296" vertical-scroll-proportion="-40.666668" vertical-offset="0" max-vertical-offset="6444">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/OurRead/RemoteLibraryBundle/BookInfo.php">
       <provider selected="true" editor-type-id="text-editor">
         <state line="24" column="0" selection-start="401" selection-end="442" vertical-scroll-proportion="-12.666667" vertical-offset="0" max-vertical-offset="3348">
@@ -849,13 +704,6 @@
     <entry file="file://$PROJECT_DIR$/src/OurRead/OurBundle/Resources/config/routing.yml">
       <provider selected="true" editor-type-id="text-editor">
         <state line="23" column="50" selection-start="698" selection-end="725" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="540">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/OurRead/LibraryBundle/LibraryBundle.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="591">
           <folding />
         </state>
       </provider>
@@ -916,14 +764,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/OurRead/OurBundle/Controller/AddBookController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="35" column="0" selection-start="801" selection-end="801" vertical-scroll-proportion="-16.666666" vertical-offset="0" max-vertical-offset="1260">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-<<<<<<< HEAD
     <entry file="file://$PROJECT_DIR$/src/OurRead/OurBundle/Controller/BookPageController.php">
       <provider selected="true" editor-type-id="text-editor">
         <state line="10" column="0" selection-start="187" selection-end="187" vertical-scroll-proportion="-0.6666667" vertical-offset="72" max-vertical-offset="936">
@@ -939,9 +779,6 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/OurRead/OurBundle/Controller/MainPageController.php">
-=======
-    <entry file="file://$PROJECT_DIR$/src/OurRead/LibraryBundle/Form/IsbnType.php">
->>>>>>> 5bb9d41aa197dd1f4fc61ddb492b3b80a3f30413
       <provider selected="true" editor-type-id="text-editor">
         <state line="34" column="27" selection-start="1125" selection-end="1125" vertical-scroll-proportion="-13.296296" vertical-offset="73" max-vertical-offset="1764">
           <folding />
@@ -955,48 +792,82 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/OurRead/OurBundle/Controller/UserPageController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="6" column="0" selection-start="0" selection-end="476" vertical-scroll-proportion="-1.3333334" vertical-offset="0" max-vertical-offset="342">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/web/bundles/our/css/CUSTOM.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="48" column="17" selection-start="567" selection-end="567" vertical-scroll-proportion="0.0" vertical-offset="435" max-vertical-offset="1026">
+        <state line="48" column="17" selection-start="567" selection-end="567" vertical-scroll-proportion="0.74726987" vertical-offset="385" max-vertical-offset="1026">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/OurRead/OurBundle/Resources/views/Components/navigation.html.twig">
       <provider selected="true" editor-type-id="text-editor">
-<<<<<<< HEAD
-        <state line="211" column="32" selection-start="11946" selection-end="11946" vertical-scroll-proportion="0.41197821" vertical-offset="3571" max-vertical-offset="4248">
+        <state line="211" column="32" selection-start="11946" selection-end="11946" vertical-scroll-proportion="-8.407408" vertical-offset="3571" max-vertical-offset="4248">
           <folding />
-=======
-        <state line="23" column="39" selection-start="579" selection-end="579" vertical-scroll-proportion="-2.0370371" vertical-offset="323" max-vertical-offset="1242">
-          <folding>
-            <element signature="e#6#89#0" expanded="true" />
-          </folding>
->>>>>>> 5bb9d41aa197dd1f4fc61ddb492b3b80a3f30413
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/OurRead/OurBundle/DependencyInjection/Configuration.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="612">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/OurRead/OurBundle/DependencyInjection/OurExtension.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="591">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/OurRead/LibraryBundle/LibraryBundle.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="591">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/OurRead/RemoteLibraryBundle/Controller/DefaultController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="641">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/OurRead/RemoteLibraryBundle/Resources/config/routing.yml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="641">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/OurRead/LibraryBundle/Entity/Book.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="98" column="47" selection-start="1910" selection-end="1910" vertical-scroll-proportion="22.666666" vertical-offset="2268" max-vertical-offset="6462">
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/OurRead/OurBundle/Controller/AddBookController.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="16" column="35" selection-start="398" selection-end="398" vertical-scroll-proportion="10.666667" vertical-offset="486" max-vertical-offset="1332">
+        <state line="14" column="0" selection-start="283" selection-end="321" vertical-scroll-proportion="-6.0" vertical-offset="0" max-vertical-offset="1404">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/OurRead/LibraryBundle/Form/BookType.php">
+    <entry file="file://$PROJECT_DIR$/src/OurRead/OurBundle/Controller/UserPageController.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="53" column="49" selection-start="1806" selection-end="1806" vertical-scroll-proportion="0.47727272" vertical-offset="702" max-vertical-offset="1854">
+        <state line="21" column="90" selection-start="582" selection-end="582" vertical-scroll-proportion="-11.333333" vertical-offset="0" max-vertical-offset="504">
           <folding>
-            <element signature="e#7#90#0" expanded="true" />
-            <element signature="e#131#171#0" expanded="true" />
+            <element signature="e#115#172#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/OurRead/OurBundle/Resources/views/UserPage/user.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="82" column="20" selection-start="1854" selection-end="1854" vertical-scroll-proportion="0.54159594" vertical-offset="1157" max-vertical-offset="3600">
+          <folding />
         </state>
       </provider>
     </entry>

@@ -96,7 +96,7 @@ class Book
     /**
      * @var integer
      *
-     * @ORM\Column(name="owner", type="string", length=15)
+     * @ORM\Column(name="owner", type="integer")
      */
     private $owner;
     /**

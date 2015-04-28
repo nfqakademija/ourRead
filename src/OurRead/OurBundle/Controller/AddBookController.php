@@ -60,7 +60,10 @@ class AddBookController extends Controller
         if ($form2->isValid())
         {
             $em = $this->getDoctrine()->getManager();
-            $book->setOwner('OurRead');
+
+            $user = $this->container->get('security.context')->getToken()->getUser();
+
+            $book->setOwner( $user->getId() );
             $em->persist($book);
             $em->flush();
             $form2['bookCover']->getData()->move(__DIR__.'/../../../../web/test/',$book->getId());
