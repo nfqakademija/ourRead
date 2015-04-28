@@ -24,7 +24,6 @@ class RemoteLibraryService
         $this->parser = $parser;
         $this->bookInfo = $bookInfo;
     }
-
     /**
      * @param $ISBN
      * @return mixed

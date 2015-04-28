@@ -26,14 +26,13 @@ class AddBookController extends Controller
 
         $em = $this->getDoctrine()->getManager();
         $allBook = $em->getRepository('OurRead\LibraryBundle\Entity\Book')->findAll();
-var_dump($allBook);
+        var_dump($allBook);
         die;
-
 
         return $this->render('OurBundle:AddBook:index.html.twig');
     }
 
-    public function saveAction(Request $request)
+    public function addAction(Request $request)
     {
         $form1 = $this->createFormBuilder()
             ->add('isbn', 'text', array(
@@ -45,6 +44,7 @@ var_dump($allBook);
                 )
             ))
             ->getForm();
+
         $form1->handleRequest($request);
 
         $bookInfo = null;
