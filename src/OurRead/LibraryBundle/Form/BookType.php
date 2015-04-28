@@ -31,19 +31,19 @@ class BookType extends AbstractType
     {
         $builder
             ->add('title','text', array(
-                'data' => (is_object($this->bookInfo))?$this->bookInfo->getTitle():''
+                'data' => (is_object($this->bookInfo))?$this->bookInfo->getTitle():'',
+                'attr' => array('style' => 'width: 300px')
             ))
             ->add('author','text', array(
-                'data' => (is_object($this->bookInfo))?$this->bookInfo->getAuthor():''
+                'data' => (is_object($this->bookInfo))?$this->bookInfo->getAuthor():'',
+                'attr' => array('style' => 'width: 300px')
             ))
             ->add('publisher','text', array(
-                'data' => (is_object($this->bookInfo))?$this->bookInfo->getPublisher():''
+                'data' => (is_object($this->bookInfo))?$this->bookInfo->getPublisher():'',
+                'attr' => array('style' => 'width: 300px')
             ))
             ->add('publishedDate','date', array(
                 'data' => (is_object($this->bookInfo))?new \DateTime($this->bookInfo->getPublishedDate()):new \DateTime()
-            ))
-            ->add('description','text', array(
-                'data' => (is_object($this->bookInfo))?$this->bookInfo->getDescription():''
             ))
             ->add('categories','entity', array(
                 'class' => 'OurRead\LibraryBundle\Entity\Category',
@@ -53,17 +53,24 @@ class BookType extends AbstractType
                         return $er->createQueryBuilder('c')
                             ->orderBy('c.category', 'ASC');
                     },
+                'attr' => array('style' => 'width: 300px'),
             ))
             ->add('pageCount','text', array(
-                'data' => (is_object($this->bookInfo))?$this->bookInfo->getPageCount():''
+                'data' => (is_object($this->bookInfo))?$this->bookInfo->getPageCount():'',
+                'attr' => array('style' => 'width: 300px'),
             ))
             ->add('language','language', array(
                 'data' => (is_object($this->bookInfo))?$this->bookInfo->getLanguage():'',
-                'empty_value' => 'Please select language'
+                'empty_value' => 'Please select language',
+                'attr' => array('style' => 'width: 300px'),
             ))
             ->add('isbn','text', array(
                 'label' => 'ISBN',
                 'data' => (is_object($this->bookInfo))?$this->bookInfo->getISBN():'',
+                'attr' => array('style' => 'width: 300px')
+            ))
+            ->add('description','text', array(
+                'data' => (is_object($this->bookInfo))?$this->bookInfo->getDescription():''
             ))
             ->add('bookCover', 'file', array(
                 'mapped' => false

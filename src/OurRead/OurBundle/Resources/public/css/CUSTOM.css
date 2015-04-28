@@ -49,14 +49,16 @@ img.LBookFoto {
     margin-top: 150px;
 }
 
-<<<<<<< HEAD
 #test {
-    width: 260x;
+    width: 260px;
     height: 450px;
-=======
+}
 #test{
 	width:260px;
 	height:450px;
->>>>>>> Entities
+}
 
+.add-book-cover {
+    width: 400px;
+    height: 1200px;
 }
