@@ -2,18 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="1a151e2b-407d-464e-8598-5fc252c96fd4" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/OurRead/LibraryBundle/Form/CategoryType.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/OurRead/LibraryBundle/Form/IsbnType.php" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/test/1" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/OurRead/OurBundle/Resources/public/img/slides/aqua.jpg" afterPath="$PROJECT_DIR$/src/OurRead/OurBundle/Resources/public/img/slides/aqua.jpg" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/images/slides/aqua.jpg" afterPath="$PROJECT_DIR$/web/images/slides/aqua.jpg" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/AppBundle/Resources/public/fonts/fontawesome-webfont.ttf" afterPath="$PROJECT_DIR$/src/AppBundle/Resources/public/fonts/fontawesome-webfont.ttf" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/OurRead/OurBundle/Controller/AddBookController.php" afterPath="$PROJECT_DIR$/src/OurRead/OurBundle/Controller/AddBookController.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/OurRead/LibraryBundle/Entity/Book.php" afterPath="$PROJECT_DIR$/src/OurRead/LibraryBundle/Entity/Book.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/OurRead/LibraryBundle/Form/BookType.php" afterPath="$PROJECT_DIR$/src/OurRead/LibraryBundle/Form/BookType.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/OurRead/RemoteLibraryBundle/Parser/GoogleLibraryParser.php" afterPath="$PROJECT_DIR$/src/OurRead/RemoteLibraryBundle/Parser/GoogleLibraryParser.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/OurRead/LibraryBundle/DataFixtures/ORM/LoadCategoryData.php" afterPath="$PROJECT_DIR$/src/OurRead/LibraryBundle/DataFixtures/ORM/LoadCategoryData.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/OurRead/RemoteLibraryBundle/RemoteLibraryInterface.php" afterPath="$PROJECT_DIR$/src/OurRead/RemoteLibraryBundle/RemoteLibraryInterface.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="nfqakademija.iws" />
@@ -75,10 +67,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="BookType.php" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="BookType.php" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/OurRead/LibraryBundle/Form/BookType.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="48" column="41" selection-start="1556" selection-end="1556" vertical-scroll-proportion="-19.296297" vertical-offset="343" max-vertical-offset="1764">
+            <state line="53" column="49" selection-start="1806" selection-end="1806" vertical-scroll-proportion="0.47727272" vertical-offset="702" max-vertical-offset="1854">
               <folding>
                 <element signature="e#7#90#0" expanded="true" />
                 <element signature="e#131#171#0" expanded="true" />
@@ -108,10 +100,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="LoadCategoryData.php" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="LoadCategoryData.php" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/OurRead/LibraryBundle/DataFixtures/ORM/LoadCategoryData.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="23" column="39" selection-start="579" selection-end="579" vertical-scroll-proportion="0.0018484289" vertical-offset="377" max-vertical-offset="1242">
+            <state line="23" column="39" selection-start="579" selection-end="579" vertical-scroll-proportion="-2.0370371" vertical-offset="323" max-vertical-offset="1242">
               <folding>
                 <element signature="e#6#89#0" expanded="true" />
               </folding>
@@ -206,10 +198,10 @@
         <option value="$PROJECT_DIR$/src/OurRead/OurBundle/Resources/views/AddBook/index.html.twig" />
         <option value="$PROJECT_DIR$/src/OurRead/LibraryBundle/Form/CategoryType.php" />
         <option value="$PROJECT_DIR$/src/OurRead/LibraryBundle/Entity/Book.php" />
-        <option value="$PROJECT_DIR$/src/OurRead/LibraryBundle/Form/BookType.php" />
         <option value="$PROJECT_DIR$/src/OurRead/OurBundle/Controller/AddBookController.php" />
         <option value="$PROJECT_DIR$/src/OurRead/LibraryBundle/Form/IsbnType.php" />
         <option value="$PROJECT_DIR$/src/OurRead/LibraryBundle/DataFixtures/ORM/LoadCategoryData.php" />
+        <option value="$PROJECT_DIR$/src/OurRead/LibraryBundle/Form/BookType.php" />
       </list>
     </option>
   </component>
@@ -846,23 +838,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/OurRead/LibraryBundle/Form/BookType.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="48" column="41" selection-start="1556" selection-end="1556" vertical-scroll-proportion="-19.296297" vertical-offset="343" max-vertical-offset="1764">
-          <folding>
-            <element signature="e#7#90#0" expanded="true" />
-            <element signature="e#131#171#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/OurRead/OurBundle/Controller/AddBookController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="16" column="35" selection-start="398" selection-end="398" vertical-scroll-proportion="10.666667" vertical-offset="486" max-vertical-offset="1332">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/OurRead/LibraryBundle/Form/IsbnType.php">
       <provider selected="true" editor-type-id="text-editor">
         <state line="6" column="3" selection-start="88" selection-end="88" vertical-scroll-proportion="11.555555" vertical-offset="420" max-vertical-offset="936">
@@ -898,9 +873,26 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/OurRead/LibraryBundle/DataFixtures/ORM/LoadCategoryData.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="23" column="39" selection-start="579" selection-end="579" vertical-scroll-proportion="0.0018484289" vertical-offset="377" max-vertical-offset="1242">
+        <state line="23" column="39" selection-start="579" selection-end="579" vertical-scroll-proportion="-2.0370371" vertical-offset="323" max-vertical-offset="1242">
           <folding>
             <element signature="e#6#89#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/OurRead/OurBundle/Controller/AddBookController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="16" column="35" selection-start="398" selection-end="398" vertical-scroll-proportion="10.666667" vertical-offset="486" max-vertical-offset="1332">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/OurRead/LibraryBundle/Form/BookType.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="53" column="49" selection-start="1806" selection-end="1806" vertical-scroll-proportion="0.47727272" vertical-offset="702" max-vertical-offset="1854">
+          <folding>
+            <element signature="e#7#90#0" expanded="true" />
+            <element signature="e#131#171#0" expanded="true" />
           </folding>
         </state>
       </provider>
