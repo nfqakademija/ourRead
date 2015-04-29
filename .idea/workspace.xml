@@ -2,12 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="1a151e2b-407d-464e-8598-5fc252c96fd4" name="Default" comment="">
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.merge_file_BuCluw" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.merge_file_LO1lFz" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/images/slides/aqua.jpg" afterPath="$PROJECT_DIR$/web/images/slides/aqua.jpg" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/AppBundle/Resources/public/fonts/fontawesome-webfont.ttf" afterPath="$PROJECT_DIR$/src/AppBundle/Resources/public/fonts/fontawesome-webfont.ttf" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/README.md" afterPath="$PROJECT_DIR$/README.md" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="nfqakademija.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -73,7 +70,7 @@
       <file leaf-file-name="README.md" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/README.md">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="2" column="404" selection-start="413" selection-end="413" vertical-scroll-proportion="0.06792453" vertical-offset="0" max-vertical-offset="792">
+            <state line="2" column="347" selection-start="356" selection-end="356" vertical-scroll-proportion="0.06792453" vertical-offset="0" max-vertical-offset="792">
               <folding />
             </state>
           </provider>
@@ -1057,7 +1054,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/README.md">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="2" column="404" selection-start="413" selection-end="413" vertical-scroll-proportion="0.06792453" vertical-offset="0" max-vertical-offset="792">
+        <state line="2" column="347" selection-start="356" selection-end="356" vertical-scroll-proportion="0.06792453" vertical-offset="0" max-vertical-offset="792">
           <folding />
         </state>
       </provider>

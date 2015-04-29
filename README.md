@@ -1,6 +1,6 @@
 OurRead
 
-[![Scrutinizer Code Quality](https://scrutinizer-ci.com/g/nfqakademija/ourRead/badges/quality-score.png?b=master)](https://scrutinizer-ci.com/g/nfqakademija/ourRead/?branch=master)[![Build Status](https://scrutinizer-ci.com/g/nfqakademija/ourRead/badges/build.png?b=master)](https://scrutinizer-ci.com/g/nfqakademija/ourRead/build-status/master)[![Build Status](https://travis-ci.org/nfqakademija/ourRead.svg)](https://travis-ci.org/nfqakademija/ourRead)
+[![Scrutinizer Code Quality](https://scrutinizer-ci.com/g/nfqakademija/ourRead/badges/quality-score.png?b=master)](https://scrutinizer-ci.com/g/nfqakademija/ourRead/?branch=master) [![Build Status](https://scrutinizer-ci.com/g/nfqakademija/ourRead/badges/build.png?b=master)](https://scrutinizer-ci.com/g/nfqakademija/ourRead/build-status/master) [![Build Status](https://travis-ci.org/nfqakademija/ourRead.svg)](https://travis-ci.org/nfqakademija/ourRead)
 ========================
 
 NFQ Academy Vilnius 2015 project 
