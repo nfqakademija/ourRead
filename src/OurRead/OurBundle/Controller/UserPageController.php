@@ -7,10 +7,6 @@
 namespace OurRead\OurBundle\Controller;
 
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
-use OurRead\LibraryBundle\Entity\Book;
-use Symfony\Component\HttpFoundation\Response;
-use Symfony\Component\HttpKernel\Bundle\Bundle;
-use Symfony\Component\HttpFoundation\Request;
 
 
 class UserPageController extends Controller

@@ -13,9 +13,9 @@ abstract class Parser
 {
     protected $ISBN;
 
-    abstract function parsedBookInfo();
+    abstract public function parsedBookInfo();
 
-    function getBookInfoFromWS($ISBN)
+    public function getBookInfoFromWS($ISBN)
     {
         $this->ISBN = $ISBN;
         return $this->parsedBookInfo();

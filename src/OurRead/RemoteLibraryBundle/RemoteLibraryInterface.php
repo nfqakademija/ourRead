@@ -14,5 +14,5 @@ interface RemoteLibraryInterface {
      * @param $ISBN
      * @return mixed
      */
-    function getBookInfoByISBN($ISBN);
+    public function getBookInfoByISBN($ISBN);
 } 

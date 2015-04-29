@@ -29,7 +29,7 @@ class GoogleLibraryParser extends Parser
     /**
      * @return $this|bool
      */
-    function parsedBookInfo()
+    public function parsedBookInfo()
     {
         return $this->getResponseFromGoogleLibrary();
     }

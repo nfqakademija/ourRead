@@ -22,12 +22,6 @@ class AddBookController extends Controller
 
     public function indexAction()
     {
-
-        $em = $this->getDoctrine()->getManager();
-        $allBook = $em->getRepository('OurRead\LibraryBundle\Entity\Book')->findAll();
-        var_dump($allBook);
-        die;
-
         return $this->render('OurBundle:AddBook:index.html.twig');
     }
 
@@ -35,7 +29,7 @@ class AddBookController extends Controller
     {
 
 
-        $form1 = $this->createForm(new IsbnType($bookInfo));
+        $form1 = $this->createForm(new IsbnType());
 
         $form1->handleRequest($request);
 
@@ -65,8 +59,6 @@ class AddBookController extends Controller
             $book->setOwner($user->getId());
             $em->persist($book);
             $em->flush();
-            $content = file_get_contents('http://bks9.books.google.lt/books/content?id=_AZ_AwAAQBAJ&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api');
-            //file_put_contents(__DIR__.'/../../../../web/test/image.jpg', $content);
             $form2['bookCover']->getData()->move(__DIR__.'/../../../../web/upload/',$book->getId());
             return new Response('<html><body>Knyga prideta sekmingai</body></html>');
         }

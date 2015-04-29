@@ -19,7 +19,7 @@ class RemoteLibraryService
      * @param GoogleLibraryParser $parser
      * @param BookInfo $bookInfo
      */
-    function __construct(GoogleLibraryParser $parser, BookInfo $bookInfo)
+    public function __construct(GoogleLibraryParser $parser, BookInfo $bookInfo)
     {
         $this->parser = $parser;
         $this->bookInfo = $bookInfo;
@@ -28,7 +28,7 @@ class RemoteLibraryService
      * @param $ISBN
      * @return mixed
      */
-    function getBookInfoByISBN($ISBN)
+    public function getBookInfoByISBN($ISBN)
     {
         if(!$this->parser->getBookInfoFromWS($ISBN))
         {
