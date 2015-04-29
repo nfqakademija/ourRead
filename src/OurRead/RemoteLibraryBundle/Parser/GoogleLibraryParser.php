@@ -139,7 +139,7 @@ class GoogleLibraryParser extends Parser
     {
         if(!empty($this->volumeInfo->pageCount))
         {
-           return $this->volumeInfo->pageCount;
+            return $this->volumeInfo->pageCount;
         }
         else
         {

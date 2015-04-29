@@ -37,7 +37,7 @@ class AddBookController extends Controller
         if ($form1->isValid())
         {
             $bookInfo = $this->get('remote_library_service')
-                ->getBookInfoByISBN(str_replace('-','',$form1["isbn"]->getData()));
+                ->getBookInfoByISBN(str_replace('-', '', $form1["isbn"]->getData()));
             if(!$bookInfo)
             {
                 $this->get('session')->getFlashBag()->add(
@@ -59,7 +59,7 @@ class AddBookController extends Controller
             $book->setOwner($user->getId());
             $em->persist($book);
             $em->flush();
-            $form2['bookCover']->getData()->move(__DIR__.'/../../../../web/upload/',$book->getId());
+            $form2['bookCover']->getData()->move(__DIR__.'/../../../../web/upload/', $book->getId());
             return new Response('<html><body>Knyga prideta sekmingai</body></html>');
         }
         return $this->render('OurBundle:AddBook:index.html.twig', array(

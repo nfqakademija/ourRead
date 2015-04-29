@@ -16,7 +16,8 @@ use Symfony\Component\HttpFoundation\Request;
 class MyBooksPageController extends Controller
 {
 
-    public function indexAction(){
+    public function indexAction()
+    {
 
 
         return $this->render('OurBundle:MyBooksPage:MyBooks.html.twig');

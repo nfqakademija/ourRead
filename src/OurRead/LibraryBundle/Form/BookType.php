@@ -30,22 +30,22 @@ class BookType extends AbstractType
     public function buildForm(FormBuilderInterface $builder, array $options)
     {
         $builder
-            ->add('title','text', array(
+            ->add('title', 'text', array(
                 'data' => (is_object($this->bookInfo))?$this->bookInfo->getTitle():'',
                 'attr' => array('style' => 'width: 300px')
             ))
-            ->add('author','text', array(
+            ->add('author', 'text', array(
                 'data' => (is_object($this->bookInfo))?$this->bookInfo->getAuthor():'',
                 'attr' => array('style' => 'width: 300px')
             ))
-            ->add('publisher','text', array(
+            ->add('publisher', 'text', array(
                 'data' => (is_object($this->bookInfo))?$this->bookInfo->getPublisher():'',
                 'attr' => array('style' => 'width: 300px')
             ))
-            ->add('publishedDate','date', array(
+            ->add('publishedDate', 'date', array(
                 'data' => (is_object($this->bookInfo))?new \DateTime($this->bookInfo->getPublishedDate()):new \DateTime()
             ))
-            ->add('categories','entity', array(
+            ->add('categories', 'entity', array(
                 'class' => 'OurRead\LibraryBundle\Entity\Category',
                 'property' => 'category',
                 'multiple' => true,
@@ -55,21 +55,21 @@ class BookType extends AbstractType
                     },
                 'attr' => array('style' => 'width: 300px'),
             ))
-            ->add('pageCount','text', array(
+            ->add('pageCount', 'text', array(
                 'data' => (is_object($this->bookInfo))?$this->bookInfo->getPageCount():'',
                 'attr' => array('style' => 'width: 300px'),
             ))
-            ->add('language','language', array(
+            ->add('language', 'language', array(
                 'data' => (is_object($this->bookInfo))?$this->bookInfo->getLanguage():'',
                 'empty_value' => 'Please select language',
                 'attr' => array('style' => 'width: 300px'),
             ))
-            ->add('isbn','text', array(
+            ->add('isbn', 'text', array(
                 'label' => 'ISBN',
                 'data' => (is_object($this->bookInfo))?$this->bookInfo->getISBN():'',
                 'attr' => array('style' => 'width: 300px')
             ))
-            ->add('description','text', array(
+            ->add('description', 'text', array(
                 'data' => (is_object($this->bookInfo))?$this->bookInfo->getDescription():''
             ))
             ->add('bookCover', 'file', array(
