@@ -2,9 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="1a151e2b-407d-464e-8598-5fc252c96fd4" name="Default" comment="">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.travis.yml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/images/slides/aqua.jpg" afterPath="$PROJECT_DIR$/web/images/slides/aqua.jpg" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/AppBundle/Resources/public/fonts/fontawesome-webfont.ttf" afterPath="$PROJECT_DIR$/src/AppBundle/Resources/public/fonts/fontawesome-webfont.ttf" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/README.md" afterPath="$PROJECT_DIR$/README.md" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="nfqakademija.iws" />
@@ -59,15 +59,6 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="DemoController.php" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Acme/DemoBundle/Controller/DemoController.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="31" column="5" selection-start="781" selection-end="781" vertical-scroll-proportion="-14.703704" vertical-offset="35" max-vertical-offset="576">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="MyBooksPageController.php" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/OurRead/OurBundle/Controller/MyBooksPageController.php">
           <provider selected="true" editor-type-id="text-editor">
@@ -77,10 +68,19 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="README.md" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="README.md" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/README.md">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="2" column="181" selection-start="190" selection-end="190" vertical-scroll-proportion="0.06792453" vertical-offset="0" max-vertical-offset="792">
+            <state line="2" column="181" selection-start="190" selection-end="190" vertical-scroll-proportion="-1.44" vertical-offset="0" max-vertical-offset="792">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name=".travis.yml" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/.travis.yml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="5" column="0" selection-start="49" selection-end="49" vertical-scroll-proportion="0.15845071" vertical-offset="0" max-vertical-offset="568">
               <folding />
             </state>
           </provider>
@@ -151,7 +151,6 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/src/Acme/DemoBundle/Resources/config/routing.yml" />
         <option value="$PROJECT_DIR$/app/config/config.yml" />
         <option value="$PROJECT_DIR$/src/OurRead/OurBundle/Entity/Users.php" />
         <option value="$PROJECT_DIR$/vendor/friendsofsymfony/user-bundle/Controller/SecurityController.php" />
@@ -202,6 +201,7 @@
         <option value="$PROJECT_DIR$/src/OurRead/LibraryBundle/Form/BookType.php" />
         <option value="$PROJECT_DIR$/src/OurRead/OurBundle/Controller/MyBooksPageController.php" />
         <option value="$PROJECT_DIR$/README.md" />
+        <option value="$PROJECT_DIR$/.travis.yml" />
       </list>
     </option>
   </component>
@@ -688,11 +688,6 @@
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/vendor/friendsofsymfony/user-bundle/Controller/SecurityController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="63" column="48" selection-start="2379" selection-end="2379" vertical-scroll-proportion="1.375" vertical-offset="162" max-vertical-offset="1296" />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/vendor/friendsofsymfony/user-bundle/Controller/ProfileController.php">
       <provider selected="true" editor-type-id="text-editor">
         <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1584" />
@@ -1053,7 +1048,14 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/README.md">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="2" column="181" selection-start="190" selection-end="190" vertical-scroll-proportion="0.06792453" vertical-offset="0" max-vertical-offset="792">
+        <state line="2" column="181" selection-start="190" selection-end="190" vertical-scroll-proportion="-1.44" vertical-offset="0" max-vertical-offset="792">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.travis.yml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="5" column="0" selection-start="49" selection-end="49" vertical-scroll-proportion="0.15845071" vertical-offset="0" max-vertical-offset="568">
           <folding />
         </state>
       </provider>
