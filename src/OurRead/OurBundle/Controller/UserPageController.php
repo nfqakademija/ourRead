@@ -14,8 +14,9 @@ class UserPageController extends Controller
     public function indexAction()
     {
 
-        $em = $this->getDoctrine()->getManager();
-        $books = $em->getRepository('OurRead\LibraryBundle\Entity\Book')->findByOwner(16);
+        $repository = $this->getDoctrine()
+            ->getRepository('OurRead\LibraryBundle\Entity\Book');
+        $books = $repository->findByOwner(1);
 
         return $this->render('OurBundle:UserPage:user.html.twig',
         array('books'=>$books));

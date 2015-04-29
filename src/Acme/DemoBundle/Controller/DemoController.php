@@ -41,7 +41,7 @@ class DemoController extends Controller
         $form->handleRequest($request);
 
         if ($form->isValid()) {
-            $mailer = $this->get('mailer');
+            //$mailer = $this->get('mailer');
 
             // .. setup a message and send it
             // http://symfony.com/doc/current/cookbook/email.html

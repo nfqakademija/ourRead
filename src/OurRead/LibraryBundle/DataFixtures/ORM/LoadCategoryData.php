@@ -23,13 +23,13 @@ class LoadCategoryData implements FixtureInterface
             $category = new Category();
             $category->setCategory($row);
             $manager->persist($category);
-            $manager->flush();
         }
+        $manager->flush();
     }
 
     private function getCategoriesList()
     {
-        $categoriesList = array (
+        $categoriesList = array(
             'Science fiction',
             'Satire',
             'Drama',
@@ -60,7 +60,6 @@ class LoadCategoryData implements FixtureInterface
         );
 
         return $categoriesList;
-
     }
 
 } 

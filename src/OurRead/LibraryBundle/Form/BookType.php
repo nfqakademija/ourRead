@@ -18,7 +18,7 @@ class BookType extends AbstractType
 {
     private $bookInfo;
 
-    function __construct($bookInfo)
+    public function __construct($bookInfo)
     {
         $this->bookInfo = $bookInfo;
     }

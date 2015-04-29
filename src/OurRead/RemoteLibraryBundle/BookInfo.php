@@ -39,7 +39,7 @@ class BookInfo
     }
 
     /**
-     * @param mixed $author
+     * @param $author
      */
     public function setAuthor($author)
     {

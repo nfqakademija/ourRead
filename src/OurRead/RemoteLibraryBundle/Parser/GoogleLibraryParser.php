@@ -14,12 +14,12 @@ class GoogleLibraryParser extends Parser
     const URL = 'https://www.googleapis.com/books/v1/volumes?';
 
     public $title;
-    public $author = array();
+    public $author;
     public $publisher;
     public $publishedDate;
     public $description;
     public $pageCount;
-    public $category = array();
+    public $category;
     public $language;
     public $imageLink;
 
@@ -93,13 +93,9 @@ class GoogleLibraryParser extends Parser
 
     private function parseAuthor ()
     {
-        if(!empty($this->volumeInfo->authors))
+        if(!empty($this->volumeInfo->authors[0]))
         {
-            foreach($this->volumeInfo->authors as $key => $value)
-            {
-                $authors[$key] = $value;
-            }
-            return $authors;
+            return $this->volumeInfo->authors[0];
         }
         else
         {
@@ -151,15 +147,14 @@ class GoogleLibraryParser extends Parser
         }
     }
 
+    /**
+     * @return string
+     */
     private function parseCategory()
     {
-        if(!empty($this->volumeInfo->categories))
+        if(!empty($this->volumeInfo->categories[0]))
         {
-            foreach($this->volumeInfo->categories as $key => $value)
-            {
-                $categories[$key] = $value;
-            }
-            return $categories;
+            return $this->volumeInfo->categories[0];
         }
         else
         {
@@ -180,10 +175,10 @@ class GoogleLibraryParser extends Parser
     }
 
     private function parseImageLink()
-    {
-        if (!empty($this->volumeInfo->imageLinks->thumbnail))
+    {   $image = $this->volumeInfo->imageLinks->thumbnail;
+        if (!empty($image))
         {
-            return $this->volumeInfo->imageLinks->thumbnail;
+            return $image;
         }
         else
         {

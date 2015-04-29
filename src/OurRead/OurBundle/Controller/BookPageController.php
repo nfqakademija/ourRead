@@ -31,7 +31,6 @@ class BookPageController extends Controller
     public function saveBookAction($id)
     {
         $bookInfo = $this->get('remote_library_service')->getBookInfoByISBN($id);
-        var_dump($bookInfo);
         $book = new Book();
         $book->setAuthor($bookInfo->getAuthor())
             ->setTitle($bookInfo->getTitle())
@@ -39,7 +38,6 @@ class BookPageController extends Controller
             ->setPublisher($bookInfo->getPublisher())
             ->setDescription($bookInfo->getDescription())
             ->setPageCount((int)$bookInfo->getPageCount())
-            ->setCategory($bookInfo->getCategory())
             ->setLanguage($bookInfo->getLanguage())
             ->setIsbn($bookInfo->getIsbn())
             ->setOwner('OurRead');

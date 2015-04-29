@@ -20,7 +20,7 @@ class DemoControllerTest extends WebTestCase
         $client = static::createClient();
 
         // goes to the secure page
-        $crawler = $client->request('GET', '/demo/secured/hello/World');
+      //  $crawler = $client->request('GET', '/demo/secured/hello/World');
 
         // redirects to the login page
         $crawler = $client->followRedirect();

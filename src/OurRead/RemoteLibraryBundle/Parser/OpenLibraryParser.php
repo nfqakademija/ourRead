@@ -11,5 +11,8 @@ namespace OurRead\RemoteLibraryBundle\Parser;
 
 class OpenLibraryParser extends Parser
 {
-
+    public function parserBookInfo()
+    {
+        
+    }
 }

@@ -47,7 +47,7 @@ class Book
     private $publisher;
 
     /**
-     * @var string
+     * @var \DateTime
      *
      * @ORM\Column(name="publishedDate", type="date")
      */
@@ -302,10 +302,8 @@ class Book
     }
 
     /**
-     * Set owner
-     *
-     * @param string $owner
-     * @return Book
+     * @param integer $owner
+     * @return $this
      */
     public function setOwner($owner)
     {
