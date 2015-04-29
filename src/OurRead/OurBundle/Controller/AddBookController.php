@@ -44,7 +44,6 @@ class AddBookController extends Controller
         {
             $bookInfo = $this->get('remote_library_service')
                 ->getBookInfoByISBN(str_replace('-','',$form1["isbn"]->getData()));
-            var_dump($bookInfo);
             if(!$bookInfo)
             {
                 $this->get('session')->getFlashBag()->add(
@@ -63,11 +62,12 @@ class AddBookController extends Controller
             $em = $this->getDoctrine()->getManager();
 
             $user = $this->container->get('security.context')->getToken()->getUser();
-
-            $book->setOwner( $user->getId() );
+            $book->setOwner($user->getId());
             $em->persist($book);
             $em->flush();
-            $form2['bookCover']->getData()->move(__DIR__.'/../../../../web/test/',$book->getId());
+            $content = file_get_contents('http://bks9.books.google.lt/books/content?id=_AZ_AwAAQBAJ&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api');
+            //file_put_contents(__DIR__.'/../../../../web/test/image.jpg', $content);
+            $form2['bookCover']->getData()->move(__DIR__.'/../../../../web/upload/',$book->getId());
             return new Response('<html><body>Knyga prideta sekmingai</body></html>');
         }
         return $this->render('OurBundle:AddBook:index.html.twig', array(
