@@ -30,27 +30,4 @@ class DemoController extends Controller
     {
         return array('name' => $name);
     }
-
-    /**
-     * @Route("/contact", name="_demo_contact")
-     * @Template()
-     */
-    public function contactAction(Request $request)
-    {
-        $form = $this->createForm(new ContactType());
-        $form->handleRequest($request);
-
-        if ($form->isValid()) {
-            //$mailer = $this->get('mailer');
-
-            // .. setup a message and send it
-            // http://symfony.com/doc/current/cookbook/email.html
-
-            $request->getSession()->getFlashBag()->set('notice', 'Message sent!');
-
-            return new RedirectResponse($this->generateUrl('_demo'));
-        }
-
-        return array('form' => $form->createView());
-    }
 }

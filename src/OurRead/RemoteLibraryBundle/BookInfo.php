@@ -12,12 +12,12 @@ namespace OurRead\RemoteLibraryBundle;
 class BookInfo
 {
     private $title;
-    private $author = array();
+    private $author;
     private $publisher;
     private $publishedDate;
     private $description;
     private $pageCount;
-    private $category = array();
+    private $category;
     private $language;
     private $imageLink;
     private $isbn;
@@ -51,7 +51,7 @@ class BookInfo
      */
     public function getAuthor()
     {
-        return $this->author[0];
+        return $this->author;
     }
 
     /**
@@ -179,7 +179,7 @@ class BookInfo
      */
     public function getCategory()
     {
-        return $this->category[0];
+        return $this->category;
     }
 
 
