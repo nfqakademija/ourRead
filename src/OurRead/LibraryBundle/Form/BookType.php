@@ -100,5 +100,4 @@ class BookType extends AbstractType
     {
         return 'book_type';
     }
-
 }

@@ -18,11 +18,6 @@ class MyBooksPageController extends Controller
 
     public function indexAction()
     {
-
-
         return $this->render('OurBundle:MyBooksPage:MyBooks.html.twig');
     }
-
-
-
 }

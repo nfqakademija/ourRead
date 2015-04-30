@@ -8,11 +8,11 @@
 
 namespace OurRead\RemoteLibraryBundle;
 
-
-interface RemoteLibraryInterface {
+interface RemoteLibraryInterface
+{
     /**
      * @param $ISBN
      * @return mixed
      */
     public function getBookInfoByISBN($ISBN);
-} 
+}

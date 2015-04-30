@@ -8,7 +8,6 @@
 
 namespace OurRead\RemoteLibraryBundle;
 
-
 class BookInfo
 {
     private $title;
@@ -181,6 +180,4 @@ class BookInfo
     {
         return $this->category;
     }
-
-
-} 
+}

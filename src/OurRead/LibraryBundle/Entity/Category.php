@@ -30,7 +30,7 @@ class Category
     /**
      * Get id
      *
-     * @return integer 
+     * @return integer
      */
     public function getId()
     {
@@ -53,7 +53,7 @@ class Category
     /**
      * Get category
      *
-     * @return string 
+     * @return string
      */
     public function getCategory()
     {

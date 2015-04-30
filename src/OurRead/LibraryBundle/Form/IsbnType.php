@@ -43,5 +43,4 @@ class IsbnType extends AbstractType
     {
         return 'isbn_type';
     }
-
 }

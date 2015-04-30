@@ -8,12 +8,10 @@ namespace OurRead\OurBundle\Controller;
 
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 
-
 class UserPageController extends Controller
 {
     public function indexAction()
     {
-
         $repository = $this->getDoctrine()
             ->getRepository('OurRead\LibraryBundle\Entity\Book');
         $books = $repository->findOneBy(

@@ -14,7 +14,4 @@ class DefaultController extends Controller
     {
         return $this->render('index.html');
     }
-    
-
-    
 }

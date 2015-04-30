@@ -30,8 +30,7 @@ class RemoteLibraryService
      */
     public function getBookInfoByISBN($ISBN)
     {
-        if(!$this->parser->getBookInfoFromWS($ISBN))
-        {
+        if (!$this->parser->getBookInfoFromWS($ISBN)) {
             return false;
         }
         $this->bookInfo->setAuthor($this->parser->getBookInfoFromWS($ISBN)->author);

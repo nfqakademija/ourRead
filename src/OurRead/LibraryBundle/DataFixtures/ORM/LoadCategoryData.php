@@ -61,5 +61,4 @@ class LoadCategoryData implements FixtureInterface
 
         return $categoriesList;
     }
-
-} 
+}

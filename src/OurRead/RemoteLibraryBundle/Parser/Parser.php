@@ -8,7 +8,6 @@
 
 namespace OurRead\RemoteLibraryBundle\Parser;
 
-
 abstract class Parser
 {
     protected $ISBN;
@@ -20,5 +19,4 @@ abstract class Parser
         $this->ISBN = $ISBN;
         return $this->parsedBookInfo();
     }
-
 }

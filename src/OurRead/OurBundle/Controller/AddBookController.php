@@ -8,14 +8,12 @@
 
 namespace OurRead\OurBundle\Controller;
 
-
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
 use OurRead\LibraryBundle\Entity\Book;
 use OurRead\LibraryBundle\Form\BookType;
 use OurRead\LibraryBundle\Form\IsbnType;
-
 
 class AddBookController extends Controller
 {
@@ -27,19 +25,15 @@ class AddBookController extends Controller
 
     public function saveAction(Request $request)
     {
-
-
         $form1 = $this->createForm(new IsbnType());
 
         $form1->handleRequest($request);
 
         $bookInfo = null;
-        if ($form1->isValid())
-        {
+        if ($form1->isValid()) {
             $bookInfo = $this->get('remote_library_service')
                 ->getBookInfoByISBN(str_replace('-', '', $form1["isbn"]->getData()));
-            if(!$bookInfo)
-            {
+            if (!$bookInfo) {
                 $this->get('session')->getFlashBag()->add(
                     'notice',
                     'Sorry, but there was no match found by your ISBN. Please fill data manually'
@@ -51,8 +45,7 @@ class AddBookController extends Controller
 
         $form2 = $this->createForm(new BookType($bookInfo), $book);
         $form2->handleRequest($request);
-        if ($form2->isValid())
-        {
+        if ($form2->isValid()) {
             $em = $this->getDoctrine()->getManager();
 
             $user = $this->container->get('security.context')->getToken()->getUser();
@@ -68,4 +61,4 @@ class AddBookController extends Controller
             'bookInfo' => $bookInfo,
         ));
     }
-} 
+}

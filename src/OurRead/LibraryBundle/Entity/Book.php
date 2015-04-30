@@ -10,6 +10,7 @@ namespace OurRead\LibraryBundle\Entity;
 
 use Doctrine\ORM\Mapping as ORM;
 use Doctrine\Common\Collections\ArrayCollection;
+
 /**
  * @ORM\Entity
  * @ORM\Table(name="book")
@@ -110,7 +111,7 @@ class Book
     /**
      * Get id
      *
-     * @return integer 
+     * @return integer
      */
     public function getId()
     {
@@ -133,7 +134,7 @@ class Book
     /**
      * Get title
      *
-     * @return string 
+     * @return string
      */
     public function getTitle()
     {
@@ -156,7 +157,7 @@ class Book
     /**
      * Get author
      *
-     * @return string 
+     * @return string
      */
     public function getAuthor()
     {
@@ -179,7 +180,7 @@ class Book
     /**
      * Get publisher
      *
-     * @return string 
+     * @return string
      */
     public function getPublisher()
     {
@@ -202,7 +203,7 @@ class Book
     /**
      * Get publishedDate
      *
-     * @return \DateTime 
+     * @return \DateTime
      */
     public function getPublishedDate()
     {
@@ -225,7 +226,7 @@ class Book
     /**
      * Get description
      *
-     * @return string 
+     * @return string
      */
     public function getDescription()
     {
@@ -248,7 +249,7 @@ class Book
     /**
      * Get pageCount
      *
-     * @return integer 
+     * @return integer
      */
     public function getPageCount()
     {
@@ -271,7 +272,7 @@ class Book
     /**
      * Get language
      *
-     * @return string 
+     * @return string
      */
     public function getLanguage()
     {
@@ -294,7 +295,7 @@ class Book
     /**
      * Get isbn
      *
-     * @return string 
+     * @return string
      */
     public function getIsbn()
     {
@@ -315,7 +316,7 @@ class Book
     /**
      * Get owner
      *
-     * @return string 
+     * @return string
      */
     public function getOwner()
     {
@@ -348,7 +349,7 @@ class Book
     /**
      * Get categories
      *
-     * @return \Doctrine\Common\Collections\Collection 
+     * @return \Doctrine\Common\Collections\Collection
      */
     public function getCategories()
     {
