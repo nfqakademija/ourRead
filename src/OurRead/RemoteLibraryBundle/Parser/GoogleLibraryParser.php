@@ -35,7 +35,7 @@ class GoogleLibraryParser extends Parser
 
     private function getResponseFromGoogleLibrary()
     {
-        $content = file_get_contents(self::URL.'q='.$this->ISBN);
+        $content = file_get_contents(self::URL.'q='.$this->isbn);
         if ($content === false) {
             return false;
         }

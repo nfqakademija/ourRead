@@ -28,21 +28,21 @@ class RemoteLibraryService
      * @param $isbn
      * @return mixed
      */
-    public function getBookInfoByISBN($isbn)
+    public function getBookInfoByIsbn($isbn)
     {
-        if (!$this->parser->getBookInfoFromWS($isbn)) {
+        if (!$this->parser->getBookInfoFromWebService($isbn)) {
             return false;
         }
-        $this->bookInfo->setAuthor($this->parser->getBookInfoFromWS($ISBN)->author);
-        $this->bookInfo->setTitle($this->parser->getBookInfoFromWS($ISBN)->title);
-        $this->bookInfo->setPublisher($this->parser->getBookInfoFromWS($ISBN)->publisher);
-        $this->bookInfo->setPublishedDate($this->parser->getBookInfoFromWS($ISBN)->publishedDate);
-        $this->bookInfo->setDescription($this->parser->getBookInfoFromWS($ISBN)->description);
-        $this->bookInfo->setCategory($this->parser->getBookInfoFromWS($ISBN)->category);
-        $this->bookInfo->setPageCount($this->parser->getBookInfoFromWS($ISBN)->pageCount);
-        $this->bookInfo->setLanguage($this->parser->getBookInfoFromWS($ISBN)->language);
-        $this->bookInfo->setImageLink($this->parser->getBookInfoFromWS($ISBN)->imageLink);
-        $this->bookInfo->setIsbn($ISBN);
+        $this->bookInfo->setAuthor($this->parser->getBookInfoFromWebService($isbn)->author);
+        $this->bookInfo->setTitle($this->parser->getBookInfoFromWebService($isbn)->title);
+        $this->bookInfo->setPublisher($this->parser->getBookInfoFromWebService($isbn)->publisher);
+        $this->bookInfo->setPublishedDate($this->parser->getBookInfoFromWebService($isbn)->publishedDate);
+        $this->bookInfo->setDescription($this->parser->getBookInfoFromWebService($isbn)->description);
+        $this->bookInfo->setCategory($this->parser->getBookInfoFromWebService($isbn)->category);
+        $this->bookInfo->setPageCount($this->parser->getBookInfoFromWebService($isbn)->pageCount);
+        $this->bookInfo->setLanguage($this->parser->getBookInfoFromWebService($isbn)->language);
+        $this->bookInfo->setImageLink($this->parser->getBookInfoFromWebService($isbn)->imageLink);
+        $this->bookInfo->setIsbn($isbn);
 
         return $this->bookInfo;
     }
