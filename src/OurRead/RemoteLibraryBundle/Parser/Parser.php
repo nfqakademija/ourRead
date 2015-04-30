@@ -10,13 +10,13 @@ namespace OurRead\RemoteLibraryBundle\Parser;
 
 abstract class Parser
 {
-    protected $ISBN;
+    protected $isbn;
 
     abstract public function parsedBookInfo();
 
-    public function getBookInfoFromWS($ISBN)
+    public function getBookInfoFromWS($isbn)
     {
-        $this->ISBN = $ISBN;
+        $this->isbn = $isbn;
         return $this->parsedBookInfo();
     }
 }

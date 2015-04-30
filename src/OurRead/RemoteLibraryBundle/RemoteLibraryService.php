@@ -25,12 +25,12 @@ class RemoteLibraryService
         $this->bookInfo = $bookInfo;
     }
     /**
-     * @param $ISBN
+     * @param $isbn
      * @return mixed
      */
-    public function getBookInfoByISBN($ISBN)
+    public function getBookInfoByISBN($isbn)
     {
-        if (!$this->parser->getBookInfoFromWS($ISBN)) {
+        if (!$this->parser->getBookInfoFromWS($isbn)) {
             return false;
         }
         $this->bookInfo->setAuthor($this->parser->getBookInfoFromWS($ISBN)->author);

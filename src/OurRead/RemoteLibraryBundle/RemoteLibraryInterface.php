@@ -11,8 +11,8 @@ namespace OurRead\RemoteLibraryBundle;
 interface RemoteLibraryInterface
 {
     /**
-     * @param $ISBN
+     * @param $isbn
      * @return mixed
      */
-    public function getBookInfoByISBN($ISBN);
+    public function getBookInfoByISBN($isbn);
 }
