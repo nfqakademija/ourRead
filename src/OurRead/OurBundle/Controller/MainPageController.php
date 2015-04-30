@@ -16,11 +16,6 @@ use Symfony\Component\HttpFoundation\RedirectResponse;
 class MainPageController extends Controller
 {
 
-    public function testAction()
-    {
-        return new Response('Hello world!');
-    }
-
     /**
      * @return \Symfony\Component\HttpFoundation\Response
      */
