@@ -129,12 +129,14 @@ class LoadBookData extends AbstractFixture implements OrderedFixtureInterface, C
     private function removeUploadsDirectory()
     {
         $target = __DIR__.'/../../../../../web/uploads/';
-        $files = glob($target.'*');
-        foreach ($files as $file) {
-            if (is_file($file)) {
-                unlink($file);
+        if (is_dir($target)) {
+            $files = glob($target.'*');
+            foreach ($files as $file) {
+                if (is_file($file)) {
+                    unlink($file);
+                }
             }
+            rmdir($target);
         }
-        rmdir($target);
     }
 }
