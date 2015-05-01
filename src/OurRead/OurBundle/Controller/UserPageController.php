@@ -14,9 +14,8 @@ class UserPageController extends Controller
     {
         $repository = $this->getDoctrine()
             ->getRepository('OurRead\LibraryBundle\Entity\Book');
-        $books = $repository->findOneBy(
-            array('owner' => 1)
-        );
+        $user = $this->container->get('security.context')->getToken()->getUser();
+        $books = $repository->findByOwner($user->getId());
 
         return $this->render('OurBundle:UserPage:user.html.twig',
         array('books'=>$books));

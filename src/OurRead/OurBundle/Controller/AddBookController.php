@@ -23,10 +23,13 @@ class AddBookController extends Controller
         return $this->render('OurBundle:AddBook:index.html.twig');
     }
 
+    /**
+     * @param Request $request
+     * @return Response
+     */
     public function saveAction(Request $request)
     {
         $form1 = $this->createForm(new IsbnType());
-
         $form1->handleRequest($request);
 
         $bookInfo = null;
@@ -46,19 +49,18 @@ class AddBookController extends Controller
         $form2 = $this->createForm(new BookType($bookInfo), $book);
         $form2->handleRequest($request);
         if ($form2->isValid()) {
-            $em = $this->getDoctrine()->getManager();
-
             $user = $this->container->get('security.context')->getToken()->getUser();
             $book->setOwner($user->getId());
+            $em = $this->getDoctrine()->getManager();
             $em->persist($book);
             $em->flush();
             $form2['bookCover']->getData()->move(__DIR__.'/../../../../web/upload/', $book->getId());
-            return new Response('<html><body>Knyga prideta sekmingai</body></html>');
+            return $this->redirect($this->generateUrl('/'));
         }
         return $this->render('OurBundle:AddBook:index.html.twig', array(
             'form1' => $form1->createView(),
             'form2' => $form2->createView(),
-            'bookInfo' => $bookInfo,
+            'bookCover' => (is_object($bookInfo))?$bookInfo->getImageLink():'',
         ));
     }
 }
