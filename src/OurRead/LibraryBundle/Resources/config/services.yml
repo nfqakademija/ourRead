@@ -1,0 +1,3 @@
+services:
+    cover_uploader_service:
+        class: OurRead\LibraryBundle\Services\BookCoverUploader\BookCoverUploaderService

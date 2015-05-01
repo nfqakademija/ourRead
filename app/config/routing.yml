@@ -8,3 +8,7 @@ our:
 
 fos_user:
     resource: "@FOSUserBundle/Resources/config/routing/all.xml"
+
+library:
+    resource: "@LibraryBundle/Resources/config/routing.yml"
+    prefix:   /

@@ -45,7 +45,6 @@ class AddBookController extends Controller
         }
 
         $book = new Book();
-
         $form2 = $this->createForm(new BookType($bookInfo), $book);
         $form2->handleRequest($request);
         if ($form2->isValid()) {
