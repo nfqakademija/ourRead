@@ -12,11 +12,10 @@ class UserPageController extends Controller
 {
     public function indexAction()
     {
-        $repository = $this->getDoctrine()
-            ->getRepository('OurRead\LibraryBundle\Entity\Book');
-        $books = $repository->findOneBy(
-            array('owner' => 1)
-        );
+
+        $user = $this->container->get('security.context')->getToken()->getUser();
+        $em = $this->getDoctrine()->getManager();
+        $books = $em->getRepository('OurRead\LibraryBundle\Entity\Book')->findByOwner($user->getId());
 
         return $this->render('OurBundle:UserPage:user.html.twig',
         array('books'=>$books));
