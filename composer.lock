@@ -4,7 +4,11 @@
         "Read more about it at http://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
+<<<<<<< HEAD
     "hash": "13b51c625f235280ccf4ebb3e4f2e835",
+=======
+    "hash": "5c500ee090eb6e0e62e88036284e693d",
+>>>>>>> 5059f3a6c7e3eb9dfb4f5e25a779835f42e132ec
     "packages": [
         {
             "name": "doctrine/annotations",
@@ -878,12 +882,21 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/FriendsOfSymfony/FOSUserBundle.git",
+<<<<<<< HEAD
                 "reference": "7bdbe66c90a27b2f8298230309ad8d0cfec1cb6e"
             },
             "dist": {
                 "type": "zip",
                 "url": "https://api.github.com/repos/FriendsOfSymfony/FOSUserBundle/zipball/7bdbe66c90a27b2f8298230309ad8d0cfec1cb6e",
                 "reference": "7bdbe66c90a27b2f8298230309ad8d0cfec1cb6e",
+=======
+                "reference": "192c53916942847aee687722af54f431aead0b70"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/FriendsOfSymfony/FOSUserBundle/zipball/192c53916942847aee687722af54f431aead0b70",
+                "reference": "192c53916942847aee687722af54f431aead0b70",
+>>>>>>> 5059f3a6c7e3eb9dfb4f5e25a779835f42e132ec
                 "shasum": ""
             },
             "require": {
@@ -937,7 +950,11 @@
             "keywords": [
                 "User management"
             ],
+<<<<<<< HEAD
             "time": "2015-05-01 08:19:36"
+=======
+            "time": "2015-04-16 23:14:14"
+>>>>>>> 5059f3a6c7e3eb9dfb4f5e25a779835f42e132ec
         },
         {
             "name": "incenteev/composer-parameter-handler",

@@ -22,7 +22,10 @@ class AppKernel extends Kernel
             new OurRead\LibraryBundle\LibraryBundle(),
             new Doctrine\Bundle\FixturesBundle\DoctrineFixturesBundle(),
             new OurRead\UserBundle\UserBundle(),
+<<<<<<< HEAD
             new OurRead\OrderBundle\OrderBundle(),
+=======
+>>>>>>> 5059f3a6c7e3eb9dfb4f5e25a779835f42e132ec
         );
 
         if (in_array($this->getEnvironment(), array('dev', 'test'))) {
