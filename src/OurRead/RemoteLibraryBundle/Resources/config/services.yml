@@ -1,0 +1,12 @@
+services:
+#    remote_library.example:
+#        class: OurRead\RemoteLibraryBundle\Example
+#        arguments: [@service_id, "plain_value", %parameter%]
+services:
+    book_info:
+        class: OurRead\RemoteLibraryBundle\BookInfo
+    library_parser:
+        class: OurRead\RemoteLibraryBundle\Parser\GoogleLibraryParser
+    remote_library_service:
+        class: OurRead\RemoteLibraryBundle\RemoteLibraryService
+        arguments: ["@library_parser","@book_info"]

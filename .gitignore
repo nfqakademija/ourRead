@@ -1,4 +1,3 @@
-/web/bundles/
 /app/bootstrap.php.cache
 /app/cache/*
 /app/config/parameters.yml
@@ -10,7 +9,10 @@
 /vendor/
 /bin/
 /composer.phar
-<<<<<<< HEAD
-=======
+/akademija-demo
+/puphpet/
+Vagrantfile
+.gitattributes
 .idea/
->>>>>>> 30601b21eb2e03fc5dac44fe129af80c939b53fc
+~*
+/web/uploads

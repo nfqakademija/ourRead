@@ -1,0 +1,231 @@
+{% trans_default_domain 'FOSUserBundle' %}
+
+<nav class="navbar navbar-default navbar-fixed-top">
+    <div class="container">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse"
+                    data-target="#bs-example-navbar-collapse-1">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+
+            <a class="navbar-brand" href="/">
+                <div class="navbar-brand-name">
+                    <img alt="Brand" src="{{ asset('bundles/our/img/a2.png') }}">
+                </div>
+            </a>
+
+        </div>
+
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+
+            <ul class="nav navbar-nav">
+                <li><a href="/" id="brand">Our Reads</a></li>
+                <li><a href="/categories">Categories</a> </li>
+                <li class="dropdown">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Books
+                        <span class="caret"></span></a>
+                    <ul class="dropdown-menu" role="menu">
+                        <li><a href="#">Fiction</a></li>
+                        <li><a href="#">Mystery</a></li>
+                        <li><a href="#">Romance</a></li>
+                        <li><a href="#">Technical</a></li>
+                        <li><a href="#">Classic</a></li>
+                        <li><a href="#">Biography</a></li>
+                    </ul>
+                </li>
+
+                {% if is_granted("IS_AUTHENTICATED_REMEMBERED") %}
+
+                <li><a href="/mybooks">My Books</a></li>
+                <li><a href="addBook" id="add_book">Add Book</a></li>
+
+                {% endif %}
+
+            </ul>
+
+            <div class="navbar-right">
+
+                {% if is_granted("IS_AUTHENTICATED_REMEMBERED") %}
+
+                    <ul class="nav navbar-nav">
+                        <li><a href="{{ path('fos_user_security_logout') }}">Logout</a></li>
+                        <li><a href="/user">{{ app.user.username }} <span class="badge">2</span> </a></li>
+                    </ul>
+
+                {% else %}
+
+
+                    {% if loginForm is defined %}
+                        {% if registerForm is defined %}
+
+                            <button type="button" class="btn btn-default navbar-btn" data-toggle="modal"
+                                    data-target=".sign-up-modal-sm">Register
+                            </button>
+                            <div class="modal fade sign-up-modal-sm" tabindex="-1" role="dialog"
+                                 aria-labelledby="mySmallModalLabel"
+                                 aria-hidden="true">
+                                <div class="modal-dialog modal-sm">
+                                    <div class="modal-content">
+                                        <form action="{{ path('fos_user_registration_register') }}" {{ form_enctype(registerForm) }}
+                                              method="POST" class="fos_user_registration_register">
+                                            <input type="hidden" name="_csrf_token" value="{{ loginForm.csrf_token }}"/>
+
+                                            <div class="modal-header">
+                                                <button type="button" class="close" data-dismiss="modal"
+                                                        aria-label="Close"><span
+                                                            aria-hidden="true">&times;</span></button>
+                                                <h4 class="modal-title">Register</h4>
+                                            </div>
+
+                                            <div class="modal-body">
+
+                                                <div>
+                                                    {{ form_label(registerForm.email, null, {'label_attr': {'class': 'control-label lol' }}
+                                                    ) }}
+                                                    {{ form_errors(registerForm.email) }}
+                                                    {{ form_widget(registerForm.email, {'attr': {'class': 'form-control' }}
+                                                    ) }}
+                                                </div>
+
+                                                <div>
+                                                    {{ form_label(registerForm.username, null, {'label_attr': {'class': 'control-label lol' }}
+                                                    ) }}
+                                                    {{ form_errors(registerForm.username) }}
+                                                    {{ form_widget(registerForm.username, {'attr': {'class': 'form-control' }}
+                                                    ) }}
+                                                </div>
+
+                                                <div>
+                                                    {{ form_label(registerForm.plainPassword.first, null, {'label_attr': {'class': 'control-label lol' }}
+                                                    ) }}
+                                                    {{ form_errors(registerForm.plainPassword.first) }}
+                                                    {{ form_widget(registerForm.plainPassword.first, {'attr': {'class': 'form-control' }}
+                                                    ) }}
+                                                </div>
+
+                                                <div>
+                                                    {{ form_label(registerForm.plainPassword.second, null, {'label_attr': {'class': 'control-label lol' }}
+                                                    ) }}
+                                                    {{ form_errors(registerForm.plainPassword.second) }}
+                                                    {{ form_widget(registerForm.plainPassword.second, {'attr': {'class': 'form-control' }}
+                                                    ) }}
+                                                </div>
+
+
+                                                {{ form_row (registerForm._token) }}
+
+                                                </br>
+
+                                                <a class="btn btn-block btn-social btn-facebook">
+                                                    <i class="fa fa-facebook"></i> Sign in with Facebook
+                                                </a>
+
+                                            </div>
+
+                                            <div class="modal-footer">
+                                                <button type="button" class="btn btn-default" data-dismiss="modal">
+                                                    Close
+                                                </button>
+                                                <input class="btn btn-primary" type="submit"
+                                                       value="{{ 'registration.submit'|trans }}"/>
+                                            </div>
+                                        </form>
+                                    </div>
+                                </div>
+                            </div>
+                            </form>
+                            <button type="button" class="btn btn-primary navbar-btn" data-toggle="modal"
+                                    data-target=".sign-in-modal-sm">Sign-in
+                            </button>
+                            <div class="modal fade sign-in-modal-sm" tabindex="-1" role="dialog"
+                                 aria-labelledby="mySmallModalLabel"
+                                 aria-hidden="true">
+
+                                <div class="modal-dialog modal-sm">
+                                    <div class="modal-content">
+                                        <form action="{{ path("fos_user_security_check") }}" method="post">
+                                            <input type="hidden" name="_csrf_token" value="{{ loginForm.csrf_token }}"/>
+
+                                            <div class="modal-header">
+                                                <button type="button" class="close" data-dismiss="modal"
+                                                        aria-label="Close"><span
+                                                            aria-hidden="true">&times;</span></button>
+                                                <h4 class="modal-title">Sign-in</h4>
+                                            </div>
+
+                                            <div class="modal-body">
+
+                                                <div class="form-group">
+                                                    <label class="control-label"
+                                                           for="username"> {{ 'security.login.username'|trans }}  </label>
+                                                    <input class="form-control" type="text" id="username"
+                                                           name="_username" value="{{ loginForm.last_username }}"
+                                                           required="required"/>
+                                                </div>
+
+                                                <div class="form-group">
+                                                    <label class="control-label"
+                                                           for="password">{{ 'security.login.password'|trans }}</label>
+                                                    <input class="form-control" type="password" id="password"
+                                                           name="_password" required="required"/>
+                                                </div>
+
+                                                <input type="checkbox" id="remember_me" name="_remember_me" value="on"/>
+                                                <label for="remember_me">{{ 'security.login.remember_me'|trans }}</label>
+
+                                                </br>
+
+                                                <a class="btn btn-block btn-social btn-facebook">
+                                                    <i class="fa fa-facebook"></i> Sign in with Facebook
+                                                </a>
+
+                                                </br>
+                                                <a href="#">Forgotten password?</a>
+
+                                            </div>
+
+                                            <div class="modal-footer">
+                                                <button type="button" class="btn btn-default" data-dismiss="modal">
+                                                    Close
+                                                </button>
+                                                <input class="btn btn-primary" type="submit" id="_submit" name="_submit"
+                                                       value="{{ 'security.login.submit'|trans }}"/>
+                                            </div>
+
+                                        </form>
+
+                                    </div>
+                                </div>
+
+                            </div>
+
+
+                        {% endif %}
+
+                        {% else %}
+                            <a href="/login" role="button" class="btn btn-default navbar-btn">Sign-up</a>
+                            <a href="/register" role="button" class="btn btn-primary navbar-btn">Sign-in</a>
+                    {% endif %}
+                {% endif %}
+
+                <form class="navbar-form navbar-right" role="search">
+                    <div class="form-group">
+                        <input type="text" class="form-control" placeholder="Title / Author / ISBN">
+                    </div>
+
+                    <button type="submit" class="btn btn-info">Search</button>
+
+
+                </form>
+            </div>
+
+        </div>
+        <!-- /.navbar-collapse -->
+    </div>
+    <!-- /.container-fluid -->
+</nav>

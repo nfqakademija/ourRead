@@ -1,3 +1,24 @@
-app:
-    resource: "@AppBundle/Controller/"
+our_read_order:
+    resource: "@OurReadOrderBundle/Controller/"
     type:     annotation
+    prefix:   /
+
+order:
+    resource: "@OrderBundle/Controller/"
+    type:     annotation
+    prefix:   /
+
+remote_library:
+    resource: "@RemoteLibraryBundle/Resources/config/routing.yml"
+    prefix:   /
+
+our:
+    resource: "@OurBundle/Resources/config/routing.yml"
+    prefix:   /
+
+fos_user:
+    resource: "@FOSUserBundle/Resources/config/routing/all.xml"
+
+library:
+    resource: "@LibraryBundle/Resources/config/routing.yml"
+    prefix:   /

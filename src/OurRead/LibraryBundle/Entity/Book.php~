@@ -1,0 +1,102 @@
+<?php
+/**
+ * Created by PhpStorm.
+ * User: povilas
+ * Date: 4/18/15
+ * Time: 10:11 PM
+ */
+
+namespace OurRead\LibraryBundle\Entity;
+
+use Doctrine\ORM\Mapping as ORM;
+use Doctrine\Common\Collections\ArrayCollection;
+/**
+ * @ORM\Entity
+ * @ORM\Table(name="book")
+ */
+class Book
+{
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="id", type="integer")
+     * @ORM\Id
+     * @ORM\GeneratedValue(strategy="AUTO")
+     */
+    private $id;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="title", type="string", length=50)
+     */
+    private $title;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="author", type="string", length=20)
+     */
+    private $author;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="publisher", type="string", length=15)
+     */
+    private $publisher;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="publishedDate", type="date")
+     */
+
+    private $publishedDate;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="description", type="string", length=255)
+     */
+    private $description;
+
+    /**
+     * @var ArrayCollection
+     *
+     * @ORM\ManyToMany(targetEntity="Category")
+     * @ORM\JoinTable(name="book_category",
+     *      joinColumns={@ORM\JoinColumn(name="book_id", referencedColumnName="id")},
+     *      inverseJoinColumns={@ORM\JoinColumn(name="category_id", referencedColumnName="id", unique=true)}
+     *      )
+     **/
+    private $categories;
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="pageCount", type="integer")
+     */
+    private $pageCount;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="language", type="string", length=15)
+     */
+    private $language;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="isbn", type="string", length=20)
+     */
+    private $isbn;
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="owner", type="string", length=15)
+     */
+    private $owner;
+}

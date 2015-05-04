@@ -1,0 +1,195 @@
+{% extends "OurBundle:Layouts:default.html.twig" %}
+
+{% block user %}
+
+    {% block slider %}
+        <p> no need this </p>
+    {% endblock %}
+
+    {% if is_granted("IS_AUTHENTICATED_REMEMBERED") %}
+
+
+        </br>
+
+        <div class="alert alert-info col-md-6 text-center col-lg-offset-3 " role="alert">
+            <p><strong>Hey!</strong> 2 readers are requesting for your books</p>
+
+        </div>
+
+
+        <table class="table">
+
+            <thead>
+
+            <tr>
+                <th>My email</th>
+                <th>Books added</th>
+                <th>Books readed</th>
+                <th>Book reading</th>
+            </tr>
+
+            <tr>
+                <td>{{ app.user.email }}     <i class="fa fa-pencil">     </i>   </td>
+                <td> {{ books |length }}</td>
+                <td>0</td>
+                <td>0</td>
+            </tr>
+
+            </thead>
+
+        </table>
+
+
+        <table class="table table-hover">
+
+            <thead>
+
+            <tr>
+                <th colspan="2">My own books</th>
+                <th colspan="4">Readers</th>
+
+            </tr>
+
+            <tr>
+                <th>Title</th>
+                <th>Author</th>
+                <th>first name</th>
+                <th>last name</th>
+                <th>comment </th>
+                <th>action</th>
+            </tr>
+            </thead>
+
+            <tbody>
+
+           {% for book in books %}
+            <tr>
+                <td> {{ book.title }}</td>
+                <td> {{ book.author }}</td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td> <i class="fa fa-trash"></i></td>
+            </tr>
+           {% endfor %}
+
+
+           <tr>
+               <td></td>
+               <td></td>
+               <td></td>
+               <td></td>
+               <td></td>
+               <td></td>
+           </tr>
+
+
+            <tr>
+                <td>Tim Tomson</td>
+                <td>Primer</td>
+                <td>John</td>
+                <td>Lajoe</td>
+                <td>I'm working in third floor</td>
+                <td><i class="fa fa-check"></i> <i class="fa fa-ban"></i> <i class="fa fa-trash"></i></td>
+            </tr>
+
+            <tr>
+                <td> {{ books[0].title }}</td>
+                <td>Primer</td>
+                <td>John</td>
+                <td>Lajoe</td>
+                <td>I'm working in third floor</td>
+                <td><i class="fa fa-check"></i> <i class="fa fa-ban"></i> <i class="fa fa-trash"></i></td>
+            </tr>
+
+
+            <tr>
+                <td>Michle Borton</td>
+                <td>Pirate island</td>
+                <td>Donmon</td>
+                <td>Morito</td>
+                <td>will be on friday</td>
+                <td><i class="fa fa-check"></i> <i class="fa fa-ban"></i> <i class="fa fa-trash"></i></td>
+            </tr>
+
+            <tr>
+                <td>Morgan Freeman</td>
+                <td>Illuminati is cool</td>
+                <td>Ferero</td>
+                <td>Montechristo</td>
+                <td>So waiting</td>
+                <td><i class="fa fa-eye"></i> <i class="fa fa-trash"></i></td>
+            </tr>
+
+            <tr>
+                <td>Morgan Freeman</td>
+                <td>Illuminati is cool</td>
+                <td>Ferero</td>
+                <td>Montechristo</td>
+                <td>So waiting</td>
+                <td><i class="fa fa-eye"></i> <i class="fa fa-trash"></i></td>
+            </tr>
+
+            <tr>
+                <td>Morgan Freeman</td>
+                <td>Illuminati is cool</td>
+                <td>Ferero</td>
+                <td>Montechristo</td>
+                <td>So waiting</td>
+                <td><i class="fa fa-eye"></i> <i class="fa fa-trash"></i></td>
+            </tr>
+
+            <tr>
+                <td>Morgan Freeman</td>
+                <td>Illuminati is cool</td>
+                <td>Ferero</td>
+                <td>Montechristo</td>
+                <td>So waiting</td>
+                <td><i class="fa fa-eye"></i> <i class="fa fa-trash"></i></td>
+            </tr>
+
+            <tr>
+                <td>Morgan Freeman</td>
+                <td>Illuminati is cool</td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td> <i class="fa fa-trash"></i></td>
+            </tr>
+
+            <tr>
+                <td>Morgan Freeman</td>
+                <td>Illuminati is cool</td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td> <i class="fa fa-trash"></i></td>
+            </tr>
+
+            </tbody>
+
+        </table>
+
+        <div class="row">
+            <nav>
+                <ul style="margin-top:0;" class="pagination pull-right">
+                <li><a href="#" aria-label="Previous"><span aria-hidden="true">&laquo;</span></a></li>
+                <li class="active"><a href="#">1 <span class="sr-only">(current)</span></a></li>
+                <li><a href="#">2 <span class="sr-only">(current)</span></a></li>
+                <li><a href="#">3 <span class="sr-only">(current)</span></a></li>
+                <li><a href="#">4 <span class="sr-only">(current)</span></a></li>
+                <li><a href="#">5 <span class="sr-only">(current)</span></a></li>
+                <li><a href="#">6 <span class="sr-only">(current)</span></a></li>
+                <li><a href="#" aria-label="Next"><span aria-hidden="true">&raquo;</span></a></li>
+            </ul>
+            </nav>
+
+        </div>
+
+
+
+
+
+    {% endif %}
+
+{% endblock %}

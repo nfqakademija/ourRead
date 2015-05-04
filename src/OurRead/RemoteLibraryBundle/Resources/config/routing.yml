@@ -1,0 +1,3 @@
+remote_library_homepage:
+    path:     /hello/{name}
+    defaults: { _controller: RemoteLibraryBundle:Default:index }

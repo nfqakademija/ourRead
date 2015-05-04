@@ -1,0 +1,137 @@
+{% trans_default_domain 'FOSUserBundle' %}
+{% extends "OurBundle:Layouts:default.html.twig" %}
+
+{% block errors %}
+
+    {% block slider %}
+
+    {% endblock %}
+
+    <div class="row">
+        <div class="col-md-6 col-md-offset-3">
+            <div class="panel panel-default" id="panele">
+
+                <div class="panel-heading">
+                    <h3 class="panel-title" id="reg-title">Sign-in</h3>
+                </div>
+
+                <div class="panel-body">
+
+                        {% if error is defined and not is_granted("IS_AUTHENTICATED_REMEMBERED") %}
+                        {% if error %}
+                            <div class="alert alert-danger">{{ error.messageKey|trans(error.messageData, 'security') }}</div>
+                        {% endif %}
+
+
+                        <form action="{{ path("fos_user_security_check") }}" method="post">
+                            <input type="hidden" name="_csrf_token" value="{{ csrf_token }}"/>
+
+                            <div class="form-group">
+                                <label class="control-label"
+                                       for="username"> {{ 'security.login.username'|trans }}  </label>
+                                <input class="form-control" type="text" id="username" name="_username"
+                                       value="{{ last_username }}" required="required"/>
+                            </div>
+
+                            <div class="form-group">
+                                <label class="control-label"
+                                       for="password">{{ 'security.login.password'|trans }}</label>
+                                <input class="form-control" type="password" id="password" name="_password"
+                                       required="required"/>
+                            </div>
+
+                            <input type="checkbox" id="remember_me" name="_remember_me" value="on"/>
+                            <label for="remember_me">{{ 'security.login.remember_me'|trans }}</label>
+                            <a href="#"> Forgotten password?</a>
+
+                            </br>
+
+                            <div class="col-md-6" id="btn-fb">
+                                <a class="btn btn-block btn-social btn-facebook col-lg-4">
+                                    <i class="fa fa-facebook"></i> Sign in with Facebook
+                                </a>
+                            </div>
+                            </br>
+                            </br>
+                            </br>
+
+
+                            <a class="btn btn-default" href="/">Close</a>
+
+                            <input class="btn btn-primary" type="submit" id="_submit" name="_submit"
+                                   value="{{ 'security.login.submit'|trans }}"/>
+                        </form>
+                    {% endif %}
+
+                    {% if form is defined and not is_granted("IS_AUTHENTICATED_REMEMBERED") %}
+
+                        <form action="{{ path('fos_user_registration_register') }}" {{ form_enctype(form) }}
+                              method="POST" class="fos_user_registration_register">
+
+
+                            <div class="row">
+                                <div class="col-md-6">
+
+                                    <div>
+                                        {{ form_label(form.email, null, {'label_attr': {'class': 'control-label lol' }})
+                                        }}
+                                        {{ form_widget(form.email, {'attr': {'class': 'form-control' }}) }}
+                                    </div>
+
+                                    <div>
+                                        {{ form_label(form.username, null, {'label_attr': {'class': 'control-label lol' }}
+                                        ) }}
+                                        {{ form_widget(form.username, {'attr': {'class': 'form-control' }}) }}
+                                    </div>
+
+                                    <div>
+                                        {{ form_label(form.plainPassword.first, null, {'label_attr': {'class': 'control-label lol'}}
+                                        ) }}
+                                        {{ form_widget(form.plainPassword.first, {'attr': {'class': 'form-control' }})
+                                        }}
+                                    </div>
+
+                                    <div>
+                                        {{ form_label(form.plainPassword.second, null, {'label_attr': {'class': 'control-label lol' }}
+                                        ) }}
+                                        {{ form_widget(form.plainPassword.second, {'attr': {'class': 'form-control' }})
+                                        }}
+                                    </div>
+                                </div>
+
+                                <div class="col-md-6">
+
+
+                                <div class="alert alert-danger " id="reg-info" >
+                                    {{ form_errors(form.email) }}
+                                    {{ form_errors(form.username) }}
+                                    {{ form_errors(form.plainPassword.first) }}
+                                </div>
+                                </div>
+                            </div>
+                            {{ form_row (form._token) }}
+                            </br>
+                            <input class="btn btn-primary" type="submit" value="{{ 'registration.submit'|trans }}"/>
+                            <a class="btn btn-default" href="/">Close</a>
+
+
+
+
+
+                        </form>
+
+                    {% endif %}
+
+                        {% if is_granted("IS_AUTHENTICATED_REMEMBERED") %}
+
+                           <h2>Your registration is successful</h2>
+
+                        {%  endif %}
+
+
+                </div>
+            </div>
+
+        </div>
+    </div>
+{% endblock %}
