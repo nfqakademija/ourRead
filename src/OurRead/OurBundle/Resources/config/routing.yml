@@ -7,6 +7,9 @@ BookPage:
 UserPage:
     path:     /user
     defaults: { _controller: OurBundle:UserPage:index }
+DeletePage:
+    path:     /user/delete/{id}
+    defaults: { _controller: OurBundle:UserPage:delete }
 MyBooksPage:
     path:     /mybooks
     defaults: { _controller: OurBundle:MyBooksPage:index }

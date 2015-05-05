@@ -6,19 +6,37 @@
  */
 namespace OurRead\OurBundle\Controller;
 
+use OurRead\LibraryBundle\Entity\Book;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
+use Symfony\Component\HttpFoundation\Response;
 
 class UserPageController extends Controller
 {
     public function indexAction()
     {
-        $repository = $this->getDoctrine()
-            ->getRepository('OurRead\LibraryBundle\Entity\Book');
-        $books = $repository->findOneBy(
-            array('owner' => 1)
+        $repository = $this->getDoctrine()->getRepository('OurRead\LibraryBundle\Entity\Book');
+        $user = $this->container->get('security.context')->getToken()->getUser();
+        $books = $repository->findByOwner($user->getId());
+        return $this->render('OurBundle:UserPage:user.html.twig',
+            array('books'=>$books));
+    }
+
+    public function deleteAction($id)
+    {
+        $user = $this->container->get('security.context')->getToken()->getUser();
+        $em = $this->getDoctrine()->getManager();
+        $repository = $this->getDoctrine()->getRepository('OurRead\LibraryBundle\Entity\Book');
+        $books = $repository->findBy(
+            array('owner' => $user->getId(), 'id' => $id)
         );
 
-        return $this->render('OurBundle:UserPage:user.html.twig',
-        array('books'=>$books));
+        if(count($books)){
+
+            $book=$this->getDoctrine()->getRepository('OurRead\LibraryBundle\Entity\Book')->find($id);
+            $em->remove($book);
+            $em->flush();
+            return $this->redirectToRoute('UserPage', array(), 301);
+        }
+        return new Response('neturite tam teises');
     }
 }
