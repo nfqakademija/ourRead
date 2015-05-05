@@ -99,7 +99,6 @@ class BookType extends AbstractType
                     'class'=>'btn-success'
                 )
             ));
-
     }
 
     /**

@@ -39,13 +39,12 @@ class AddBookController extends Controller
                 );
             }
         }
-        var_dump($bookInfo);
+        
         $book = new Book();
         $form2 = $this->createForm(new BookType($bookInfo), $book);
         $form2->handleRequest($request);
 
         if ($form2->isValid()) {
-
             $user = $this->container->get('security.context')->getToken()->getUser();
             $book->setOwner($user->getId());
             $em = $this->getDoctrine()->getManager();
