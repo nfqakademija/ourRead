@@ -30,4 +30,24 @@ $(document).ready(function() {
 $('#form-add-book').submit(function() {
     return confirm("Click OK if you are sure you want to add this book");
 });
+$('.delete-action').click(function(e) {
+    e.preventDefault();
+    var href = $(this).attr('href');
+    $.confirm({
+        confirmButton: 'Yes',
+        cancelButton: 'No!',
+        icon: 'fa fa-warning',
+        title: 'Warning!',
+        content: 'Are you sure you want to delete this book?!',
+        cancelButtonClass: 'btn-info',
+        confirmButtonClass: 'btn-danger',
+        animation: 'bottom',
+        autoClose: 'cancel|10000',
+        confirm: function(){
+            window.location = href;
+        },
+        cancel: function(){
 
+        }
+    });
+});

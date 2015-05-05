@@ -57,7 +57,7 @@ class AddBookController extends Controller
                 $this->container->get('cover_uploader_service')
                     ->uploadBookCoverByImageLink($form2['bookCoverByWebService']->getData(), $book->getId());
             }
-            return $this->redirectToRoute('/');
+            return $this->redirectToRoute('OurHomepage', array(), 301);
         }
         return $this->render('OurBundle:AddBook:index.html.twig', array(
             'form1' => $form1->createView(),
