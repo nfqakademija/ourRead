@@ -4,6 +4,9 @@ OurHomepage:
 BookPage:
     path:     /book/{id}
     defaults: { _controller: OurBundle:BookPage:index }
+BooksPage:
+    path:     /books
+    defaults: { _controller: OurBundle:BooksPage:index }
 UserPage:
     path:     /user
     defaults: { _controller: OurBundle:UserPage:index }
