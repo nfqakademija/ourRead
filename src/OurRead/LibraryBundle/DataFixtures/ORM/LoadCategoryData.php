@@ -58,7 +58,8 @@ class LoadCategoryData extends AbstractFixture implements OrderedFixtureInterfac
             'Diary',
             'Biography',
             'Autobiography',
-            'Fantasy'
+            'Fantasy',
+            'Fiction'
         );
 
         return $categoriesList;

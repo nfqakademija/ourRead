@@ -46,7 +46,7 @@ class Orders
     /**
      * Get id
      *
-     * @return integer 
+     * @return integer
      */
     public function getId()
     {
@@ -69,7 +69,7 @@ class Orders
     /**
      * Get orderId
      *
-     * @return integer 
+     * @return integer
      */
     public function getOrderId()
     {
@@ -92,7 +92,7 @@ class Orders
     /**
      * Get userId
      *
-     * @return integer 
+     * @return integer
      */
     public function getUserId()
     {
@@ -115,7 +115,7 @@ class Orders
     /**
      * Get bookId
      *
-     * @return integer 
+     * @return integer
      */
     public function getBookId()
     {

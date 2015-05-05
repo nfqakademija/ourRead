@@ -8,9 +8,10 @@
     {% block stylesheets %}
         <link href="{{ asset('bundles/our/css/bootstrap.min.css') }}" rel="stylesheet">
         <link href="{{ asset('bundles/our/css/bootstrap-social.css') }}" rel="stylesheet">
-
         <!-- // Paliekam po kolkas taip, nes antraip man niekaip neuzkrauna is/bundles/... veliau sutvarkysiu -->
         <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+        <link href="{{ asset('bundles/our/css/bootstrap-select.min.css') }}" rel="stylesheet">
+        <link href="{{ asset('bundles/our/css/jquery-confirm.min.css') }}" rel="stylesheet">
         <link href="{{ asset('bundles/our/css/custom.css') }}" rel="stylesheet">
         <link href="{{ asset('bundles/our/css/star-rating.min.css') }}" rel="stylesheet">
         <link rel="stylesheet" href="{{ asset('bundles/our/css/index.css') }}" type="text/css" media="screen"/>
@@ -42,7 +43,11 @@
 {% block scripts %}
     <script src="{{ asset('bundles/our/js/jquery.min.js') }}"></script>
     <script src="{{ asset('bundles/our/js/bootstrap.min.js') }}"></script>
+    <script src="{{ asset('bundles/our/js/bootstrap-select.min.js') }}"></script>
     <script src="{{ asset('bundles/our/js/index-slider.js') }}"></script>
+    <script src="{{ asset('bundles/our/js/blockUI.js') }}"></script>
+    <script src="{{ asset('bundles/our/js/jquery-confirm.min.js') }}"></script>
+    <script src="{{ asset('bundles/our/js/custom.js') }}"></script>
 {% endblock %}
 </body>
 </html>
