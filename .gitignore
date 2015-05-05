@@ -15,3 +15,4 @@ Vagrantfile
 .gitattributes
 .idea/
 ~*
+/web/uploads

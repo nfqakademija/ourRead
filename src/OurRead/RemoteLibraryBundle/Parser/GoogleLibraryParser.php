@@ -143,9 +143,8 @@ class GoogleLibraryParser extends Parser
 
     private function parseImageLink()
     {
-        $image = $this->volumeInfo->imageLinks->thumbnail;
-        if (!empty($image)) {
-            return $image;
+        if (!empty($this->volumeInfo->imageLinks->thumbnail)) {
+            return $this->volumeInfo->imageLinks->thumbnail;
         } else {
             return '';
         }
