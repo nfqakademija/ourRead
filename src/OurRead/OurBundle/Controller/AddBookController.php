@@ -18,16 +18,11 @@ use OurRead\LibraryBundle\Form\IsbnType;
 class AddBookController extends Controller
 {
 
-    public function indexAction()
-    {
-        return $this->render('OurBundle:AddBook:index.html.twig');
-    }
-
     /**
      * @param Request $request
      * @return Response
      */
-    public function saveAction(Request $request)
+    public function addBookAction(Request $request)
     {
         $form1 = $this->createForm(new IsbnType());
         $form1->handleRequest($request);
@@ -36,25 +31,34 @@ class AddBookController extends Controller
         if ($form1->isValid()) {
             $bookInfo = $this->get('remote_library_service')
                 ->getBookInfoByISBN(str_replace('-', '', $form1["isbn"]->getData()));
-            if (!$bookInfo) {
+
+            if (empty($bookInfo)) {
                 $this->get('session')->getFlashBag()->add(
                     'notice',
                     'Sorry, but there was no match found by your ISBN. Please fill data manually'
                 );
             }
         }
-
+        var_dump($bookInfo);
         $book = new Book();
         $form2 = $this->createForm(new BookType($bookInfo), $book);
         $form2->handleRequest($request);
+
         if ($form2->isValid()) {
+
             $user = $this->container->get('security.context')->getToken()->getUser();
             $book->setOwner($user->getId());
             $em = $this->getDoctrine()->getManager();
             $em->persist($book);
             $em->flush();
-            $form2['bookCover']->getData()->move(__DIR__.'/../../../../web/upload/', $book->getId());
-            return $this->redirect($this->generateUrl('/'));
+
+            if ($form2['bookCoverByUser']->getData() !== null) {
+                $form2['bookCoverByUser']->getData()->move(__DIR__.'/../../../../web/uploads/', $book->getId());
+            } else {
+                $this->container->get('cover_uploader_service')
+                    ->uploadBookCoverByImageLink($form2['bookCoverByWebService']->getData(), $book->getId());
+            }
+            return $this->redirectToRoute('/');
         }
         return $this->render('OurBundle:AddBook:index.html.twig', array(
             'form1' => $form1->createView(),

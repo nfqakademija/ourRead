@@ -35,7 +35,7 @@ class GoogleLibraryParser extends Parser
 
     private function getResponseFromGoogleLibrary()
     {
-        $content = file_get_contents(self::URL.'q='.$this->isbn);
+        $content = @file_get_contents(self::URL.'q='.$this->isbn);
         if ($content === false) {
             return false;
         }
@@ -53,6 +53,7 @@ class GoogleLibraryParser extends Parser
         } else {
             if (!empty($this->unprocessedResponse->items[0])) {
                 $this->volumeInfo = $this->unprocessedResponse->items[0]->volumeInfo;
+
                 $this->title = $this->parseTitle();
                 $this->author = $this->parseAuthor();
                 $this->publisher = $this->parsePublisher();

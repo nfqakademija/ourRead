@@ -53,7 +53,13 @@ class BookType extends AbstractType
                         return $er->createQueryBuilder('c')
                             ->orderBy('c.category', 'ASC');
                     },
-                'attr' => array('style' => 'width: 300px'),
+                'attr' => array(
+                    'class' => 'selectpicker',
+                    'data-width' => '300px',
+                    'title' => 'Please choose category',
+                    'data-selected-text-format' => 'count>4',
+                    'data-live-search' => true
+                ),
             ))
             ->add('pageCount', 'text', array(
                 'data' => (is_object($this->bookInfo))?$this->bookInfo->getPageCount():'',
@@ -62,7 +68,10 @@ class BookType extends AbstractType
             ->add('language', 'language', array(
                 'data' => (is_object($this->bookInfo))?$this->bookInfo->getLanguage():'',
                 'empty_value' => 'Please select language',
-                'attr' => array('style' => 'width: 300px'),
+                'attr' => array(
+                    'class' => 'selectpicker',
+                    'data-width' => '300px',
+                ),
             ))
             ->add('isbn', 'text', array(
                 'label' => 'ISBN',
@@ -72,8 +81,17 @@ class BookType extends AbstractType
             ->add('description', 'text', array(
                 'data' => (is_object($this->bookInfo))?$this->bookInfo->getDescription():''
             ))
-            ->add('bookCover', 'file', array(
-                'mapped' => false
+            ->add('bookCoverByUser', 'file', array(
+                'mapped' => false,
+                'label' => 'Book cover',
+            ))
+            ->add('bookCoverByWebService', 'text', array(
+                'mapped' => false,
+                'label' => false,
+                'data' => (is_object($this->bookInfo))?$this->bookInfo->getImageLink():'',
+                'attr' => array(
+                    'style'=>'display:none;'
+                )
             ))
             ->add('Submit', 'submit', array(
                 'label' => 'Add Book',
@@ -81,6 +99,7 @@ class BookType extends AbstractType
                     'class'=>'btn-success'
                 )
             ));
+
     }
 
     /**

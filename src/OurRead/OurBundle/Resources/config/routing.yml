@@ -21,4 +21,4 @@ acttco:
     defaults: { _controller: OurBundle:Contact:contact }
 addBook:
     path:     /addBook
-    defaults: { _controller: OurBundle:AddBook:save }
+    defaults: { _controller: OurBundle:AddBook:addBook }

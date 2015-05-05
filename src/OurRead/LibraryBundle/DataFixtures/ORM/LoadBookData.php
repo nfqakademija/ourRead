@@ -65,6 +65,8 @@ class LoadBookData extends AbstractFixture implements OrderedFixtureInterface, C
      */
     private function getBookList()
     {
+        $bookList = array();
+
         $bookList[] = array(
            'title' => 'The Nightingale',
            'author' => 'Kristin Hannah',
