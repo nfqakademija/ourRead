@@ -46,7 +46,11 @@ $('.delete-action').click(function(e) {
             window.location = $(this).attr('href');
         },
         cancel: function(){
-
         }
     });
+});
+
+$('.row-link').click(function() {
+    console.log(this);
+    document.location = $(this).attr('data-href');
 });

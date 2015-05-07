@@ -1,3 +1,5 @@
 services:
-    cover_uploader_service:
-        class: OurRead\LibraryBundle\Services\BookCoverUploader\BookCoverUploaderService
+    cover_uploader:
+        class: OurRead\LibraryBundle\Services\BookCoverService\BookCoverUploader
+    cover_remover:
+        class: OurRead\LibraryBundle\Services\BookCoverService\BookCoverRemover

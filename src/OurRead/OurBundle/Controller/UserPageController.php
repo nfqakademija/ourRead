@@ -35,8 +35,9 @@ class UserPageController extends Controller
             $book=$this->getDoctrine()->getRepository('OurRead\LibraryBundle\Entity\Book')->find($id);
             $em->remove($book);
             $em->flush();
+            $this->container->get('cover_remover')->removeBookCover($id);
             return $this->redirectToRoute('UserPage', array(), 301);
         }
-        return new Response('neturite tam teises');
+        return new Response('You have no permission');
     }
 }

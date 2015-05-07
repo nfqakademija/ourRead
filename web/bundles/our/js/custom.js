@@ -32,7 +32,6 @@ $('#form-add-book').submit(function() {
 });
 $('.delete-action').click(function(e) {
     e.preventDefault();
-    var href = $(this).attr('href');
     $.confirm({
         confirmButton: 'Yes',
         cancelButton: 'No!',
@@ -44,10 +43,14 @@ $('.delete-action').click(function(e) {
         animation: 'bottom',
         autoClose: 'cancel|10000',
         confirm: function(){
-            window.location = href;
+            window.location = $(this).attr('href');
         },
         cancel: function(){
-
         }
     });
+});
+
+$('.row-link').click(function() {
+    console.log(this);
+    document.location = $(this).attr('data-href');
 });

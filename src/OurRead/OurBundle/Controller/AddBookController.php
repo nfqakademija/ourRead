@@ -54,7 +54,7 @@ class AddBookController extends Controller
             if ($form2['bookCoverByUser']->getData() !== null) {
                 $form2['bookCoverByUser']->getData()->move(__DIR__.'/../../../../web/uploads/', $book->getId());
             } else {
-                $this->container->get('cover_uploader_service')
+                $this->container->get('cover_uploader')
                     ->uploadBookCoverByImageLink($form2['bookCoverByWebService']->getData(), $book->getId());
             }
             return $this->redirectToRoute('OurHomepage', array(), 301);
