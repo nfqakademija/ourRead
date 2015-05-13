@@ -30,7 +30,14 @@ class MainPageController extends Controller
 
         // most recent books
         $newBooks = $repository->createQueryBuilder('book')
-            ->orderBy('book.id', 'DESC')
+            ->orderBy('book.createdDate', 'DESC')
+            ->getQuery()
+            ->setMaxResults(8)
+            ->getResult();
+
+        // most popular books
+        $popularBooks = $repository->createQueryBuilder('book')
+            ->orderBy('book.popularity', 'DESC')
             ->getQuery()
             ->setMaxResults(8)
             ->getResult();
@@ -51,6 +58,7 @@ class MainPageController extends Controller
             'loginForm' => $login,
             'registerForm' => $register,
             'newBooks' => $newBooks,
+            'popularBooks' => $popularBooks,
             'randomBooks' =>$randomBooks
         ));
     }

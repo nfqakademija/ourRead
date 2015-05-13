@@ -50,6 +50,7 @@ class LoadBookData extends AbstractFixture implements OrderedFixtureInterface, C
             $bookData->setDescription($book['description']);
             $bookData->setOwner($book['owner']);
             $bookData->setCreatedDate($book['createdDate']);
+            $bookData->setPopularity($book['popularity']);
 
             $manager->persist($bookData);
             $manager->flush();
@@ -84,6 +85,7 @@ class LoadBookData extends AbstractFixture implements OrderedFixtureInterface, C
             'imageLink' => 'http://bks8.books.google.lt/books/content?id=B6eQBQAAQBAJ&printsec=frontcover&img=1&zoom=1&source=gbs_api',
             'owner' => 1,
             'createdDate' => new \DateTime('2014-05-11'),
+            'popularity' => 23
         );
 
         $bookList[] = array(
@@ -101,6 +103,7 @@ class LoadBookData extends AbstractFixture implements OrderedFixtureInterface, C
             'imageLink' => 'http://bks4.books.google.lt/books/content?id=IevnoAEACAAJ&printsec=frontcover&img=1&zoom=1&source=gbs_api',
             'owner' => 1,
             'createdDate' => new \DateTime('2015-05-11'),
+            'popularity' => 2
         );
 
         $bookList[] = array(
@@ -118,6 +121,7 @@ class LoadBookData extends AbstractFixture implements OrderedFixtureInterface, C
             'imageLink' => 'http://bks9.books.google.lt/books/content?id=_AZ_AwAAQBAJ&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api',
             'owner' => 1,
             'createdDate' => new \DateTime('2015-05-11'),
+            'popularity' => 0
         );
         $bookList[] = array(
             'title' => 'A Clockwork Orange',
@@ -134,6 +138,7 @@ class LoadBookData extends AbstractFixture implements OrderedFixtureInterface, C
             'imageLink' => 'http://bks2.books.google.lt/books/content?id=Kb5_Q0_AILIC&printsec=frontcover&img=1&zoom=1&source=gbs_api',
             'owner' => 1,
             'createdDate' => new \DateTime(),
+            'popularity' => 13
         );
         $bookList[] = array(
             'title' => 'Fight Club: A Novel',
@@ -152,6 +157,7 @@ class LoadBookData extends AbstractFixture implements OrderedFixtureInterface, C
             'imageLink' => 'http://bks5.books.google.lt/books/content?id=SzfvHXu_5t8C&printsec=frontcover&img=1&zoom=1&source=gbs_api',
             'owner' => 1,
             'createdDate' => new \DateTime('2014-04-17'),
+            'popularity' => 4
         );
         $bookList[] = array(
             'title' => 'Girls in Pants',
@@ -169,6 +175,7 @@ class LoadBookData extends AbstractFixture implements OrderedFixtureInterface, C
             'imageLink' => 'http://bks6.books.google.lt/books/content?id=UKQDCQAAQBAJ&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api',
             'owner' => 1,
             'createdDate' => new \DateTime('2015-05-12'),
+            'popularity' => 4
         );
         $bookList[] = array(
             'title' => 'A Tree Grows in Brooklyn',
@@ -185,6 +192,7 @@ class LoadBookData extends AbstractFixture implements OrderedFixtureInterface, C
             'imageLink' => 'http://bks4.books.google.lt/books/content?id=KbSPuAAACAAJ&printsec=frontcover&img=1&zoom=1&source=gbs_api',
             'owner' => 1,
             'createdDate' => new \DateTime('2015-04-17'),
+            'popularity' => 13
         );
         $bookList[] = array(
             'title' => 'City of Bones',
@@ -202,6 +210,7 @@ class LoadBookData extends AbstractFixture implements OrderedFixtureInterface, C
             'imageLink' => 'http://bks8.books.google.lt/books/content?id=N25JAQAAIAAJ&printsec=frontcover&img=1&zoom=1&source=gbs_api',
             'owner' => 1,
             'createdDate' => new \DateTime('2015-05-13'),
+            'popularity' => 9
         );
         $bookList[] = array(
             'title' => 'Feed',
@@ -218,6 +227,7 @@ class LoadBookData extends AbstractFixture implements OrderedFixtureInterface, C
             'imageLink' => 'http://bks4.books.google.lt/books/content?id=NAHvnQEACAAJ&printsec=frontcover&img=1&zoom=1&source=gbs_api',
             'owner' => 1,
             'createdDate' => new \DateTime(),
+            'popularity' => 7
         );
         $bookList[] = array(
             'title' => 'I Know What You Did Last Summer',
@@ -235,6 +245,7 @@ class LoadBookData extends AbstractFixture implements OrderedFixtureInterface, C
             'imageLink' => 'http://bks1.books.google.lt/books/content?id=swnwRAAACAAJ&printsec=frontcover&img=1&zoom=1&source=gbs_api',
             'owner' => 1,
             'createdDate' => new \DateTime('2014-04-17'),
+            'popularity' => 9
         );
         $bookList[] = array(
             'title' => 'Monster',
@@ -251,6 +262,7 @@ class LoadBookData extends AbstractFixture implements OrderedFixtureInterface, C
             'imageLink' => 'http://bks5.books.google.lt/books/content?id=tcr0ii90BrcC&printsec=frontcover&img=1&zoom=1&source=gbs_api',
             'owner' => 1,
             'createdDate' => new \DateTime(''),
+            'popularity' => 0
         );
         $bookList[] = array(
             'title' => 'The Boy in the Striped Pajamas',
@@ -268,6 +280,7 @@ class LoadBookData extends AbstractFixture implements OrderedFixtureInterface, C
             'imageLink' => 'http://bks1.books.google.lt/books/content?id=dpCzx9Ho52UC&printsec=frontcover&img=1&zoom=1&source=gbs_api',
             'owner' => 1,
             'createdDate' => new \DateTime('2014-04-17'),
+            'popularity' => 4
         );
         return $bookList;
     }

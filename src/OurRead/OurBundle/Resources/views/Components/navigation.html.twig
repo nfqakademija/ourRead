@@ -76,7 +76,7 @@
                                                     {{ form_label(registerForm.email, null, {'label_attr': {'class': 'control-label lol' }}
                                                     ) }}
                                                     {{ form_errors(registerForm.email) }}
-                                                    {{ form_widget(registerForm.email, {'attr': {'class': 'form-control' }}
+                                                    {{ form_widget(registerForm.email, {'attr': {'class': 'form-control form-space' }}
                                                     ) }}
                                                 </div>
 
@@ -84,7 +84,7 @@
                                                     {{ form_label(registerForm.username, null, {'label_attr': {'class': 'control-label lol' }}
                                                     ) }}
                                                     {{ form_errors(registerForm.username) }}
-                                                    {{ form_widget(registerForm.username, {'attr': {'class': 'form-control' }}
+                                                    {{ form_widget(registerForm.username, {'attr': {'class': 'form-control form-space' }}
                                                     ) }}
                                                 </div>
 
@@ -92,7 +92,7 @@
                                                     {{ form_label(registerForm.plainPassword.first, null, {'label_attr': {'class': 'control-label lol' }}
                                                     ) }}
                                                     {{ form_errors(registerForm.plainPassword.first) }}
-                                                    {{ form_widget(registerForm.plainPassword.first, {'attr': {'class': 'form-control' }}
+                                                    {{ form_widget(registerForm.plainPassword.first, {'attr': {'class': 'form-control form-space' }}
                                                     ) }}
                                                 </div>
 
@@ -100,14 +100,14 @@
                                                     {{ form_label(registerForm.plainPassword.second, null, {'label_attr': {'class': 'control-label lol' }}
                                                     ) }}
                                                     {{ form_errors(registerForm.plainPassword.second) }}
-                                                    {{ form_widget(registerForm.plainPassword.second, {'attr': {'class': 'form-control' }}
+                                                    {{ form_widget(registerForm.plainPassword.second, {'attr': {'class': 'form-control form-space' }}
                                                     ) }}
                                                 </div>
 
 
                                                 {{ form_row (registerForm._token) }}
 
-                                                </br>
+
 
                                                 <a class="btn btn-block btn-social btn-facebook">
                                                     <i class="fa fa-facebook"></i> Sign in with Facebook
@@ -164,9 +164,10 @@
                                                 </div>
 
                                                 <input type="checkbox" id="remember_me" name="_remember_me" value="on"/>
-                                                <label for="remember_me">{{ 'security.login.remember_me'|trans }}</label>
+                                                <label for="remember_me" id="label">{{ 'security.login.remember_me'|trans }}</label>
 
                                                 </br>
+
 
                                                 <a class="btn btn-block btn-social btn-facebook">
                                                     <i class="fa fa-facebook"></i> Sign in with Facebook
@@ -196,8 +197,8 @@
                         {% endif %}
 
                         {% else %}
-                            <a href="/login" role="button" class="btn btn-default navbar-btn">Register</a>
-                            <a href="/register" role="button" class="btn btn-primary navbar-btn">Sign-in</a>
+                            <a href="/register" role="button" class="btn btn-default navbar-btn">Register</a>
+                            <a href="/login" role="button" class="btn btn-primary navbar-btn">Sign-in</a>
                     {% endif %}
                 {% endif %}
                 <form method="GET" action="{{ path('SearchResult') }}" class="navbar-form navbar-right" role="search">

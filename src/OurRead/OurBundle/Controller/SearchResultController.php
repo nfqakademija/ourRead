@@ -35,7 +35,7 @@ class SearchResultController extends Controller
         $pagination = $paginator->paginate(
             $query,
             $request->query->get('page', 1)/*page number*/,
-            6/*limit per page*/
+            8/*limit per page*/
         );
         return $this->render('OurBundle:Search:SearchResult.html.twig', array(
                 'search' => $search,

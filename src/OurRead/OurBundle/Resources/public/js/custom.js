@@ -2,6 +2,21 @@
  * Created by povilas on 5/3/15.
  */
 
+
+$('#reg-info').ready(function() {
+
+    if ($('#reg-info').html().trim()) {
+        $('#reg-title').text('Sign-up');
+
+    }
+    else
+    {
+        $('#reg-title').text('Sign-up');
+        $("#reg-info").hide();
+    }
+});
+
+
 $('#form-isbn').submit(function() {
     $.blockUI({ css: {
         border: 'none',

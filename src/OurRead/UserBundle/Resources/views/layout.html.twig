@@ -17,7 +17,7 @@
 
                 <div class="panel-body">
 
-                        {% if error is defined and not is_granted("IS_AUTHENTICATED_REMEMBERED") %}
+                    {% if error is defined and not is_granted("IS_AUTHENTICATED_REMEMBERED") %}
                         {% if error %}
                             <div class="alert alert-danger">{{ error.messageKey|trans(error.messageData, 'security') }}</div>
                         {% endif %}
@@ -102,11 +102,11 @@
                                 <div class="col-md-6">
 
 
-                                <div class="alert alert-danger " id="reg-info" >
-                                    {{ form_errors(form.email) }}
-                                    {{ form_errors(form.username) }}
-                                    {{ form_errors(form.plainPassword.first) }}
-                                </div>
+                                    <div class="alert alert-danger " id="reg-info" >
+                                        {{ form_errors(form.email) }}
+                                        {{ form_errors(form.username) }}
+                                        {{ form_errors(form.plainPassword.first) }}
+                                    </div>
                                 </div>
                             </div>
                             {{ form_row (form._token) }}
@@ -122,11 +122,11 @@
 
                     {% endif %}
 
-                        {% if is_granted("IS_AUTHENTICATED_REMEMBERED") %}
+                    {% if is_granted("IS_AUTHENTICATED_REMEMBERED") %}
 
-                           <h2>Your registration is successful</h2>
+                        <h2>Your registration is successful</h2>
 
-                        {%  endif %}
+                    {%  endif %}
 
 
                 </div>

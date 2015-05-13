@@ -50,7 +50,7 @@ class Book
     /**
      * @var \DateTime
      *
-     * @ORM\Column(name="publishedDate", type="date")
+     * @ORM\Column(name="published_date", type="date")
      */
 
     private $publishedDate;
@@ -76,7 +76,7 @@ class Book
     /**
      * @var integer
      *
-     * @ORM\Column(name="pageCount", type="integer")
+     * @ORM\Column(name="page_count", type="integer")
      */
     private $pageCount;
 
@@ -100,12 +100,22 @@ class Book
      * @ORM\Column(name="owner", type="integer")
      */
     private $owner;
+
     /**
      * @var \DateTime
      *
-     * @ORM\Column(name="createdDate", type="date")
+     * @ORM\Column(name="created_date", type="date")
      */
+
     private $createdDate;
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="popularity", type="integer")
+     */
+    private $popularity;
+
     /**
      * Constructor
      */
@@ -383,5 +393,28 @@ class Book
     public function getCreatedDate()
     {
         return $this->createdDate;
+    }
+
+    /**
+     * Set popularity
+     *
+     * @param integer $popularity
+     * @return Book
+     */
+    public function setPopularity($popularity)
+    {
+        $this->popularity = $popularity;
+
+        return $this;
+    }
+
+    /**
+     * Get popularity
+     *
+     * @return integer 
+     */
+    public function getPopularity()
+    {
+        return $this->popularity;
     }
 }
