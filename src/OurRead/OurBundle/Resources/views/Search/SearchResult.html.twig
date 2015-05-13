@@ -28,7 +28,7 @@
                     <div class="caption">
                         <h3><b>{{ book.title }}  </b>{% if "now"|date('Y-m-d') == book.createdDate|date('Y-m-d') or "yesterday"|date('Y-m-d') == book.createdDate|date('Y-m-d')%}<span class="label label-primary">New!</span>{% endif %}</h3>
                         <h5>by <b>{{ book.author }}</b></h5>
-                        <p><i>"{{ book.description|length > 120 ? book.description|slice(0, 120) ~ '...' : book.description.text  }}"</i></p>
+                        <p><i>"{{ book.description|length > 100 ? book.description|slice(0, 100) ~ '...' : book.description.text  }}"</i></p>
 
                         <p>
                             <button type="button" class="btn btn-primary btn--b" data-toggle="modal" data-target="#myModal-{{ book.id }}">
