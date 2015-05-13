@@ -29,20 +29,29 @@ class MainPageController extends Controller
         $repository = $em->getRepository('LibraryBundle:Book');
 
         // most recent books
-        $query = $repository->createQueryBuilder('book')
+        $newBooks = $repository->createQueryBuilder('book')
             ->orderBy('book.id', 'DESC')
-            ->getQuery();
-        $books['new'] = $query->setMaxResults(8)->getResult();
-        // most recent books
-        $query = $repository->createQueryBuilder('book')
-            ->orderBy('book.id', 'DESC')
-            ->getQuery();
-        $newBooks = $query->setMaxResults(8)->getResult();
+            ->getQuery()
+            ->setMaxResults(8)
+            ->getResult();
+
+        // get 12 random books for slide
+        $query=$repository->createQueryBuilder('book')
+            ->getQuery()
+            ->getResult();
+
+        $randomKeys = array_rand($query, 12);
+        shuffle($randomKeys);
+        $randomBooks = array();
+        foreach ($randomKeys as $number) {
+            $randomBooks[] = $query[$number];
+        }
 
         return $this->render('OurBundle:MainPage:index.html.twig', array(
             'loginForm' => $login,
             'registerForm' => $register,
-            'newBooks' => $newBooks
+            'newBooks' => $newBooks,
+            'randomBooks' =>$randomBooks
         ));
     }
 

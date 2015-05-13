@@ -1,77 +1,117 @@
-<section id="feature_slider" class="lol">
-    <article class="slide" id="showcasing"
-             style="background: url('{{ asset('bundles/our/img/slides/landscape.png') }}') repeat-x top center;">
-        <a href="/book/9"><img class="asset left-1200 sp1500 t90 z1" style="width:210px;height:350px"
-                               src="{{ asset('bundles/our/img/slides/9.jpg') }}"/></a>
-        <a href="/book/10"><img class="asset left-900 sp1500 t90 z2" style="width:210px;height:350px"
-                                src="{{ asset('bundles/our/img/slides/10.jpg') }}"/></a>
-        <a href="/book/11"><img class="asset left-600 sp1500 t90 z3" style="width:210px;height:350px"
-                                src="{{ asset('bundles/our/img/slides/11.jpg') }}"/></a>
-        <a href="/book/12"><img class="asset left-300 sp1500 t90 z3" style="width:210px;height:350px"
-                                src="{{ asset('bundles/our/img/slides/12.jpg') }}"/></a>
-    <article class="slide" id="showcasing" style="background: url('{{ asset('bundles/our/img/slides/landscape.png') }}') repeat-x top center;">
-        <a href="/book/9"><img class="asset left-1200 sp1500 t90 z1" style="width:210px;height:350px" src="{{ asset('bundles/our/img/9.jpg') }}"/></a>
-        <a href="/book/10"><img class="asset left-900 sp1500 t90 z2" style="width:210px;height:350px" src="{{ asset('bundles/our/img/10.jpg') }}"/></a>
-        <a href="/book/11"><img class="asset left-600 sp1500 t90 z3" style="width:210px;height:350px" src="{{ asset('bundles/our/img/11.jpg') }}"/></a>
-        <a href="/book/12"><img class="asset left-300 sp1500 t90 z3" style="width:210px;height:350px" src="{{ asset('bundles/our/img/12.jpg') }}"/></a>
+<div style="min-height: 50px;">
+    <div id="slider1_container" style="display: none; position: relative; margin: 0 auto;
+        top: 0px; left: 0px; width: 1300px; height: 500px; overflow: hidden;">
+        <!-- Loading Screen -->
+        <div u="loading" style="position: absolute; top: 0px; left: 0px;">
+            <div style="filter: alpha(opacity=70); opacity: 0.7; position: absolute; display: block;
+                top: 0px; left: 0px; width: 100%; height: 100%;">
+            </div>
+            <div style="position: absolute; display: block; background: url({{ asset('bundles/our/img/loading.gif') }}) no-repeat center center;
+                top: 0px; left: 0px; width: 100%; height: 100%;">
+            </div>
+        </div>
+        <!-- Slides Container -->
+        <div u="slides" style="cursor: move; position: absolute; left: 0px; top: 0px; width: 1300px; height: 500px; overflow: hidden;">
 
-        <div class="info">
-            <h2></h2>
+            <div>
+                <img u="image" src2="{{ asset('bundles/our/img/slides/landscape.png') }}" />
+                <div style="position:absolute;left:100px;top:90px;width:300px;height:30px;">
+                    <a href="/book/{{ randomBooks[0].id }}"><img class="slide-image" style="width:210px;height:350px" src="{{ asset('uploads/' ~randomBooks[0].id) }}"/></a>
+                </div>
+                <div style="position:absolute;left:400px;top:90px;width:300px;height:30px;">
+                    <a href="/book/{{ randomBooks[1].id }}"><img class="slide-image" style="width:210px;height:350px" src="{{ asset('uploads/'~randomBooks[1].id) }}"/></a>
+                </div>
+                <div style="position:absolute;left:700px;top:90px;width:300px;height:30px;">
+                    <a href="/book/{{ randomBooks[2].id }}"><img class="slide-image" style="width:210px;height:350px" src="{{ asset('uploads/'~randomBooks[2].id) }}"/></a>
+                </div>
+                <div style="position:absolute;left:1000px;top:90px;width:300px;height:30px;">
+                    <a href="/book/{{ randomBooks[3].id }}"><img class="slide-image" style="width:210px;height:350px" src="{{ asset('uploads/'~randomBooks[3].id) }}"/></a>
+                </div>
+            </div>
+            <div>
+                <img class ="imgA1" u="image" src2="{{ asset('bundles/our/img/slides/bubble2.jpg') }}"/>
+                <div style="position:absolute;left:100px;top:90px;width:300px;height:30px;">
+                    <a href="/book/{{ randomBooks[4].id }}"><img class="slide-image" style="width:210px;height:350px" src="{{ asset('uploads/'~randomBooks[4].id) }}"/></a>
+                </div>
+                <div style="position:absolute;left:400px;top:90px;width:300px;height:30px;">
+                    <a href="/book/{{ randomBooks[5].id }}"><img class="slide-image" style="width:210px;height:350px" src="{{ asset('uploads/'~randomBooks[5].id) }}"/></a>
+                </div>
+                <div style="position:absolute;left:700px;top:90px;width:300px;height:30px;">
+                    <a href="/book/{{ randomBooks[6].id }}"><img class="slide-image" style="width:210px;height:350px" src="{{ asset('uploads/'~randomBooks[6].id) }}"/></a>
+                </div>
+                <div style="position:absolute;left:1000px;top:90px;width:300px;height:30px;">
+                    <a href="/book/{{ randomBooks[7].id }}"><img class="slide-image" style="width:210px;height:350px" src="{{ asset('uploads/'~randomBooks[7].id) }}"/></a>
+                </div>
+            </div>
+            <div>
+                <img u="image" src2="{{ asset('bundles/our/img/slides/bubble.jpg') }}" />
+                <div style="position:absolute;left:100px;top:90px;width:300px;height:30px;">
+                    <a href="/book/{{ randomBooks[8].id }}"><img class="slide-image" style="width:210px;height:350px" src="{{ asset('uploads/'~randomBooks[8].id) }}"/></a>
+                </div>
+                <div style="position:absolute;left:400px;top:90px;width:300px;height:30px;">
+                    <a href="/book/{{ randomBooks[9].id }}"><img class="slide-image" style="width:210px;height:350px" src="{{ asset('uploads/'~randomBooks[9].id) }}"/></a>
+                </div>
+                <div style="position:absolute;left:700px;top:90px;width:300px;height:30px;">
+                    <a href="/book/{{ randomBooks[10].id }}"><img class="slide-image" style="width:210px;height:350px" src="{{ asset('uploads/'~randomBooks[10].id) }}"/></a>
+                </div>
+                <div style="position:absolute;left:1000px;top:90px;width:300px;height:30px;">
+                    <a href="/book/{{ randomBooks[11].id }}"><img class="slide-image" style="width:210px;height:350px" src="{{ asset('uploads/'~randomBooks[11].id) }}"/></a>
+                </div>
+            </div>
         </div>
-    </article>
-    <article class="slide" id="ideas"
-             style="background: url('{{ asset('bundles/our/img/slides/aqua.jpg') }}') repeat-x top center;">
-        <div class="info">
-            <h2></h2>
+        <style>
+            .jssorb21 {
+                position: absolute;
+            }
+            .jssorb21 div, .jssorb21 div:hover, .jssorb21 .av {
+                position: absolute;
+                /* size of bullet elment */
+                width: 19px;
+                height: 19px;
+                text-align: center;
+                line-height: 19px;
+                color: white;
+                font-size: 12px;
+                background: url({{ asset('bundles/our/img/b21.png') }}) no-repeat;
+                overflow: hidden;
+                cursor: pointer;
+            }
+            .jssorb21 div { background-position: -5px -5px; }
+            .jssorb21 div:hover, .jssorb21 .av:hover { background-position: -35px -5px; }
+            .jssorb21 .av { background-position: -65px -5px; }
+            .jssorb21 .dn, .jssorb21 .dn:hover { background-position: -95px -5px; }
+        </style>
+        <div u="navigator" class="jssorb21" style="bottom: 26px; right: 6px;">
+            <div u="prototype"></div>
         </div>
-        <a href="/book/9"><img class="asset left-1200 sp1500 t90 z1" style="width:210px;height:350px"
-                               src="{{ asset('bundles/our/img/slides/9.jpg') }}"/></a>
-        <a href="/book/10"><img class="asset left-900 sp1500 t90 z2" style="width:210px;height:350px"
-                                src="{{ asset('bundles/our/img/slides/10.jpg') }}"/></a>
-        <a href="/book/11"><img class="asset left-600 sp1500 t90 z3" style="width:210px;height:350px"
-                                src="{{ asset('bundles/our/img/slides/11.jpg') }}"/></a>
-        <a href="/book/12"><img class="asset left-300 sp1500 t90 z3" style="width:210px;height:350px"
-                                src="{{ asset('bundles/our/img/slides/12.jpg') }}"/></a>
-    </article>
-    <article class="slide" id="tour"
-             style="background: url('{{ asset('bundles/our/img/slides/bubble2.jpg') }}') repeat-x top center;">
-        <a href="/book/9"><img class="asset left-1200 sp1500 t90 z1" style="width:210px;height:350px"
-                               src="{{ asset('bundles/our/img/slides/9.jpg') }}"/></a>
-        <a href="/book/10"><img class="asset left-900 sp1500 t90 z2" style="width:210px;height:350px"
-                                src="{{ asset('bundles/our/img/slides/10.jpg') }}"/></a>
-        <a href="/book/11"><img class="asset left-600 sp1500 t90 z3" style="width:210px;height:350px"
-                                src="{{ asset('bundles/our/img/slides/11.jpg') }}"/></a>
-        <a href="/book/12"><img class="asset left-300 sp1500 t90 z3" style="width:210px;height:350px"
-                               src="{{ asset('bundles/our/img/slides/12.jpg') }}"/></a>
-        <a href="/book/9"><img class="asset left-1200 sp1500 t90 z1" style="width:210px;height:350px" src="{{ asset('bundles/our/img/9.jpg') }}"/></a>
-        <a href="/book/10"><img class="asset left-900 sp1500 t90 z2" style="width:210px;height:350px" src="{{ asset('bundles/our/img/10.jpg') }}"/></a>
-        <a href="/book/11"><img class="asset left-600 sp1500 t90 z3" style="width:210px;height:350px" src="{{ asset('bundles/our/img/11.jpg') }}"/></a>
-        <a href="/book/12"><img class="asset left-300 sp1500 t90 z3" style="width:210px;height:350px" src="{{ asset('bundles/our/img/12.jpg') }}"/></a>
-    </article>
-    <article class="slide" id="tour" style="background: url('{{ asset('bundles/our/img/slides/bubble2.jpg') }}') repeat-x top center;">
-        <a href="/book/9"><img class="asset left-1200 sp1500 t90 z1" style="width:210px;height:350px" src="{{ asset('bundles/our/img/9.jpg') }}"/></a>
-        <a href="/book/10"><img class="asset left-900 sp1500 t90 z2" style="width:210px;height:350px" src="{{ asset('bundles/our/img/10.jpg') }}"/></a>
-        <a href="/book/11"><img class="asset left-600 sp1500 t90 z3" style="width:210px;height:350px" src="{{ asset('bundles/our/img/11.jpg') }}"/></a>
-        <a href="/book/12"><img class="asset left-300 sp1500 t90 z3" style="width:210px;height:350px" src="{{ asset('bundles/our/img/12.jpg') }}"/></a>
-
-        <div class="info">
-            <h2></h2>
-        </div>
-    </article>
-    <article class="slide" id="responsive"
-             style="background: url('{{ asset('bundles/our/img/slides/aqua.jpg') }}') repeat-x top center;">
-        <a href="/book/9"><img class="asset left-1200 sp1500 t90 z1" style="width:210px;height:350px"
-                               src="{{ asset('bundles/our/img/9.jpg') }}"/></a>
-        <a href="/book/10"><img class="asset left-900 sp1500 t90 z2" style="width:210px;height:350px"
-                                src="{{ asset('bundles/our/img/10.jpg') }}"/></a>
-        <a href="/book/11"><img class="asset left-600 sp1500 t90 z3" style="width:210px;height:350px"
-                                src="{{ asset('bundles/our/img/11.jpg') }}"/></a>
-        <a href="/book/12"><img class="asset left-300 sp1500 t90 z3" style="width:210px;height:350px"
-                                src="{{ asset('bundles/our/img/12.jpg') }}"/></a>
-
-        <div class="info">
-            <h2>
-            </h2>
-        </div>
-    </article>
-</section>
+        <style>
+            .jssora21l, .jssora21r {
+                display: block;
+                position: absolute;
+                /* size of arrow element */
+                width: 55px;
+                height: 55px;
+                cursor: pointer;
+                background: url({{ asset('bundles/our/img/a21.png') }}) center center no-repeat;
+                overflow: hidden;
+            }
+            .jssora21l { background-position: -3px -33px; }
+            .jssora21r { background-position: -63px -33px; }
+            .jssora21l:hover { background-position: -123px -33px; }
+            .jssora21r:hover { background-position: -183px -33px; }
+            .jssora21l.jssora21ldn { background-position: -243px -33px; }
+            .jssora21r.jssora21rdn { background-position: -303px -33px; }
+        </style>
+        <!-- Arrow Left -->
+            <span u="arrowleft" class="jssora21l" style="top: 123px; left: 8px;">
+            </span>
+        <!-- Arrow Right -->
+            <span u="arrowright" class="jssora21r" style="top: 123px; right: 8px;">
+            </span>
+    </div>
+    <!-- Jssor Slider End -->
+</div>
+<!-- Bootstrap core JavaScript
+================================================== -->
+<script src="{{ asset('bundles/our/js/jquery.min.js') }}"></script>
+<script src="{{ asset('bundles/our/js/jssor.slider.mini.js') }}"></script>
