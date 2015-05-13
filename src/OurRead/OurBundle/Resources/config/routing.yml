@@ -19,12 +19,12 @@ MyBooksPage:
 CategoriesPage:
     path:     /categories
     defaults: { _controller: OurBundle:CategoriesPage:index }
-saveBook:
-    path:     /save/{id}
-    defaults: { _controller: OurBundle:BookPage:saveBook }
 acttco:
     path:     /contact
     defaults: { _controller: OurBundle:Contact:contact }
-addBook:
+AddBook:
     path:     /addBook
     defaults: { _controller: OurBundle:AddBook:addBook }
+SearchResult:
+    path:     /searchResult
+    defaults: { _controller: OurBundle:SearchResult:searchResult }

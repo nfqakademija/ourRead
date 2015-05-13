@@ -24,14 +24,14 @@
         <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
 
             <ul class="nav navbar-nav">
-                <li><a href="/" id="brand">Our Reads</a></li>
+                <li><a href="{{ path('OurHomepage') }}" id="brand">Our Reads</a></li>
                 <li><a href="/categories">Categories</a> </li>
                 <li><a href="/books">Books</a></li>
 
                 {% if is_granted("IS_AUTHENTICATED_REMEMBERED") %}
 
-                <li><a href="/mybooks">My Books</a></li>
-                <li><a href="addBook" id="add_book">Add Book</a></li>
+                <li><a href="{{ path('MyBooksPage') }}">My Books</a></li>
+                <li><a href="{{ path('AddBook') }}" id="add_book">Add Book</a></li>
 
                 {% endif %}
 
@@ -40,10 +40,9 @@
             <div class="navbar-right">
 
                 {% if is_granted("IS_AUTHENTICATED_REMEMBERED") %}
-
                     <ul class="nav navbar-nav">
                         <li><a href="{{ path('fos_user_security_logout') }}">Logout</a></li>
-                        <li><a href="/user">{{ app.user.username }} <span class="badge">2</span> </a></li>
+                        <li><a href="{{ path('UserPage') }}">{{ app.user.username }} <span class="badge">2</span> </a></li>
                     </ul>
 
                 {% else %}
@@ -197,22 +196,17 @@
                         {% endif %}
 
                         {% else %}
-                            <a href="/login" role="button" class="btn btn-default navbar-btn">Sign-up</a>
+                            <a href="/login" role="button" class="btn btn-default navbar-btn">Register</a>
                             <a href="/register" role="button" class="btn btn-primary navbar-btn">Sign-in</a>
                     {% endif %}
                 {% endif %}
-
-                <form class="navbar-form navbar-right" role="search">
+                <form method="GET" action="{{ path('SearchResult') }}" class="navbar-form navbar-right" role="search">
                     <div class="form-group">
-                        <input type="text" class="form-control" placeholder="Title / Author / ISBN">
+                        <input name="search" type="text" required = "required" class="form-control" placeholder="Title / Author / ISBN">
                     </div>
-
-                    <button type="submit" class="btn btn-info">Search</button>
-
-
+                    <button type="submit" class="btn  .btn--b btn-info">Search</button>
                 </form>
             </div>
-
         </div>
         <!-- /.navbar-collapse -->
     </div>

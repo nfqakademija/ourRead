@@ -101,6 +101,12 @@ class Book
      */
     private $owner;
     /**
+     * @var \DateTime
+     *
+     * @ORM\Column(name="createdDate", type="date")
+     */
+    private $createdDate;
+    /**
      * Constructor
      */
     public function __construct()
@@ -354,5 +360,28 @@ class Book
     public function getCategories()
     {
         return $this->categories;
+    }
+
+    /**
+     * Set createdDate
+     *
+     * @param \DateTime $createdDate
+     * @return Book
+     */
+    public function setCreatedDate($createdDate)
+    {
+        $this->createdDate = $createdDate;
+
+        return $this;
+    }
+
+    /**
+     * Get createdDate
+     *
+     * @return \DateTime 
+     */
+    public function getCreatedDate()
+    {
+        return $this->createdDate;
     }
 }

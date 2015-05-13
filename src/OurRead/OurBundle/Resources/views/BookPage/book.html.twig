@@ -1,57 +1,33 @@
 {% extends 'OurBundle:Layouts:default.html.twig' %}
 
-{% block styles %}
-    {{ parent() }}
 
-    .navbar-brand {
-    padding-top: 5px;
-    }
-
-    #brand {
-    margin-left: -5px;
-    font-size: 20px;
-    }
-
-    img.LBookFoto {
-    width: 350px;
-    height: 600px;
-    }
-
-    #main {
-    padding-top: 60px;
-    }
-
-    div.imgCol {
-    overflow: hidden;
-    text-align: center;
-    }
-{% endblock %}
 
 {% block slider %}{% endblock %}
 
 {% block body %}
-    <div class="row">
-        <div class="col-md-4 imgCol">
-            <img src="{{ asset('bundles/our/img/' ~ book_id ~ '.jpg') }}" class="LBookFoto" id="test"/>
+    </br></br></br></br>
+    <div class="container">
+        <div class="col-md-4 ">
+            <img src="{{ asset('uploads/' ~ book_data.id) }}" class="LBookFoto" id="test"/>
         </div>
-
-        <div class="col-md-4">
-            <h1>Text Editing</h1>
-
-            <h3>John Frusciante</h3>
-
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam ut lectus ac tortor fringilla tristique.
-                Phasellus condimentum sem velit. Suspendisse vel odio eget augue bibendum tincidunt. Maecenas auctor
-                eros at tellus accumsan, a venenatis lectus luctus. Vivamus ultricies elit vulputate lacus mollis
-                placerat. Curabitur fermentum mauris eget velit faucibus, et posuere sem feugiat. Vivamus efficitur
-                metus in massa porttitor, sollicitudin viverra odio feugiat. Morbi dui mi, fermentum sed convallis ac,
-                ultricies vestibulum nibh. Vivamus efficitur porttitor placerat. Quisque venenatis imperdiet nisl a
-                efficitur. Aenean convallis, libero vel dictum venenatis, enim erat ullamcorper turpis, quis aliquam
-                velit lectus id mauris. </p>
-
-            <p><a href="#" class="btn btn-primary">Take book</a></p>
+        <div class="col-md-5">
+                <h1><b>{{ book_data.title}}</b></h1>
+                <h3>by <b>{{ book_data.author }}</b></h3>
+                <p><h4><i>{{ book_data.description }}</i></h4></p>
+                <br>
+                <h4><b>Categories:</b>
+                    {% for category in book_data.categories %}
+                        {{ category.category }}
+                    {% endfor %}
+                </h4>
+                <p><h4><b>Pages:</b> {{ book_data.pageCount }}</h4></p>
+                <p><h4><b>Publisher:</b> {{ book_data.publisher }}</h4></p>
+                <p><h4><b>ISBN:</b> {{ book_data.isbn }}</h4></p>
+                <p><h4><b>Book Owner:</b> {{ book_data.owner }}</h4></p>
+            <br>
+            <div class="btn-group-lg">
+                <a href="#" class="btn btn-primary">Order It!</a>
+            </div>
         </div>
-
-
     </div>
 {% endblock %}

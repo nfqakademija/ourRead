@@ -6,9 +6,12 @@
  * Time: 3:26 PM
  */
 
-namespace OurRead\LibraryBundle\Services\BookCoverUploader;
 
-class BookCoverUploaderService
+namespace OurRead\LibraryBundle\Services\BookCoverService;
+
+
+
+class BookCoverUploader extends BookCoverService
 {
     /**
      * @param $imageLink
@@ -20,22 +23,5 @@ class BookCoverUploaderService
             mkdir($this->getUploadRootDir());
         }
         file_put_contents($this->getUploadRootDir().$fileName, file_get_contents($imageLink));
-    }
-
-    /**
-     * @return string
-     */
-    private function getUploadRootDir()
-    {
-        // the absolute directory path where uploaded
-        return __DIR__.'/../../../../../web/'.$this->getUploadDir();
-    }
-
-    /**
-     * @return string
-     */
-    private function getUploadDir()
-    {
-        return 'uploads/';
     }
 }

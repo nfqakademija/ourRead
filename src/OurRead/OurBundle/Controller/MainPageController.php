@@ -17,20 +17,39 @@ class MainPageController extends Controller
 {
 
     /**
-     * @return \Symfony\Component\HttpFoundation\Response
+     * @return Response
      */
     public function indexAction()
     {
         $request = new Request();
         $login = $this->loginAction($request);
-        $form = $this->registrationAction($request);
+        $register = $this->registrationAction($request);
+
+        $em = $this->getDoctrine()->getManager();
+        $repository = $em->getRepository('LibraryBundle:Book');
+
+        // most recent books
+        $query = $repository->createQueryBuilder('book')
+            ->orderBy('book.id', 'DESC')
+            ->getQuery();
+        $books['new'] = $query->setMaxResults(8)->getResult();
+        // most recent books
+        $query = $repository->createQueryBuilder('book')
+            ->orderBy('book.id', 'DESC')
+            ->getQuery();
+        $newBooks = $query->setMaxResults(8)->getResult();
 
         return $this->render('OurBundle:MainPage:index.html.twig', array(
             'loginForm' => $login,
-            'registerForm' => $form
+            'registerForm' => $register,
+            'newBooks' => $newBooks
         ));
     }
 
+    /**
+     * @param Request $request
+     * @return array
+     */
     public function loginAction(Request $request)
     {
         /** @var $session \Symfony\Component\HttpFoundation\Session\Session */
@@ -95,4 +114,5 @@ class MainPageController extends Controller
         }
         return $form->createView();
     }
+
 }

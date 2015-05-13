@@ -63,7 +63,7 @@
             <tbody>
 
            {% for book in books %}
-            <tr>
+            <tr class = "row-link" data-href="/book/{{book.id}}">
                 <td> {{ book.title }}</td>
                 <td> {{ book.author }}</td>
                 <td></td>

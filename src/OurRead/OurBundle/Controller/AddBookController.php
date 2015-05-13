@@ -32,6 +32,7 @@ class AddBookController extends Controller
             $bookInfo = $this->get('remote_library_service')
                 ->getBookInfoByISBN(str_replace('-', '', $form1["isbn"]->getData()));
 
+
             if (empty($bookInfo)) {
                 $this->get('session')->getFlashBag()->add(
                     'notice',
@@ -39,7 +40,6 @@ class AddBookController extends Controller
                 );
             }
         }
-        
         $book = new Book();
         $form2 = $this->createForm(new BookType($bookInfo), $book);
         $form2->handleRequest($request);
@@ -47,6 +47,7 @@ class AddBookController extends Controller
         if ($form2->isValid()) {
             $user = $this->container->get('security.context')->getToken()->getUser();
             $book->setOwner($user->getId());
+            $book->setCreatedDate(new \DateTime());
             $em = $this->getDoctrine()->getManager();
             $em->persist($book);
             $em->flush();
@@ -54,7 +55,7 @@ class AddBookController extends Controller
             if ($form2['bookCoverByUser']->getData() !== null) {
                 $form2['bookCoverByUser']->getData()->move(__DIR__.'/../../../../web/uploads/', $book->getId());
             } else {
-                $this->container->get('cover_uploader_service')
+                $this->container->get('cover_uploader')
                     ->uploadBookCoverByImageLink($form2['bookCoverByWebService']->getData(), $book->getId());
             }
             return $this->redirectToRoute('OurHomepage', array(), 301);
