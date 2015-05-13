@@ -6,8 +6,8 @@
         <!-- Nav tabs -->
         <ul class="nav nav-tabs" role="tablist">
             <li role="presentation" class="active"><a href="#new" aria-controls="new" role="tab" data-toggle="tab"><h3>NEW</h3></a></li>
-            <li role="presentation"><a href="#profile" aria-controls="profile" role="tab" data-toggle="tab"><h3>POPULAR</h3></a></li>
-            <li role="presentation"><a href="#messages" aria-controls="messages" role="tab" data-toggle="tab"><h3>MOST WAITING</h3></a></li>
+            <li role="presentation"><a href="#popular" aria-controls="popular" role="tab" data-toggle="tab"><h3>POPULAR</h3></a></li>
+            <li role="presentation"><a href="#most-waiting" aria-controls="most-waiting" role="tab" data-toggle="tab"><h3>MOST WAITING</h3></a></li>
         </ul>
         <!-- Tab panes -->
         <div class="tab-content">
@@ -57,20 +57,19 @@
                             <div class="btn-group-lg ">
                                 <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
                                 <a href="/book/{{ book.id }}" class="btn btn-primary">Take It!</a>
+                             </div>
+                         </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </p>
                             </div>
                         </div>
                     </div>
-                    </div>
-                    </div>
-                    </p>
-                    </div>
-                    </div>
-                    </div>
                 {% endfor %}
-
             </div>
-            <div role="tabpanel" class="tab-pane fade" id="profile">...</div>
-            <div role="tabpanel" class="tab-pane fade" id="messages">...</div>
+            <div role="tabpanel" class="tab-pane fade" id="popular">...</div>
+            <div role="tabpanel" class="tab-pane fade" id="most-waiting">...</div>
         </div>
     </div>
 {% endblock %}
