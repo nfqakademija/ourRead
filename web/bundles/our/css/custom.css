@@ -4,6 +4,12 @@ img.fotos {
     padding-bottom: 4px;
 }
 
+.img-modal {
+    width: 400px;
+    height: 600px;
+    padding-bottom: 4px;
+}
+
 .thumbnail.right-caption > img {
     float: left;
     margin-right: 9px;
@@ -77,8 +83,20 @@ img.LBookFoto {
     -webkit-animation-delay: 0.6s;
     -moz-animation-delay: 0.6s;
 }
-label {
+label{
     display:block;
+}
+
+.btn--b {
+    background-color: snow;
+    border: 2px solid #578998;
+    color: #126c7b;
+}
+
+.footer {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
 }
 @-webkit-keyframes loader {
     0% {

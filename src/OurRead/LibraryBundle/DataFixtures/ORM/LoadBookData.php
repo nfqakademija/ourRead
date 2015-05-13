@@ -49,13 +49,14 @@ class LoadBookData extends AbstractFixture implements OrderedFixtureInterface, C
             $bookData->setIsbn($book['isbn']);
             $bookData->setDescription($book['description']);
             $bookData->setOwner($book['owner']);
+            $bookData->setCreatedDate($book['createdDate']);
 
             $manager->persist($bookData);
             $manager->flush();
 
             $fileName = $bookData->getId();
 
-            $this->container->get('cover_uploader_service')
+            $this->container->get('cover_uploader')
             ->uploadBookCoverByImageLink($book['imageLink'], $fileName);
         }
     }
@@ -81,7 +82,8 @@ class LoadBookData extends AbstractFixture implements OrderedFixtureInterface, C
             'isbn' => '0312577222',
             'description' => "From the #1 New York Times bestselling author comes Kristin Hannah's next novel. It is an epic love story and family drama set at the dawn of World War II. She is the author of twenty-one novels. Her previous novels include Home Front, Night Road, Firefly Lane, Fly Away, and Winter Garden",
             'imageLink' => 'http://bks8.books.google.lt/books/content?id=B6eQBQAAQBAJ&printsec=frontcover&img=1&zoom=1&source=gbs_api',
-            'owner' => 1
+            'owner' => 1,
+            'createdDate' => new \DateTime('2014-05-11'),
         );
 
         $bookList[] = array(
@@ -97,7 +99,8 @@ class LoadBookData extends AbstractFixture implements OrderedFixtureInterface, C
             'isbn' => '1594633665',
             'description' => "Obsessively watching a breakfasting couple every day to escape the pain of her losses, Rachel witnesses a shocking event that inextricably entangles her in the lives of strangers.",
             'imageLink' => 'http://bks4.books.google.lt/books/content?id=IevnoAEACAAJ&printsec=frontcover&img=1&zoom=1&source=gbs_api',
-            'owner' => 1
+            'owner' => 1,
+            'createdDate' => new \DateTime('2015-05-11'),
         );
 
         $bookList[] = array(
@@ -113,7 +116,8 @@ class LoadBookData extends AbstractFixture implements OrderedFixtureInterface, C
             'isbn' => '1476746583',
             'description' => "A blind French girl on the run from the German occupation and a German orphan-turned-Resistance tracker struggle with their respective beliefs after meeting on the Brittany coast. By the award-winning author of About Grace.",
             'imageLink' => 'http://bks9.books.google.lt/books/content?id=_AZ_AwAAQBAJ&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api',
-            'owner' => 1
+            'owner' => 1,
+            'createdDate' => new \DateTime('2015-05-11'),
         );
         return $bookList;
     }

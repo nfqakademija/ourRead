@@ -77,9 +77,16 @@ img.LBookFoto {
     -webkit-animation-delay: 0.6s;
     -moz-animation-delay: 0.6s;
 }
-label {
+label .control-label{
     display:block;
 }
+
+.btn--b {
+    background-color: snow;
+    border: 2px solid #578998;
+    color: #126c7b;
+}
+
 @-webkit-keyframes loader {
     0% {
         width: 10px;

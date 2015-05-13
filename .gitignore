@@ -16,3 +16,5 @@ Vagrantfile
 .idea/
 ~*
 /web/uploads
+/web/bundles
+/app/config/parameters.yml
