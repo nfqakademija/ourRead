@@ -32,6 +32,7 @@ class AddBookController extends Controller
             $bookInfo = $this->get('remote_library_service')
                 ->getBookInfoByISBN(str_replace('-', '', $form1["isbn"]->getData()));
 
+
             if (empty($bookInfo)) {
                 $this->get('session')->getFlashBag()->add(
                     'notice',
@@ -39,7 +40,6 @@ class AddBookController extends Controller
                 );
             }
         }
-        
         $book = new Book();
         $form2 = $this->createForm(new BookType($bookInfo), $book);
         $form2->handleRequest($request);
