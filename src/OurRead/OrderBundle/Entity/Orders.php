@@ -24,7 +24,7 @@ class Orders
     /**
      * @var integer
      *
-     * @ORM\ManyToOne(targetEntity="OurRead\UserBundle\Entity\Users")
+     * @ORM\ManyToOne(targetEntity="OurRead\UserBundle\Entity\Users", inversedBy="orders")
      * @ORM\JoinColumn(name="user_id", referencedColumnName="id")
      **/
     private $userId;
@@ -32,7 +32,7 @@ class Orders
     /**
      * @var integer
      *
-     * @ORM\ManyToOne(targetEntity="OurRead\LibraryBundle\Entity\Book")
+     * @ORM\ManyToOne(targetEntity="OurRead\LibraryBundle\Entity\Book", inversedBy="orders")
      * @ORM\JoinColumn(name="book_id", referencedColumnName="id")
      **/
     private $bookId;
