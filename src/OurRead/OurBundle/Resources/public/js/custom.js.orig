@@ -364,6 +364,8 @@ $('.row-link').click(function() {
     console.log(this);
     document.location = $(this).attr('data-href');
 });
+<<<<<<< HEAD
+
 
 $('#reg-info').ready(function() {
 
@@ -376,3 +378,13 @@ $('#reg-info').ready(function() {
         $("#reg-info").hide();
     }
 });
+=======
+if ($('#reg-info').html().trim()) {
+    $('#reg-title').text('Sign-up');
+}
+else
+{
+    $('#reg-title').text('Sign-up');
+    $("#reg-info").hide();
+}
+>>>>>>> 0a706dcdc83d8b7294fb9336812b0fc5080af239

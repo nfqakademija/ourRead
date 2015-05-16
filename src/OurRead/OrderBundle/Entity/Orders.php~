@@ -154,74 +154,6 @@ class Orders
         return $this->bookId;
     }
 
-    /**
-     * Set takenDate
-     *
-     * @param \DateTime $takenDate
-     * @return Orders
-     */
-    public function setTakenDate($takenDate)
-    {
-        $this->takenDate = $takenDate;
-
-        return $this;
-    }
-
-    /**
-     * Get takenDate
-     *
-     * @return \DateTime 
-     */
-    public function getTakenDate()
-    {
-        return $this->takenDate;
-    }
-
-    /**
-     * Set backDate
-     *
-     * @param \DateTime $backDate
-     * @return Orders
-     */
-    public function setBackDate($backDate)
-    {
-        $this->backDate = $backDate;
-
-        return $this;
-    }
-
-    /**
-     * Get backDate
-     *
-     * @return \DateTime 
-     */
-    public function getBackDate()
-    {
-        return $this->backDate;
-    }
-
-    /**
-     * Set returnDate
-     *
-     * @param \DateTime $returnDate
-     * @return Orders
-     */
-    public function setReturnDate($returnDate)
-    {
-        $this->returnDate = $returnDate;
-
-        return $this;
-    }
-
-    /**
-     * Get returnDate
-     *
-     * @return \DateTime 
-     */
-    public function getReturnDate()
-    {
-        return $this->returnDate;
-    }
 
     /**
      * Set orderType
@@ -239,7 +171,7 @@ class Orders
     /**
      * Get orderType
      *
-     * @return integer 
+     * @return integer
      */
     public function getOrderType()
     {
@@ -262,7 +194,7 @@ class Orders
     /**
      * Get status
      *
-     * @return integer 
+     * @return integer
      */
     public function getStatus()
     {
@@ -285,7 +217,7 @@ class Orders
     /**
      * Get extendedStatus
      *
-     * @return integer 
+     * @return integer
      */
     public function getExtendedStatus()
     {
@@ -308,7 +240,7 @@ class Orders
     /**
      * Get startDate
      *
-     * @return \DateTime 
+     * @return \DateTime
      */
     public function getStartDate()
     {
@@ -331,7 +263,7 @@ class Orders
     /**
      * Get endDate
      *
-     * @return \DateTime 
+     * @return \DateTime
      */
     public function getEndDate()
     {

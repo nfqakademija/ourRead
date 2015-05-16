@@ -31,12 +31,12 @@ class SearchResultController extends Controller
             ->orWhere('c.category LIKE :search')
             ->setParameter('search', '%'.$search.'%')
             ->getQuery();
-        $paginator  = $this->get('knp_paginator');
-        $pagination = $paginator->paginate(
-            $query,
-            $request->query->get('page', 1)/*page number*/,
-            8/*limit per page*/
-        );
+        $pagination  = $this->get('knp_paginator')
+                            ->paginate(
+                                $query,
+                                $request->query->get('page', 1)/*page number*/,
+                                8/*limit per page*/
+                            );
         return $this->render('OurBundle:Search:SearchResult.html.twig', array(
                 'search' => $search,
                 'pagination' => $pagination
