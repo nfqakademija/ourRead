@@ -47,12 +47,7 @@ class MainPageController extends Controller
             ->getQuery()
             ->getResult();
 
-        $randomKeys = array_rand($query, 12);
-        shuffle($randomKeys);
-        $randomBooks = array();
-        foreach ($randomKeys as $number) {
-            $randomBooks[] = $query[$number];
-        }
+        $randomBooks = $this->get('random_book_generator')->randBookGenerator($query,12);
 
         return $this->render('OurBundle:MainPage:index.html.twig', array(
             'loginForm' => $login,

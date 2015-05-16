@@ -15,17 +15,30 @@ class BookPageController extends Controller
 {
     /**
      * @param $id
-     * @return \Symfony\Component\HttpFoundation\Response
+     * @return Response
+     * @throws \Symfony\Component\HttpKernel\Exception\NotFoundHttpException
      */
     public function indexAction($id)
     {
-        $repository = $this->getDoctrine()->getRepository('OurRead\LibraryBundle\Entity\Book');
-        $bookData = $repository->findOneById($id);
-        if (!$bookData) {
+        $em = $this->getDoctrine()->getManager();
+        $book= $em->getRepository('LibraryBundle:Book')->find($id);
+        $user = $this->container->get('security.context')->getToken()->getUser();
+
+        if(is_object($user) && $book){
+            $status = $this->get('check_book_availability')->getBookAvailabilityStatus($book, $user);
+        }
+        else{
+            $status = 'no_action';
+        }
+        if (!$book) {
             throw $this->createNotFoundException(
                 'No book found for id '.$id
             );
         }
-        return $this->render('OurBundle:BookPage:book.html.twig', array('book_data' => $bookData));
+        return $this->render('OurBundle:BookPage:book.html.twig', array(
+                'book_data' => $book,
+                'book_status' => $status,
+            )
+        );
     }
 }
