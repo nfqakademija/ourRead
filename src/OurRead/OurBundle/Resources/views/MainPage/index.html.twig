@@ -55,7 +55,7 @@
                                 <p>
                                     <button type="button" class="btn btn-primary btn--b" data-toggle="modal" data-target="#myModal-{{ book.id }}">
                                         Take a Look
-                                    </button> <span class="label label-success">Free!</span>
+                                    </button> {% if book.badge == true %}<span class="label label-success">Free!</span>{% endif %}{% if book.badge == false %}<span class="label label-danger">Taken</span>{% endif %}
                                 <div class="modal fade" id="myModal-{{ book.id }}" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
                                     <div class="modal-dialog modal-lg">
                                         <div class="modal-content">
@@ -111,7 +111,7 @@
                                 <p>
                                     <button type="button" class="btn btn-primary btn--b" data-toggle="modal" data-target="#myModal-{{ book.id }}">
                                         Take a Look
-                                    </button> <span class="label label-success">Free!</span>
+                                    </button> {% if book.badge == true %}<span class="label label-success">Free!</span>{% endif %}{% if book.badge == false %}<span class="label label-danger">Taken</span>{% endif %}
                                 <div class="modal fade" id="myModal-{{ book.id }}" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
                                     <div class="modal-dialog modal-lg">
                                         <div class="modal-content">

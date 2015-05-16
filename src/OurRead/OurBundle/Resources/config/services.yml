@@ -1,3 +1,6 @@
 services:
     random_book_generator:
         class: OurRead\OurBundle\Services\RandomBookIdGenerator
+    badge_status:
+        class: OurRead\OurBundle\Services\BookBadgeStatus
+        arguments: ["@doctrine.orm.entity_manager"]

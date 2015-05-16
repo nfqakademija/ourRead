@@ -34,13 +34,14 @@ class MainPageController extends Controller
             ->getQuery()
             ->setMaxResults(8)
             ->getResult();
-
+        $newBooks = $this->get('badge_status')->addBadgeStatus($newBooks);
         // most popular books
         $popularBooks = $repository->createQueryBuilder('book')
             ->orderBy('book.popularity', 'DESC')
             ->getQuery()
             ->setMaxResults(8)
             ->getResult();
+        $popularBooks = $this->get('badge_status')->addBadgeStatus($popularBooks);
 
         // get 12 random books for slide
         $query=$repository->createQueryBuilder('book')
