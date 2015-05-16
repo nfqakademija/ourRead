@@ -30,8 +30,7 @@ class UserPageController extends Controller
             array('owner' => $user->getId(), 'id' => $id)
         );
 
-        if(count($books)){
-
+        if (count($books)) {
             $book=$this->getDoctrine()->getRepository('OurRead\LibraryBundle\Entity\Book')->find($id);
             $em->remove($book);
             $em->flush();

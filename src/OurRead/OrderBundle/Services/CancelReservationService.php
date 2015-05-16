@@ -19,9 +19,8 @@ class CancelReservationService
         $this->entityManager = $em;
     }
 
-    public function cancelReservation(Book $book,Users $user)
+    public function cancelReservation(Book $book, Users $user)
     {
-
         $repository = $this->entityManager
             ->getRepository('OrderBundle:Orders');
         $order = $repository->createQueryBuilder('orders')
@@ -29,11 +28,11 @@ class CancelReservationService
             ->andWhere('orders.bookId = :book_id')
             ->andWhere('orders.userId = :user_id')
             ->andWhere('orders.orderType = 1')
-            ->setParameter('book_id',$book->getId())
-            ->setParameter('user_id',$user->getId())
+            ->setParameter('book_id', $book->getId())
+            ->setParameter('user_id', $user->getId())
             ->getQuery()
             ->getSingleResult();
         $order->setStatus(1);
         $this->entityManager->flush();
     }
-} 
+}

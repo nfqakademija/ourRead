@@ -20,9 +20,8 @@ class BookReservationService
         $this->entityManager = $em;
     }
 
-    public function reserveBook(Book $book,Users $user)
+    public function reserveBook(Book $book, Users $user)
     {
-
         $order = new Orders();
         $order->setUserId($user);
         $order->setBookId($book);
@@ -34,6 +33,5 @@ class BookReservationService
 
         $this->entityManager->persist($order);
         $this->entityManager->flush();
-
     }
-} 
+}

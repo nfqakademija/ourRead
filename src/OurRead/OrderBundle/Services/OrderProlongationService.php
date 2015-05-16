@@ -19,17 +19,16 @@ class OrderProlongationService
         $this->entityManager = $em;
     }
 
-    public function extendOrder(Book $book,Users $user)
+    public function extendOrder(Book $book, Users $user)
     {
-
         $repository = $this->entityManager
             ->getRepository('OrderBundle:Orders');
         $order = $repository->createQueryBuilder('orders')
             ->where('orders.status = 0')
             ->andWhere('orders.bookId = :book_id')
             ->andWhere('orders.userId = :user_id')
-            ->setParameter('book_id',$book->getId())
-            ->setParameter('user_id',$user->getId())
+            ->setParameter('book_id', $book->getId())
+            ->setParameter('user_id', $user->getId())
             ->getQuery()
             ->getSingleResult();
         $order->setExtendedStatus(1)
@@ -44,5 +43,4 @@ class OrderProlongationService
 
         return $date->format('Y-m-d');
     }
-
-} 
+}

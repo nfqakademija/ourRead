@@ -18,6 +18,4 @@ class BooksPageController extends Controller
     {
         return $this->render('');
     }
-
-
 }

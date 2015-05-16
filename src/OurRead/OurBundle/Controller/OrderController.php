@@ -21,14 +21,13 @@ class OrderController extends Controller
         $book= $em->getRepository('LibraryBundle:Book')->find($id);
         $user = $this->container->get('security.context')->getToken()->getUser();
         $status = $this->get('check_book_availability')->getBookAvailabilityStatus($book, $user);
-        if($book && $user && $status === 'available') {
+        if ($book && $user && $status === 'available') {
             $this->get('create_order')->createOrder($book, $user);
 
             return new JsonResponse(array(
                 'message' => 'Book order was successful!',
             ), 200);
-        }
-        else{
+        } else {
             return new JsonResponse(array(
                 'message' => 'Something goes wrong. Try again later',
             ), 400);
@@ -41,14 +40,13 @@ class OrderController extends Controller
         $book= $em->getRepository('LibraryBundle:Book')->find($id);
         $user = $this->container->get('security.context')->getToken()->getUser();
         $status = $this->get('check_book_availability')->getBookAvailabilityStatus($book, $user);
-        if($book && $user && $status === 'prolongation') {
+        if ($book && $user && $status === 'prolongation') {
             $this->get('extend_order')->extendOrder($book, $user);
 
             return new JsonResponse(array(
                 'message' => "Book's order return time was extended successfully!",
             ), 200);
-        }
-        else{
+        } else {
             return new JsonResponse(array(
                 'message' => 'Something goes wrong. Try again later',
             ), 400);
@@ -61,14 +59,13 @@ class OrderController extends Controller
         $book= $em->getRepository('LibraryBundle:Book')->find($id);
         $user = $this->container->get('security.context')->getToken()->getUser();
         $status = $this->get('check_book_availability')->getBookAvailabilityStatus($book, $user);
-        if($book && $user && $status === 'reservation') {
+        if ($book && $user && $status === 'reservation') {
             $this->get('reserve_book')->reserveBook($book, $user);
 
             return new JsonResponse(array(
                 'response' => "Book's reservation was successful!"
             ), 200);
-        }
-        else{
+        } else {
             return new JsonResponse(array(
                 'response' => 'Something goes wrong. Try again later'
             ), 400);
@@ -81,14 +78,13 @@ class OrderController extends Controller
         $book= $em->getRepository('LibraryBundle:Book')->find($id);
         $user = $this->container->get('security.context')->getToken()->getUser();
         $status = $this->get('check_book_availability')->getBookAvailabilityStatus($book, $user);
-        if($book && $user && $status === 'return') {
+        if ($book && $user && $status === 'return') {
             $this->get('return_book')->returnBook($book, $user);
 
             return new JsonResponse(array(
                 'response' => "Book was returned successfully!"
             ), 200);
-        }
-        else{
+        } else {
             return new JsonResponse(array(
                 'response' => 'Something goes wrong. Try again later'
             ), 400);
@@ -101,14 +97,13 @@ class OrderController extends Controller
         $book= $em->getRepository('LibraryBundle:Book')->find($id);
         $user = $this->container->get('security.context')->getToken()->getUser();
         $status = $this->get('check_book_availability')->getBookAvailabilityStatus($book, $user);
-        if($book && $user && $status === 'cancel_reservation') {
+        if ($book && $user && $status === 'cancel_reservation') {
             $this->get('cancel_reservation')->cancelReservation($book, $user);
 
             return new JsonResponse(array(
                 'response' => "Reservation was canceled successfully!"
             ), 200);
-        }
-        else{
+        } else {
             return new JsonResponse(array(
                 'response' => 'Something goes wrong. Try again later'
             ), 400);
@@ -121,18 +116,17 @@ class OrderController extends Controller
         $book= $em->getRepository('LibraryBundle:Book')->find($id);
         $user = $this->container->get('security.context')->getToken()->getUser();
         $status = $this->get('check_book_availability')->getBookAvailabilityStatus($book, $user);
-        if($book && $user && $status === 'cancel_and_order') {
+        if ($book && $user && $status === 'cancel_and_order') {
             $this->get('cancel_reservation')->cancelReservation($book, $user);
             $this->get('create_order')->createOrder($book, $user);
 
             return new JsonResponse(array(
                 'response' => "Book order was successful!!"
             ), 200);
-        }
-        else{
+        } else {
             return new JsonResponse(array(
                 'response' => 'Something goes wrong. Try again later'
             ), 400);
         }
     }
-} 
+}

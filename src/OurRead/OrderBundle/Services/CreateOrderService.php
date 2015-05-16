@@ -21,9 +21,8 @@ class CreateOrderService
         $this->entityManager = $em;
     }
 
-    public function createOrder(Book $book,Users $user)
+    public function createOrder(Book $book, Users $user)
     {
-
         $order = new Orders();
         $order->setUserId($user);
         $order->setBookId($book);
@@ -47,4 +46,4 @@ class CreateOrderService
 
         return $date->format('Y-m-d');
     }
-} 
+}

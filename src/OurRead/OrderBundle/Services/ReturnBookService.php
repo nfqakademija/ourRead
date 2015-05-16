@@ -19,9 +19,8 @@ class ReturnBookService
         $this->entityManager = $em;
     }
 
-    public function returnBook(Book $book,Users $user)
+    public function returnBook(Book $book, Users $user)
     {
-
         $repository = $this->entityManager
             ->getRepository('OrderBundle:Orders');
         $order = $repository->createQueryBuilder('orders')
@@ -29,11 +28,11 @@ class ReturnBookService
             ->andWhere('orders.bookId = :book_id')
             ->andWhere('orders.userId = :user_id')
             ->andWhere('orders.orderType = 0')
-            ->setParameter('book_id',$book->getId())
-            ->setParameter('user_id',$user->getId())
+            ->setParameter('book_id', $book->getId())
+            ->setParameter('user_id', $user->getId())
             ->getQuery()
             ->getSingleResult();
         $order->setStatus(1);
         $this->entityManager->flush();
     }
-} 
+}

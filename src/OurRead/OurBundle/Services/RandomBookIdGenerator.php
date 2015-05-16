@@ -8,14 +8,12 @@
 
 namespace OurRead\OurBundle\Services;
 
-
 class RandomBookIdGenerator
 {
 
     public function randBookGenerator($query, $count)
     {
-        if(count($query) < $count)
-        {
+        if (count($query) < $count) {
             $count = count($query);
         }
         $randomKeys = array_rand($query, $count);
@@ -26,4 +24,4 @@ class RandomBookIdGenerator
         }
         return $randomBooks;
     }
-} 
+}

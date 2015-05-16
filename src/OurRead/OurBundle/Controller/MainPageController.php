@@ -47,7 +47,7 @@ class MainPageController extends Controller
             ->getQuery()
             ->getResult();
 
-        $randomBooks = $this->get('random_book_generator')->randBookGenerator($query,12);
+        $randomBooks = $this->get('random_book_generator')->randBookGenerator($query, 12);
 
         return $this->render('OurBundle:MainPage:index.html.twig', array(
             'loginForm' => $login,
@@ -126,5 +126,4 @@ class MainPageController extends Controller
         }
         return $form->createView();
     }
-
 }

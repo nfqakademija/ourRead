@@ -170,7 +170,7 @@ class Orders
     /**
      * Get takenDate
      *
-     * @return \DateTime 
+     * @return \DateTime
      */
     public function getTakenDate()
     {
@@ -193,7 +193,7 @@ class Orders
     /**
      * Get backDate
      *
-     * @return \DateTime 
+     * @return \DateTime
      */
     public function getBackDate()
     {
@@ -216,7 +216,7 @@ class Orders
     /**
      * Get returnDate
      *
-     * @return \DateTime 
+     * @return \DateTime
      */
     public function getReturnDate()
     {
@@ -239,7 +239,7 @@ class Orders
     /**
      * Get orderType
      *
-     * @return integer 
+     * @return integer
      */
     public function getOrderType()
     {
@@ -262,7 +262,7 @@ class Orders
     /**
      * Get status
      *
-     * @return integer 
+     * @return integer
      */
     public function getStatus()
     {
@@ -285,7 +285,7 @@ class Orders
     /**
      * Get extendedStatus
      *
-     * @return integer 
+     * @return integer
      */
     public function getExtendedStatus()
     {
@@ -308,7 +308,7 @@ class Orders
     /**
      * Get startDate
      *
-     * @return \DateTime 
+     * @return \DateTime
      */
     public function getStartDate()
     {
@@ -331,7 +331,7 @@ class Orders
     /**
      * Get endDate
      *
-     * @return \DateTime 
+     * @return \DateTime
      */
     public function getEndDate()
     {

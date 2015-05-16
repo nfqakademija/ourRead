@@ -24,10 +24,9 @@ class BookPageController extends Controller
         $book= $em->getRepository('LibraryBundle:Book')->find($id);
         $user = $this->container->get('security.context')->getToken()->getUser();
 
-        if(is_object($user) && $book){
+        if (is_object($user) && $book) {
             $status = $this->get('check_book_availability')->getBookAvailabilityStatus($book, $user);
-        }
-        else{
+        } else {
             $status = 'no_action';
         }
         if (!$book) {

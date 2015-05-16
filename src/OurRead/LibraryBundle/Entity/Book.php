@@ -388,7 +388,7 @@ class Book
     /**
      * Get createdDate
      *
-     * @return \DateTime 
+     * @return \DateTime
      */
     public function getCreatedDate()
     {
@@ -411,7 +411,7 @@ class Book
     /**
      * Get popularity
      *
-     * @return integer 
+     * @return integer
      */
     public function getPopularity()
     {
