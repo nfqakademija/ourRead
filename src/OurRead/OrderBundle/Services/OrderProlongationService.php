@@ -33,7 +33,7 @@ class OrderProlongationService
             ->getQuery()
             ->getSingleResult();
         $order->setExtendedStatus(1)
-              ->setStartDate(new \DateTime($this->extendReturnDate($order->getEndDate())));
+              ->setEndDate(new \DateTime($this->extendReturnDate($order->getEndDate())));
         $this->entityManager->flush();
     }
 

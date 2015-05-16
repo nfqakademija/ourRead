@@ -51,5 +51,6 @@ CancelReservation:
 CancelAndOrder:
     path:     /cancelAndOrder/{id}
     defaults: { _controller: OurBundle:Order:cancelAndOrder }
+    condition: "request.headers.get('X-Requested-With') == 'XMLHttpRequest'"
 
 
