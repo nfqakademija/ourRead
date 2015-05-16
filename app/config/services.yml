@@ -3,6 +3,8 @@
 imports:
     - { resource: "@LibraryBundle/Resources/config/services.yml" }
     - { resource: "@RemoteLibraryBundle/Resources/config/services.yml" }
+    - { resource: "@OurBundle/Resources/config/services.yml" }
+    - { resource: "@OrderBundle/Resources/config/services.yml" }
 parameters:
 #    parameter_name: value
 

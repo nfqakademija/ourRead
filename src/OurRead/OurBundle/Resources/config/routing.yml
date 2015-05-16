@@ -28,3 +28,27 @@ AddBook:
 SearchResult:
     path:     /searchResult
     defaults: { _controller: OurBundle:SearchResult:searchResult }
+CreateOrder:
+    path:     /order/{id}
+    defaults: { _controller: OurBundle:Order:createOrder }
+    condition: "request.headers.get('X-Requested-With') == 'XMLHttpRequest'"
+ExtendOrder:
+    path:     /extend/{id}
+    defaults: { _controller: OurBundle:Order:extendOrder }
+    condition: "request.headers.get('X-Requested-With') == 'XMLHttpRequest'"
+Reservation:
+    path:     /reserve/{id}
+    defaults: { _controller: OurBundle:Order:reserveBook }
+    condition: "request.headers.get('X-Requested-With') == 'XMLHttpRequest'"
+Return:
+    path:     /return/{id}
+    defaults: { _controller: OurBundle:Order:returnBook }
+    condition: "request.headers.get('X-Requested-With') == 'XMLHttpRequest'"
+CancelReservation:
+    path:     /cancel/{id}
+    defaults: { _controller: OurBundle:Order:cancelReservation }
+    condition: "request.headers.get('X-Requested-With') == 'XMLHttpRequest'"
+CancelAndOrder:
+    path:     /cancelAndOrder/{id}
+    defaults: { _controller: OurBundle:Order:cancelAndOrder }
+    condition: "request.headers.get('X-Requested-With') == 'XMLHttpRequest'"

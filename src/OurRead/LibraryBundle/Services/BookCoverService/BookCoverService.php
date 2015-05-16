@@ -8,7 +8,6 @@
 
 namespace OurRead\LibraryBundle\Services\BookCoverService;
 
-
 abstract class BookCoverService
 {
     /**

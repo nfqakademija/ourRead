@@ -8,7 +8,6 @@
 
 namespace OurRead\LibraryBundle\Services\BookCoverService;
 
-
 class BookCoverRemover extends BookCoverService
 {
     /**
@@ -18,4 +17,4 @@ class BookCoverRemover extends BookCoverService
     {
         unlink($this->getUploadRootDir().$fileName);
     }
-} 
+}

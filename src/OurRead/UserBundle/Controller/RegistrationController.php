@@ -18,7 +18,6 @@ class RegistrationController extends BaseController
 {
     public function confirmedAction()
     {
-
         $confirmed=1;
 
         $user = $this->getUser();
@@ -60,6 +59,5 @@ class RegistrationController extends BaseController
             'popularBooks' => $popularBooks,
             'randomBooks' =>$randomBooks
         ));
-
     }
 }

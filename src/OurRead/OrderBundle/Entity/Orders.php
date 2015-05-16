@@ -40,24 +40,40 @@ class Orders
     /**
      * @var \DateTime
      *
-     * @ORM\Column(name="taken_date", type="date")
+     * @ORM\Column(name="start_date", type="date")
      */
-    private $takenDate;
+    private $startDate;
 
     /**
      * @var \DateTime
      *
-     * @ORM\Column(name="return_date", type="date")
+     * @ORM\Column(name="end_date", type="date")
      */
-    private $returnDate;
+    private $endDate;
 
     /**
-     * 0-order, 1-reservation, 99 - ended
+     * 0-order, 1-reservation
      * @var integer
      *
      * @ORM\Column(name="order_type", type="integer")
      **/
     private $orderType;
+
+    /**
+     * 0-active, 1-ended
+     * @var integer
+     *
+     * @ORM\Column(name="status", type="integer")
+     **/
+    private $status;
+
+    /**
+     * 0-wasnot extended, 1-was extended
+     * @var integer
+     *
+     * @ORM\Column(name="extended_status", type="integer")
+     **/
+    private $extendedStatus;
 
     /**
      * Get id
@@ -154,7 +170,7 @@ class Orders
     /**
      * Get takenDate
      *
-     * @return \DateTime 
+     * @return \DateTime
      */
     public function getTakenDate()
     {
@@ -177,7 +193,7 @@ class Orders
     /**
      * Get backDate
      *
-     * @return \DateTime 
+     * @return \DateTime
      */
     public function getBackDate()
     {
@@ -200,7 +216,7 @@ class Orders
     /**
      * Get returnDate
      *
-     * @return \DateTime 
+     * @return \DateTime
      */
     public function getReturnDate()
     {
@@ -223,10 +239,102 @@ class Orders
     /**
      * Get orderType
      *
-     * @return integer 
+     * @return integer
      */
     public function getOrderType()
     {
         return $this->orderType;
+    }
+
+    /**
+     * Set status
+     *
+     * @param integer $status
+     * @return Orders
+     */
+    public function setStatus($status)
+    {
+        $this->status = $status;
+
+        return $this;
+    }
+
+    /**
+     * Get status
+     *
+     * @return integer
+     */
+    public function getStatus()
+    {
+        return $this->status;
+    }
+
+    /**
+     * Set extendedStatus
+     *
+     * @param integer $extendedStatus
+     * @return Orders
+     */
+    public function setExtendedStatus($extendedStatus)
+    {
+        $this->extendedStatus = $extendedStatus;
+
+        return $this;
+    }
+
+    /**
+     * Get extendedStatus
+     *
+     * @return integer
+     */
+    public function getExtendedStatus()
+    {
+        return $this->extendedStatus;
+    }
+
+    /**
+     * Set startDate
+     *
+     * @param \DateTime $startDate
+     * @return Orders
+     */
+    public function setStartDate($startDate)
+    {
+        $this->startDate = $startDate;
+
+        return $this;
+    }
+
+    /**
+     * Get startDate
+     *
+     * @return \DateTime
+     */
+    public function getStartDate()
+    {
+        return $this->startDate;
+    }
+
+    /**
+     * Set endDate
+     *
+     * @param \DateTime $endDate
+     * @return Orders
+     */
+    public function setEndDate($endDate)
+    {
+        $this->endDate = $endDate;
+
+        return $this;
+    }
+
+    /**
+     * Get endDate
+     *
+     * @return \DateTime
+     */
+    public function getEndDate()
+    {
+        return $this->endDate;
     }
 }

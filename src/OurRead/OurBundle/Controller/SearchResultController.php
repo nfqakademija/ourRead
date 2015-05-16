@@ -14,7 +14,7 @@ use Symfony\Component\HttpFoundation\Response;
 
 class SearchResultController extends Controller
 {
-    public function searchResultAction (Request $request)
+    public function searchResultAction(Request $request)
     {
         $search= $request->query->get('search');
 

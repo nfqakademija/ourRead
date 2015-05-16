@@ -1,0 +1,19 @@
+services:
+    create_order:
+          class: OurRead\OrderBundle\Services\CreateOrderService
+          arguments: ["@doctrine.orm.entity_manager"]
+    check_book_availability:
+              class: OurRead\OrderBundle\Services\BookAvailabilityService
+              arguments: ["@doctrine.orm.entity_manager"]
+    extend_order:
+              class: OurRead\OrderBundle\Services\OrderProlongationService
+              arguments: ["@doctrine.orm.entity_manager"]
+    reserve_book:
+              class: OurRead\OrderBundle\Services\BookReservationService
+              arguments: ["@doctrine.orm.entity_manager"]
+    return_book:
+              class: OurRead\OrderBundle\Services\ReturnBookService
+              arguments: ["@doctrine.orm.entity_manager"]
+    cancel_reservation:
+              class: OurRead\OrderBundle\Services\CancelReservationService
+              arguments: ["@doctrine.orm.entity_manager"]

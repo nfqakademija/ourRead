@@ -9,8 +9,6 @@
 
 namespace OurRead\LibraryBundle\Services\BookCoverService;
 
-
-
 class BookCoverUploader extends BookCoverService
 {
     /**
