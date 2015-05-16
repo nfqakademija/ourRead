@@ -18,6 +18,48 @@ class RegistrationController extends BaseController
 {
     public function confirmedAction()
     {
-        return new RedirectResponse($this->generateUrl('OurHomepage'));
+
+        $confirmed=1;
+
+        $user = $this->getUser();
+        if (!is_object($user) || !$user instanceof UserInterface) {
+            throw new AccessDeniedException('This user does not have access to this section.');
+        }
+
+        $em = $this->getDoctrine()->getManager();
+        $repository = $em->getRepository('LibraryBundle:Book');
+        // most recent books
+        $newBooks = $repository->createQueryBuilder('book')
+            ->orderBy('book.createdDate', 'DESC')
+            ->getQuery()
+            ->setMaxResults(8)
+            ->getResult();
+
+        // most popular books
+        $popularBooks = $repository->createQueryBuilder('book')
+            ->orderBy('book.popularity', 'DESC')
+            ->getQuery()
+            ->setMaxResults(8)
+            ->getResult();
+
+        // get 12 random books for slide
+        $query=$repository->createQueryBuilder('book')
+            ->getQuery()
+            ->getResult();
+
+        $randomKeys = array_rand($query, 12);
+        shuffle($randomKeys);
+        $randomBooks = array();
+        foreach ($randomKeys as $number) {
+            $randomBooks[] = $query[$number];
+        }
+
+        return $this->render('OurBundle:MainPage:index.html.twig', array(
+            'confirmed' => $user,
+            'newBooks' => $newBooks,
+            'popularBooks' => $popularBooks,
+            'randomBooks' =>$randomBooks
+        ));
+
     }
 }

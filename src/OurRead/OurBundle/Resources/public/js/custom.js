@@ -7,7 +7,6 @@ $('#reg-info').ready(function() {
 
     if ($('#reg-info').html().trim()) {
         $('#reg-title').text('Sign-up');
-
     }
     else
     {

@@ -17,4 +17,6 @@ Vagrantfile
 ~*
 /web/uploads/
 /web/bundles/
+/web/test/
+/web/upload/
 /app/config/parameters.yml
