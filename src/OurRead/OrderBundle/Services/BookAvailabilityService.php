@@ -15,6 +15,8 @@ use OurRead\UserBundle\Entity\Users;
 class BookAvailabilityService
 {
 
+    private $entityManager;
+
     public function __construct(EntityManager $em)
     {
         $this->entityManager = $em;

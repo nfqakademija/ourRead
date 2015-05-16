@@ -14,6 +14,8 @@ use OurRead\UserBundle\Entity\Users;
 
 class OrderProlongationService
 {
+    private $entityManager;
+
     public function __construct(EntityManager $em)
     {
         $this->entityManager = $em;

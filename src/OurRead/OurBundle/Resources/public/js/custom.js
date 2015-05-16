@@ -372,4 +372,3 @@ else
     $('#reg-title').text('Sign-up');
     $("#reg-info").hide();
 }
-});

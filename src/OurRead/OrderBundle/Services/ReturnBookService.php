@@ -14,6 +14,8 @@ use OurRead\UserBundle\Entity\Users;
 
 class ReturnBookService
 {
+    private $entityManager;
+
     public function __construct(EntityManager $em)
     {
         $this->entityManager = $em;

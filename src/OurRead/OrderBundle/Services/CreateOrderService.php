@@ -16,6 +16,8 @@ use OurRead\UserBundle\Entity\Users;
 class CreateOrderService
 {
 
+    private $entityManager;
+
     public function __construct(EntityManager $em)
     {
         $this->entityManager = $em;
