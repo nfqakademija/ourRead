@@ -1,0 +1,89 @@
+{% extends 'OurBundle:Layouts:default.html.twig' %}
+{% block slider %}
+{% endblock %}
+{% block body %}
+    </br></br></br></br>
+    <h2><small>Total {{ pagination.getTotalItemCount }} book(s)</small></h2>
+    {% if  pagination.getTotalItemCount >0 %}
+        <div class="navigation">
+            {{ knp_pagination_render(pagination) }}
+        </div>
+        <div class="col-sm-2">
+            <h4>Sort by: </h4>
+        </div>
+        <div class="col-sm-2">
+            <h4>{{ knp_pagination_sortable(pagination, 'Title', 'book.title') }}
+                {% if pagination.getDirection() == 'asc' %}  <img class = "arrow" src="{{ asset('bundles/our/img/arrow_up.png') }}">{% endif %}
+                {% if pagination.getDirection() == 'desc' %}  <img class = "arrow" src="{{ asset('bundles/our/img/arrow_down.png') }}">{% endif %}
+            </h4>
+        </div>
+        <div class="col-sm-2">
+            <h4>{{ knp_pagination_sortable(pagination, 'Author', 'book.author') }}
+                {% if pagination.getDirection() == 'asc' %}  <img class = "arrow" src="{{ asset('bundles/our/img/arrow_up.png') }}">{% endif %}
+                {% if pagination.getDirection() == 'desc' %}  <img class = "arrow" src="{{ asset('bundles/our/img/arrow_down.png') }}">{% endif %}
+            </h4>
+        </div>
+        <div class="col-sm-2">
+            <h4>{{ knp_pagination_sortable(pagination, 'Newest/Oldest', 'book.createdDate') }}
+                {% if pagination.getDirection() == 'asc' %}  <img class = "arrow" src="{{ asset('bundles/our/img/arrow_up.png') }}">{% endif %}
+                {% if pagination.getDirection() == 'desc' %}  <img class = "arrow" src="{{ asset('bundles/our/img/arrow_down.png') }}">{% endif %}
+            </h4>
+        </div>
+        {% for book in pagination %}
+            <div class="col-sm-6">
+                <div class="thumbnail right-caption span4">
+                    <img src="{{ asset('uploads/' ~ book.id) }}" alt="pirma" class="fotos">
+                    <div class="caption">
+                        <h3><b>{{ book.title }}  </b>{% if "now"|date('Y-m-d') == book.createdDate|date('Y-m-d') or "yesterday"|date('Y-m-d') == book.createdDate|date('Y-m-d')%}<span class="label label-primary">New!</span> {% endif %}</h3>
+                        <h5>by <b>{{ book.author }}</b></h5>
+                        <p><i>"{{ book.description|length > 90 ? book.description|slice(0, 90) ~ '...' : book.description.text  }}"</i></p>
+
+                        <p>
+                            <button type="button" class="btn btn-primary btn--b" data-toggle="modal" data-target="#myModal-{{ book.id }}">Take a Look</button> <span class="label label-success">Free!</span>
+                        <div class="modal fade" id="myModal-{{ book.id }}" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+                            <div class="modal-dialog modal-lg">
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                                        <b><h2 class="modal-title" >Book overview</h2></b>
+                                    </div>
+                                    <div class="modal-body row">
+                                        <div class="col-md-6">
+                                            <img src="{{ asset('uploads/' ~ book.id) }}" alt="pirma" class="img-modal">
+                                        </div>
+                                        <div class="col-md-6">
+                                            <h1><b>{{ book.title}}</b></h1>
+                                            <h3>by <b>{{ book.author }}</b></h3>
+                                            <p><h4><i>{{ book.description }}</i></h4></p>
+                        <br>
+                        <h4><b>Categories:</b>
+                            {% for category in book.categories %}
+                                {{ category.category }}
+                            {% endfor %}
+                        </h4>
+                        <p><h4><b>Pages:</b> {{ book.pageCount }}</h4></p>
+                        <p><h4><b>Publisher:</b> {{ book.publisher }}</h4></p>
+                        <p><h4><b>ISBN:</b> {{ book.isbn }}</h4></p>
+                        <p><h4><b>Book Owner:</b> {{ book.owner }}</h4></p>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <div class="btn-group-lg ">
+                        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                        <a href="/book/{{ book.id }}" class="btn btn-primary">Take It!</a>
+                    </div>
+                </div>
+            </div>
+            </div>
+            </div>
+            </p>
+            </div>
+            </div>
+            </div>
+
+        {% endfor %}
+        <div class="navigation">
+            {{ knp_pagination_render(pagination) }}
+        </div>
+    {% endif %}
+{% endblock %}
