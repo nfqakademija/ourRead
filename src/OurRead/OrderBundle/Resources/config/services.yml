@@ -15,11 +15,7 @@ services:
           class: OurRead\OrderBundle\Services\BookReservationService
           arguments:
               - @doctrine
-    return_book:
-          class: OurRead\OrderBundle\Services\ReturnBookService
-          arguments:
-              - @doctrine
-    cancel_reservation:
-          class: OurRead\OrderBundle\Services\CancelReservationService
+    end_order:
+          class: OurRead\OrderBundle\Services\EndOrderService
           arguments:
               - @doctrine
