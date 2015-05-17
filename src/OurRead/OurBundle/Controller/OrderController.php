@@ -74,12 +74,13 @@ class OrderController extends Controller
 
     public function returnBookAction($id)
     {
+
         $em = $this->getDoctrine()->getManager();
         $book= $em->getRepository('LibraryBundle:Book')->find($id);
         $user = $this->container->get('security.context')->getToken()->getUser();
         $status = $this->get('check_book_availability')->getBookAvailabilityStatus($book, $user);
-        if ($book && $user && $status === 'return') {
-            $this->get('return_book')->returnBook($book, $user);
+        if ($book && $user && ($status === 'return' || $status === 'prolongation')) {
+            $this->get('end_order')->endOrder($book, $user,0);
 
             return new JsonResponse(array(
                 'response' => "Book was returned successfully!"
@@ -98,7 +99,7 @@ class OrderController extends Controller
         $user = $this->container->get('security.context')->getToken()->getUser();
         $status = $this->get('check_book_availability')->getBookAvailabilityStatus($book, $user);
         if ($book && $user && $status === 'cancel_reservation') {
-            $this->get('cancel_reservation')->cancelReservation($book, $user);
+            $this->get('end_order')->endOrder($book, $user, 1);
 
             return new JsonResponse(array(
                 'response' => "Reservation was canceled successfully!"

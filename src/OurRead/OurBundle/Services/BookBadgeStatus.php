@@ -29,6 +29,7 @@ class BookBadgeStatus
             $orders = $repository->createQueryBuilder('orders')
                 ->where('orders.status = 0')
                 ->andWhere('orders.bookId = :book_id')
+                ->andWhere('orders.confirmStatus = 1')
                 ->setParameter('book_id', $book->getId())
                 ->getQuery()
                 ->getResult();

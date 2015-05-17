@@ -68,7 +68,14 @@ class Orders
     private $status;
 
     /**
-     * 0-wasnot extended, 1-was extended
+     * 0-false 1-true
+     * @var integer
+     *
+     * @ORM\Column(name="confirmStatus", type="integer")
+     **/
+    private $confirmStatus;
+
+    /**
      * @var integer
      *
      * @ORM\Column(name="extended_status", type="integer")
@@ -176,6 +183,29 @@ class Orders
     public function getStatus()
     {
         return $this->status;
+    }
+
+    /**
+     * Set confirmStatus
+     *
+     * @param integer $confirmStatus
+     * @return Orders
+     */
+    public function setConfirmStatus($confirmStatus)
+    {
+        $this->confirmStatus = $confirmStatus;
+
+        return $this;
+    }
+
+    /**
+     * Get confirmStatus
+     *
+     * @return integer
+     */
+    public function getConfirmStatus()
+    {
+        return $this->confirmStatus;
     }
 
     /**

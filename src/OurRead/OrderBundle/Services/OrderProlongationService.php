@@ -8,22 +8,23 @@
 
 namespace OurRead\OrderBundle\Services;
 
-use Doctrine\ORM\EntityManager;
+use Doctrine\Common\Persistence\ManagerRegistry;
 use OurRead\LibraryBundle\Entity\Book;
 use OurRead\UserBundle\Entity\Users;
 
 class OrderProlongationService
 {
-    private $entityManager;
+    private $managerRegistry;
 
-    public function __construct(EntityManager $em)
+    public function __construct(ManagerRegistry $managerRegistry)
     {
-        $this->entityManager = $em;
+        $this->managerRegistry = $managerRegistry;
     }
 
     public function extendOrder(Book $book, Users $user)
     {
-        $repository = $this->entityManager
+        $entityManager = $this->managerRegistry->getManager();
+        $repository = $entityManager
             ->getRepository('OrderBundle:Orders');
         $order = $repository->createQueryBuilder('orders')
             ->where('orders.status = 0')
@@ -35,7 +36,7 @@ class OrderProlongationService
             ->getSingleResult();
         $order->setExtendedStatus(1)
               ->setEndDate(new \DateTime($this->extendReturnDate($order->getEndDate())));
-        $this->entityManager->flush();
+        $entityManager->flush();
     }
 
     private function extendReturnDate($returnDate)

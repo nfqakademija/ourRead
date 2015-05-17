@@ -12,7 +12,13 @@ UserPage:
     defaults: { _controller: OurBundle:UserPage:index }
 DeleteBook:
     path:     /user/delete/{id}
-    defaults: { _controller: OurBundle:UserPage:delete }
+ConfirmOrder:
+    path:     /confirm/{id}
+    defaults: { _controller: OurBundle:UserPage:confirm }
+CancelOrder:
+    path:     /cancel/{id}
+    defaults: { _controller: OurBundle:UserPage:cancel }
+
 MyBooksPage:
     path:     /mybooks
     defaults: { _controller: OurBundle:MyBooksPage:index }

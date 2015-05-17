@@ -6,7 +6,6 @@
         slider
     {% endblock %}
 
-
     <h1>Currently reading</h1>
 
     <hr>
@@ -14,8 +13,13 @@
     <div class="row">
 
         <div class="col-xs-10 col-xs-offset-1">
-
-
+            {% for book in readingBooks %}
+                <div class="col-lg-2">
+                    <a href='/book/{{ book.bookId.id }}'><img src="{{ asset('uploads/' ~ book.bookId.id) }}   " alt="{{ book.bookId.title }}"  class="fotos"></a>
+                    <p></p>
+                    <p></p>
+                </div>
+            {% endfor %}
 
         </div>
 
@@ -47,7 +51,13 @@
 
         <div class="col-xs-10 col-xs-offset-1">
 
-
+            {% for book in waitingBooks %}
+                <div class="col-lg-2">
+                    <a href='/book/{{ book.bookId.id }}'><img src="{{ asset('uploads/' ~ book.bookId.id) }}   " alt="{{ book.bookId.title }}"  class="fotos"></a>
+                    <p></p>
+                    <p></p>
+                </div>
+            {% endfor %}
 
         </div>
 
@@ -60,7 +70,13 @@
 
         <div class="col-xs-10 col-xs-offset-1">
 
-
+            {% for book in finishedBooks %}
+                <div class="col-lg-2">
+                    <a href='/book/{{ book.bookId.id }}'><img src="{{ asset('uploads/' ~ book.bookId.id) }}   " alt="{{ book.bookId.title }}"  class="fotos"></a>
+                    <p></p>
+                    <p></p>
+                </div>
+            {% endfor %}
 
         </div>
 

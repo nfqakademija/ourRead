@@ -26,10 +26,16 @@
                 <p><h4><b>Book Owner:</b> {{ book_data.id }}</h4></p>
             <input id = "book-page-id" type="hidden" value = "{{ book_data.id }}">
             <br>
+
+            {% if book_status == "waiting" %}
+                <h2>Waiting for order to confirm</h2>
+            {% endif %}
+
             <div class="btn-group-lg">
                 {% if book_status == "available" %}
                     <a href="{{ path('CreateOrder', { 'id': book_data.id }) }}" class="btn btn-primary create-order">Order It!</a>
                 {% endif %}
+
                 {% if book_status == "prolongation" %}
                     <a href="{{ path('ExtendOrder', { 'id': book_data.id }) }}" class="btn btn-success extend-order">Extend your order!</a>
                     <a href="{{ path('Return', { 'id': book_data.id }) }}" class="btn btn-info return-book">Return book</a>
