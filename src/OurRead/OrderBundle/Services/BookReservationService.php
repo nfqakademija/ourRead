@@ -8,18 +8,18 @@
 
 namespace OurRead\OrderBundle\Services;
 
-use Doctrine\ORM\EntityManager;
+use Doctrine\Common\Persistence\ManagerRegistry;
 use OurRead\OrderBundle\Entity\Orders;
 use OurRead\LibraryBundle\Entity\Book;
 use OurRead\UserBundle\Entity\Users;
 
 class BookReservationService
 {
-    private $entityManager;
+    private $managerRegistry;
 
-    public function __construct(EntityManager $em)
+    public function __construct(ManagerRegistry $managerRegistry)
     {
-        $this->entityManager = $em;
+        $this->managerRegistry = $managerRegistry;
     }
 
     public function reserveBook(Book $book, Users $user)
@@ -33,7 +33,8 @@ class BookReservationService
         $order->setStatus(0);
         $order->setExtendedStatus(0);
 
-        $this->entityManager->persist($order);
-        $this->entityManager->flush();
+        $entityManager = $this->managerRegistry->getManager();
+        $entityManager->persist($order);
+        $entityManager->flush();
     }
 }

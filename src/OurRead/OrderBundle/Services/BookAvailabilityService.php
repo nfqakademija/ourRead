@@ -8,23 +8,24 @@
 
 namespace OurRead\OrderBundle\Services;
 
-use Doctrine\ORM\EntityManager;
+use Doctrine\Common\Persistence\ManagerRegistry;
 use OurRead\LibraryBundle\Entity\Book;
 use OurRead\UserBundle\Entity\Users;
 
 class BookAvailabilityService
 {
 
-    private $entityManager;
+    private $managerRegistry;
 
-    public function __construct(EntityManager $em)
+    public function __construct(ManagerRegistry $managerRegistry)
     {
-        $this->entityManager = $em;
+        $this->managerRegistry = $managerRegistry;
     }
 
     public function getBookAvailabilityStatus(Book $book, Users $user)
     {
-        $repository = $this->entityManager
+        $repository = $this->managerRegistry
+            ->getManager()
             ->getRepository('OrderBundle:Orders');
         $orders = $repository->createQueryBuilder('orders')
             ->where('orders.status = 0')

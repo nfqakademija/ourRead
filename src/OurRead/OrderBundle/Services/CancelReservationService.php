@@ -8,23 +8,23 @@
 
 namespace OurRead\OrderBundle\Services;
 
-use Doctrine\ORM\EntityManager;
+use Doctrine\Common\Persistence\ManagerRegistry;
 use OurRead\LibraryBundle\Entity\Book;
 use OurRead\UserBundle\Entity\Users;
 
 class CancelReservationService
 {
-    private $entityManager;
+    private $managerRegistry;
 
-    public function __construct(EntityManager $em)
+    public function __construct(ManagerRegistry $managerRegistry)
     {
-        $this->entityManager = $em;
+        $this->managerRegistry = $managerRegistry;
     }
 
     public function cancelReservation(Book $book, Users $user)
     {
-        $repository = $this->entityManager
-            ->getRepository('OrderBundle:Orders');
+        $entityManager = $this->managerRegistry->getManager();
+        $repository = $entityManager->getRepository('OrderBundle:Orders');
         $order = $repository->createQueryBuilder('orders')
             ->where('orders.status = 0')
             ->andWhere('orders.bookId = :book_id')
@@ -35,6 +35,6 @@ class CancelReservationService
             ->getQuery()
             ->getSingleResult();
         $order->setStatus(1);
-        $this->entityManager->flush();
+        $entityManager->flush();
     }
 }
