@@ -13,13 +13,22 @@
             <h4>Sort by: </h4>
         </div>
         <div class="col-sm-2">
-            <h4>{{ knp_pagination_sortable(pagination, 'Title', 'book.title') }}</h4>
+            <h4>{{ knp_pagination_sortable(pagination, 'Title', 'book.title') }}
+                {% if pagination.getDirection() == 'asc' %}  <img class = "arrow" src="{{ asset('bundles/our/img/arrow_up.png') }}">{% endif %}
+                {% if pagination.getDirection() == 'desc' %}  <img class = "arrow" src="{{ asset('bundles/our/img/arrow_down.png') }}">{% endif %}
+            </h4>
         </div>
         <div class="col-sm-2">
-            <h4>{{ knp_pagination_sortable(pagination, 'Author', 'book.author') }}</h4>
+            <h4>{{ knp_pagination_sortable(pagination, 'Author', 'book.author') }}
+                {% if pagination.getDirection() == 'asc' %}  <img class = "arrow" src="{{ asset('bundles/our/img/arrow_up.png') }}">{% endif %}
+                {% if pagination.getDirection() == 'desc' %}  <img class = "arrow" src="{{ asset('bundles/our/img/arrow_down.png') }}">{% endif %}
+            </h4>
         </div>
         <div class="col-sm-2">
-            <h4>{{ knp_pagination_sortable(pagination, 'Newest/Oldest', 'book.createdDate') }}</h4>
+            <h4>{{ knp_pagination_sortable(pagination, 'Newest/Oldest', 'book.createdDate') }}
+                {% if pagination.getDirection() == 'asc' %}  <img class = "arrow" src="{{ asset('bundles/our/img/arrow_up.png') }}">{% endif %}
+                {% if pagination.getDirection() == 'desc' %}  <img class = "arrow" src="{{ asset('bundles/our/img/arrow_down.png') }}">{% endif %}
+            </h4>
         </div>
         {% for book in pagination %}
             <div class="col-sm-6">

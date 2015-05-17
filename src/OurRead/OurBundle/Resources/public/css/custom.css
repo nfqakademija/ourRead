@@ -3,7 +3,11 @@ img.fotos {
     height: 170px;
     padding-bottom: 4px;
 }
+.arrow {
+    width: 20px;
+    height: 20px;
 
+}
 .img-modal {
     width: 400px;
     height: 600px;
