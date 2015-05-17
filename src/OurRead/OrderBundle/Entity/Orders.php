@@ -86,29 +86,6 @@ class Orders
     }
 
     /**
-     * Set orderId
-     *
-     * @param integer $orderId
-     * @return Orders
-     */
-    public function setOrderId($orderId)
-    {
-        $this->orderId = $orderId;
-
-        return $this;
-    }
-
-    /**
-     * Get orderId
-     *
-     * @return integer
-     */
-    public function getOrderId()
-    {
-        return $this->orderId;
-    }
-
-    /**
      * Set userId
      *
      * @param integer $userId

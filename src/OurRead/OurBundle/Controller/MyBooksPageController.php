@@ -18,12 +18,13 @@ class MyBooksPageController extends Controller
 
     public function indexAction()
     {
-
         $repository = $this->getDoctrine()->getRepository('OurRead\LibraryBundle\Entity\Book');
+        $repositoryUser = $this->getDoctrine()->getRepository('OurRead\OrderBundle\Entity\Orders');
         $user = $this->container->get('security.context')->getToken()->getUser();
         $books = $repository->findByOwner($user->getId());
 
-       // var_dump($books);
+        $reading= $repositoryUser->findByUser_id($user->getId());
+        var_dump($reading);
 
         return $this->render('OurBundle:MyBooksPage:MyBooks.html.twig', array(
             'myBooks' => $books

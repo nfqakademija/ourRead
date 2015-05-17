@@ -63,14 +63,16 @@
             <tbody>
 
            {% for book in books %}
-            <tr class = "row-link" data-href="/book/{{book.id}}">
-                <td> {{ book.title }}</td>
-                <td> {{ book.author }}</td>
+
+            <tr class = "row-link" >
+                <td> <a href="/book/{{book.id}}">{{ book.title }} </a></td>
+                <td> <a href="/book/{{book.id}}">{{ book.author }}</a></td>
                 <td></td>
                 <td></td>
                 <td></td>
                 <td> <a class="delete-action" href='/user/delete/{{book.id}}'> <i class="fa fa-trash"></i>  </a></td>
             </tr>
+
            {% endfor %}
 
            <tr>
@@ -81,9 +83,6 @@
                <td></td>
                <td></td>
            </tr>
-
-
-
             </tbody>
 
         </table>
@@ -101,12 +100,7 @@
                 <li><a href="#" aria-label="Next"><span aria-hidden="true">&raquo;</span></a></li>
             </ul>
             </nav>
-
         </div>
-
-
-
-
 
     {% endif %}
 

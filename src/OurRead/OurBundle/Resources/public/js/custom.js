@@ -360,10 +360,6 @@ $('.delete-action').click(function(e) {
     });
 });
 
-$('.row-link').click(function() {
-    console.log(this);
-    document.location = $(this).attr('data-href');
-});
 
 $('#reg-info').ready(function() {
 
