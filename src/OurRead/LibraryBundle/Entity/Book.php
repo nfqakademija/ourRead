@@ -97,8 +97,9 @@ class Book
     /**
      * @var integer
      *
-     * @ORM\Column(name="owner", type="integer")
-     */
+     * @ORM\ManyToOne(targetEntity="OurRead\UserBundle\Entity\Users", inversedBy="orders")
+     * @ORM\JoinColumn(name="owner", referencedColumnName="id")
+     **/
     private $owner;
 
     /**

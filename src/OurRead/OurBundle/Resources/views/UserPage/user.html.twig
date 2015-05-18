@@ -60,7 +60,7 @@
                 <th>Username</th>
                 <th></th>
                 <th></th>
-                <th>action</th>
+                <th>Action</th>
             </tr>
             </thead>
 
@@ -68,16 +68,16 @@
 
            {% for book in readingBooks %}
 
-            <tr class = "row-link" >
+            <tr class = "row-link request-row" >
                 <td> <a href="/book/{{book.bookId.id}}">{{ book.bookId.title }} </a></td>
                 <td> <a href="/book/{{book.bookId.id}}">{{ book.bookId.author }}</a></td>
                 <td> {{ book.userId.username }}</td>
                 <td></td>
                 <td></td>
-                <td> <a class="delete-action" href='/user/delete/{{book.bookId.id}}'> <i class="fa fa-trash"></i>  </a>
+                <td>
                     <a class="confirm-action" href='/confirm/{{book.bookId.id}}'> <i class="fa fa-check"></i>  </a>
                     <a class="cancel-action" href='/cancel/{{book.bookId.id}}'> <i class="fa fa-ban"></i>  </a>
-
+                    <a class="delete-action" href='/user/delete/{{book.bookId.id}}'> <i class="fa fa-trash"></i>  </a>
                 </td>
             </tr>
 

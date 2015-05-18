@@ -47,7 +47,6 @@ class UserPageController extends Controller
 
         //How many people requesting for books
         $requests = $this->get('news_status')->getNewsStatus();
-
         //Reading books
         $query = $repositoryOrders->createQueryBuilder('o')
             ->leftJoin('o.bookId', 'b')
