@@ -41,7 +41,6 @@ class BookAvailabilityService
             ->setParameter('ownerId', $user->getId())
             ->getQuery()
             ->getResult();
-
         $books=count($books);
 
         $orders = $repository->createQueryBuilder('orders')

@@ -41,7 +41,7 @@
                 {% if is_granted("IS_AUTHENTICATED_REMEMBERED") %}
                     <ul class="nav navbar-nav">
                         <li><a href="{{ path('fos_user_security_logout') }}">Logout</a></li>
-                        <li><a href="{{ path('UserPage') }}">{{ app.user.username }} <span class="badge"> {{ requests }}</span> </a></li>
+                        <li><a href="{{ path('UserPage') }}">{{ app.user.username }} {% if requests != 0 %}<span class="badge"> {{ requests }}</span> {% endif %}</a></li>
                     </ul>
 
                 {% else %}
