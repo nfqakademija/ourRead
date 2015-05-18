@@ -19,6 +19,8 @@ class UserPageController extends Controller
         $user = $this->container->get('security.context')->getToken()->getUser();
         $books = $repository->findByOwner($user->getId());
 
+   //     var_dump($books);
+
         //How many books Im reading
         $query = $repositoryOrders->createQueryBuilder('o')
             ->where('o.userId = :userId')
@@ -62,7 +64,7 @@ class UserPageController extends Controller
             array('books' =>$books,
                   'requests' => $requests,
                   'readingBooks' => $readingBooks,
-                   'stats' => $stats
+                  'stats' => $stats
             ));
     }
 
@@ -90,6 +92,7 @@ class UserPageController extends Controller
         $user = $this->container->get('security.context')->getToken()->getUser();
         $em = $this->getDoctrine()->getManager();
         $repository = $this->getDoctrine()->getRepository('OurRead\LibraryBundle\Entity\Book');
+
         $books = $repository->findBy(
             array('owner' => $user->getId(), 'id' => $id)
         );

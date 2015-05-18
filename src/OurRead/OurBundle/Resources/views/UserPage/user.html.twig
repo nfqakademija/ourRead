@@ -8,37 +8,29 @@
 
     {% if is_granted("IS_AUTHENTICATED_REMEMBERED") %}
 
-        {% dump(requests) %}
-
         </br>
 
-
         {% if requests > 0 %}
-        <div class="alert alert-info col-md-6 text-center col-lg-offset-3 " role="alert">
-            <p><strong>Hey!</strong> readers are requesting for <strong> {{ requests }} </strong> of your books</p>
-        </div>
+            <div class="alert alert-info col-md-6 text-center col-lg-offset-3 " role="alert">
+                <p><strong>Hey!</strong> readers are requesting for <strong> {{ requests }} </strong> of your books</p>
+            </div>
         {% endif %}
-
-
 
         <table class="table">
 
             <thead>
-
             <tr>
                 <th>My email</th>
                 <th>Books added</th>
                 <th>Books finished</th>
                 <th>Book reading</th>
             </tr>
-
             <tr>
-                <td>{{ app.user.email }}     <i class="fa fa-pencil">     </i>   </td>
-                <td> {{ stats.read }}</td>
+                <td>{{ app.user.email }}</td>
+                <td>{{ stats.read }}</td>
                 <td>{{ stats.finished }}</td>
                 <td>{{ stats.reading }}</td>
             </tr>
-
             </thead>
 
         </table>
@@ -60,7 +52,7 @@
                 <th>Username</th>
                 <th></th>
                 <th></th>
-                <th>action</th>
+                <th>Action</th>
             </tr>
             </thead>
 
@@ -68,20 +60,33 @@
 
            {% for book in readingBooks %}
 
-            <tr class = "row-link" >
+            <tr class = "row-link request-row" >
                 <td> <a href="/book/{{book.bookId.id}}">{{ book.bookId.title }} </a></td>
                 <td> <a href="/book/{{book.bookId.id}}">{{ book.bookId.author }}</a></td>
                 <td> {{ book.userId.username }}</td>
                 <td></td>
                 <td></td>
-                <td> <a class="delete-action" href='/user/delete/{{book.bookId.id}}'> <i class="fa fa-trash"></i>  </a>
+                <td>
+                    {% if book.confirmStatus == 0 %}
                     <a class="confirm-action" href='/confirm/{{book.bookId.id}}'> <i class="fa fa-check"></i>  </a>
                     <a class="cancel-action" href='/cancel/{{book.bookId.id}}'> <i class="fa fa-ban"></i>  </a>
-
+                    {% endif %}
+                    <a class="delete-action" href='/user/delete/{{book.bookId.id}}'> <i class="fa fa-trash"></i>  </a>
                 </td>
             </tr>
 
            {% endfor %}
+
+
+           <tr class = "row-link" >
+               <td></td>
+               <td></td>
+               <td></td>
+               <td></td>
+               <td></td>
+               <td></td>
+           </tr>
+
 
            {% for book in books %}
 

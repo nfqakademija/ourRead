@@ -28,20 +28,6 @@ class BookAvailabilityService
             ->getManager()
             ->getRepository('OrderBundle:Orders');
 
-        $repositoryBooks = $this->managerRegistry
-            ->getManager()
-            ->getRepository('OurRead\LibraryBundle\Entity\Book');
-
-
-
-        $books = $repositoryBooks ->createQueryBuilder('books')
-            ->where('books.owner = :ownerId')
-            ->andWhere('books.id = :bookId')
-            ->setParameter('bookId', $book)
-            ->setParameter('ownerId', $user->getId())
-            ->getQuery()
-            ->getResult();
-        $books=count($books);
 
         $orders = $repository->createQueryBuilder('orders')
             ->where('orders.status = 0')
@@ -50,10 +36,9 @@ class BookAvailabilityService
             ->getQuery()
             ->getResult();
 
-        if($books){
+        if($book->getOwner() === $user->getId()){
             return 'owner';
         }
-
         if (empty($orders)) {
             return 'available'; //Book is available to order
         }
