@@ -3,7 +3,6 @@
 
 
 {% block slider %}{% endblock %}
-
 {% block body %}
     </br></br></br></br>
     <div class="container">
@@ -52,5 +51,10 @@
                 {% endif %}
             </div>
         </div>
+
     </div>
+    <div class="container">
+        {% include 'FOSCommentBundle:Thread:async.html.twig' with {'id': book_data.id} %}
+    </div>
+    <br><br><br>
 {% endblock %}

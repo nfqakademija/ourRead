@@ -19,4 +19,4 @@ Vagrantfile
 /web/bundles/
 /web/test/
 /web/upload/
-/app/config/parameters.yml
+/web/.htaccess
