@@ -18,6 +18,10 @@ class BooksPageController extends Controller
     public function indexAction(Request $request)
     {
 
+
+        //How many readers are requesting for your books
+        $requests = $this->get('news_status')->getNewsStatus();
+
         $em = $this->getDoctrine()->getManager();
         $repository = $em->getRepository('LibraryBundle:Book');
 
@@ -31,7 +35,8 @@ class BooksPageController extends Controller
                 10/*limit per page*/
             );
         return $this->render('OurBundle:BooksPage:books.html.twig', array(
-                'pagination' => $pagination
+                'pagination' => $pagination,
+                'requests' =>$requests
             )
         );
     }

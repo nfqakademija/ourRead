@@ -39,8 +39,6 @@ class UserPageController extends Controller
             ->getQuery();
         $finished=$query->getResult();
 
-
-
         $stats= array(
             "read" => count($books),
             "reading" => count($reading),
@@ -48,16 +46,7 @@ class UserPageController extends Controller
         );
 
         //How many people requesting for books
-        $query = $repositoryOrders->createQueryBuilder('o')
-            ->leftJoin('o.bookId', 'b')
-            ->where('b.owner = :userId')
-            ->Andwhere('o.orderType = 0')
-            ->andWhere('o.status = 0')
-            ->andWhere('o.confirmStatus = 0')
-            ->setParameter('userId', $user->getId())
-            ->getQuery();
-        $requests=$query->getResult();
-        $requests=count($requests);
+        $requests = $this->get('news_status')->getNewsStatus();
 
         //Reading books
         $query = $repositoryOrders->createQueryBuilder('o')

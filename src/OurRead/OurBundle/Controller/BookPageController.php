@@ -24,6 +24,10 @@ class BookPageController extends Controller
         $book= $em->getRepository('LibraryBundle:Book')->find($id);
         $user = $this->container->get('security.context')->getToken()->getUser();
 
+        //How many readers are requesting for your books
+        $requests = $this->get('news_status')->getNewsStatus();
+
+
         if (is_object($user) && $book) {
             $status = $this->get('check_book_availability')->getBookAvailabilityStatus($book, $user);
         } else {
@@ -37,6 +41,7 @@ class BookPageController extends Controller
         return $this->render('OurBundle:BookPage:book.html.twig', array(
                 'book_data' => $book,
                 'book_status' => $status,
+                'requests' => $requests
             )
         );
     }

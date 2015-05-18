@@ -4,3 +4,8 @@ services:
     badge_status:
         class: OurRead\OurBundle\Services\BookBadgeStatus
         arguments: ["@doctrine.orm.entity_manager"]
+    news_status:
+        class: OurRead\OurBundle\Services\NewsStatus
+        arguments: ["@doctrine.orm.entity_manager", "@service_container"]
+
+

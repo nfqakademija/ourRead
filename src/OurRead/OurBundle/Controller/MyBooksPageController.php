@@ -22,6 +22,9 @@ class MyBooksPageController extends Controller
         $repositoryOrders = $this->getDoctrine()->getRepository('OurRead\OrderBundle\Entity\Orders');
         $user = $this->container->get('security.context')->getToken()->getUser();
 
+        //How many readers are requesting for your books
+        $requests = $this->get('news_status')->getNewsStatus();
+
         //Shared books
         $books = $repository->findByOwner($user->getId());
 
@@ -57,7 +60,8 @@ class MyBooksPageController extends Controller
             'myBooks' => $books,
             'readingBooks' => $reading,
             'finishedBooks' => $finished,
-            'waitingBooks' => $waiting
+            'waitingBooks' => $waiting,
+            'requests' => $requests
         ));
     }
 }

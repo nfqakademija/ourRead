@@ -21,6 +21,9 @@ class SearchResultController extends Controller
         $em = $this->getDoctrine()->getManager();
         $repository = $em->getRepository('LibraryBundle:Book');
 
+        //How many readers are requesting for your books
+        $requests = $this->get('news_status')->getNewsStatus();
+
         $query = $repository->createQueryBuilder('book')
             ->leftJoin('book.categories', 'c')
             ->where('book.author LIKE :search')
@@ -39,7 +42,8 @@ class SearchResultController extends Controller
                             );
         return $this->render('OurBundle:Search:SearchResult.html.twig', array(
                 'search' => $search,
-                'pagination' => $pagination
+                'pagination' => $pagination,
+                'requests' => $requests
             )
         );
     }

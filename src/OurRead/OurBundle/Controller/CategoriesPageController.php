@@ -15,6 +15,11 @@ class CategoriesPageController extends Controller
 {
     public function indexAction()
     {
-        return $this->render('OurBundle:CategoriesPage:categories.html.twig');
+        //How many readers are requesting for your books
+        $requests = $this->get('news_status')->getNewsStatus();
+
+        return $this->render('OurBundle:CategoriesPage:categories.html.twig', array(
+            'requests' => $requests
+        ));
     }
 }

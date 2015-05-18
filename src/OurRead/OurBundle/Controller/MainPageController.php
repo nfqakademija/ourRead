@@ -28,6 +28,9 @@ class MainPageController extends Controller
         $em = $this->getDoctrine()->getManager();
         $repository = $em->getRepository('LibraryBundle:Book');
 
+        //How many readers are requesting for your books
+        $requests = $this->get('news_status')->getNewsStatus();
+
         // most recent books
         $newBooks = $repository->createQueryBuilder('book')
             ->orderBy('book.createdDate', 'DESC')
@@ -60,7 +63,8 @@ class MainPageController extends Controller
             'registerForm' => $register,
             'newBooks' => $newBooks,
             'popularBooks' => $popularBooks,
-            'randomBooks' =>$randomBooks
+            'randomBooks' =>$randomBooks,
+            'requests' => $requests
         ));
     }
 

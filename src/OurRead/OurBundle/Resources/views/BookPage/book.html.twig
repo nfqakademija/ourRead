@@ -31,6 +31,10 @@
                 <h2>Waiting for order to confirm</h2>
             {% endif %}
 
+            {% if book_status == "owner" %}
+                <h2>You are owner of this books</h2>
+            {% endif %}
+
             <div class="btn-group-lg">
                 {% if book_status == "available" %}
                     <a href="{{ path('CreateOrder', { 'id': book_data.id }) }}" class="btn btn-primary create-order">Order It!</a>

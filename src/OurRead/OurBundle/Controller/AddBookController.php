@@ -61,10 +61,15 @@ class AddBookController extends Controller
             }
             return $this->redirectToRoute('OurHomepage', array(), 301);
         }
+
+        //How many people requesting for books
+        $requests = $this->get('news_status')->getNewsStatus();
+
         return $this->render('OurBundle:AddBook:index.html.twig', array(
             'form1' => $form1->createView(),
             'form2' => $form2->createView(),
             'bookCover' => (is_object($bookInfo))?$bookInfo->getImageLink():'',
+            'requests' => $requests
         ));
     }
 }

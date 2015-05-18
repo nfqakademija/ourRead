@@ -27,15 +27,38 @@ class BookAvailabilityService
         $repository = $this->managerRegistry
             ->getManager()
             ->getRepository('OrderBundle:Orders');
+
+        $repositoryBooks = $this->managerRegistry
+            ->getManager()
+            ->getRepository('OurRead\LibraryBundle\Entity\Book');
+
+
+
+        $books = $repositoryBooks ->createQueryBuilder('books')
+            ->where('books.owner = :ownerId')
+            ->andWhere('books.id = :bookId')
+            ->setParameter('bookId', $book)
+            ->setParameter('ownerId', $user->getId())
+            ->getQuery()
+            ->getResult();
+
+        $books=count($books);
+
         $orders = $repository->createQueryBuilder('orders')
             ->where('orders.status = 0')
             ->andWhere('orders.bookId = :book_id')
             ->setParameter('book_id', $book->getId())
             ->getQuery()
             ->getResult();
+
+        if($books){
+            return 'owner';
+        }
+
         if (empty($orders)) {
             return 'available'; //Book is available to order
         }
+
         foreach ($orders as $order) {
             if ($order->getUserId() == $user) {
                 if ( $order->getOrderType() === 0 && $order->getConfirmStatus() === 1 ) {
