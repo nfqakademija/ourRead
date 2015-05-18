@@ -60,8 +60,8 @@ img.LBookFoto {
 }
 
 #test{
-	width:260px;
-	height:450px;
+    width:260px;
+    height:450px;
 }
 #add-book-cover {
     height: 500px;
@@ -235,7 +235,8 @@ label{
     margin-left: 2em;
 }
 .fos_comment_comment_reply {
-    text-align: right;
+    text-align: left;
+
 }
 .fos_comment_comment_reply.replying {
     text-align: left;
@@ -247,12 +248,16 @@ label{
     -moz-border-radius: 5px;
 }
 .fos_comment_comment_reply_show_form {
-    padding: 2px 5px;
-    font-size: 0.8em;
+    background-color: #5cb85c;
+    border-color: #4cae4c;
+    color: #fff;
+    border-radius: 5px;
 }
 .fos_comment_comment_reply.fos_comment_replying button.fos_comment_comment_reply_show_form {
     display: none;
+
 }
+
 .fos_comment_thread_comments {
     margin-bottom: 1.5em;
 }
@@ -270,10 +275,10 @@ form.fos_comment_comment_form label.author_name {
     float:left;
 }
 form.fos_comment_comment_form label.author_name input {
-    padding: 2px 5px;
+    padding: 10px 25px;
 }
 form.fos_comment_comment_form textarea {
-    width: 98%;
+    width: 200%;
     height: 6em;
     padding: 1%;
 }
@@ -284,12 +289,16 @@ form.fos_comment_comment_form.error textarea {
     color: #ff0000;
 }
 .fos_comment_submit {
-    text-align: right;
+    text-align: left;
 }
 .fos_comment_submit input {
-    font-size: 1.2em;
-    padding: 3px 12px;
-    margin-top: 3px;
+    border-radius: 6px;
+    font-size: 10px;
+    line-height: 1.33333;
+    padding: 10px 16px;
+    background-color: #5bc0de;
+    border-color: #46b8da;
+    color: #fff;
 }
 a.fos_comment_thread_feed {
     width: 16px;
@@ -302,4 +311,13 @@ a.fos_comment_thread_feed {
 }
 .fos_comment_comment_score {
     display: inline-block;
+}
+.fos_comment_comment_reply_cancel{
+    border-radius: 6px;
+    font-size: 10px;
+    line-height: 1.33333;
+    padding: 10px 16px;
+    background-color: #f0ad4e;
+    border-color: #eea236;
+    color: #fff;
 }
