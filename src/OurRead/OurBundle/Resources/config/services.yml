@@ -7,5 +7,3 @@ services:
     news_status:
         class: OurRead\OurBundle\Services\NewsStatus
         arguments: ["@doctrine.orm.entity_manager", "@service_container"]
-
-

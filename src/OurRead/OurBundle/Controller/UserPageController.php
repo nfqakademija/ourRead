@@ -98,7 +98,6 @@ class UserPageController extends Controller
         );
 
         if (count($books)) {
-
             $order=$this->getDoctrine()->getRepository('OurRead\OrderBundle\Entity\Orders')->findOneByBookId($id);
             $order->setConfirmStatus(1);
             $em->flush();
@@ -118,7 +117,6 @@ class UserPageController extends Controller
         );
 
         if (count($books)) {
-
             $order=$this->getDoctrine()->getRepository('OurRead\OrderBundle\Entity\Orders')->findOneByBookId($id);
             $em->remove($order);
             $em->flush();

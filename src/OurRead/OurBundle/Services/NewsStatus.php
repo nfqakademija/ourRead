@@ -32,9 +32,8 @@ class NewsStatus
 
 
 
-        if($securityContext->isGranted('IS_AUTHENTICATED_REMEMBERED')){
-
-        $query = $repository->createQueryBuilder('o')
+        if ($securityContext->isGranted('IS_AUTHENTICATED_REMEMBERED')) {
+            $query = $repository->createQueryBuilder('o')
             ->leftJoin('o.bookId', 'b')
             ->where('b.owner = :userId')
             ->Andwhere('o.orderType = 0')
@@ -42,14 +41,12 @@ class NewsStatus
             ->andWhere('o.confirmStatus = 0')
             ->setParameter('userId', $user->getId())
             ->getQuery();
-        $requests=$query->getResult();
-        $requests=count($requests);
+            $requests=$query->getResult();
+            $requests=count($requests);
 
-        return $requests;
+            return $requests;
         }
 
         return 0;
-
     }
-
 }

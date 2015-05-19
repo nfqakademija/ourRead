@@ -36,7 +36,7 @@ class BookAvailabilityService
             ->getQuery()
             ->getResult();
 
-        if($book->getOwner() === $user->getId()){
+        if ($book->getOwner() === $user->getId()) {
             return 'owner';
         }
         if (empty($orders)) {
@@ -45,7 +45,7 @@ class BookAvailabilityService
 
         foreach ($orders as $order) {
             if ($order->getUserId() == $user) {
-                if ( $order->getOrderType() === 0 && $order->getConfirmStatus() === 1 ) {
+                if ($order->getOrderType() === 0 && $order->getConfirmStatus() === 1) {
                     // if normal order
 
                     if (count($orders) === 1 && $order->getExtendedStatus() === 0) {
@@ -77,8 +77,9 @@ class BookAvailabilityService
                 }
             }
 
-            if($order->getConfirmStatus() === 0)    // waiting form confirm
+            if ($order->getConfirmStatus() === 0) {// waiting form confirm
                 return 'waiting';
+            }
         }
         return 'available'; //Book is available to order
     }
