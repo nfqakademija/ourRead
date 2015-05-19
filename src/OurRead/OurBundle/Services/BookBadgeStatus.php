@@ -22,8 +22,7 @@ class BookBadgeStatus
 
     public function addBadgeStatus($books)
     {
-        foreach($books as $key => $book)
-        {
+        foreach ($books as $key => $book) {
             $repository = $this->entityManager
                 ->getRepository('OrderBundle:Orders');
             $orders = $repository->createQueryBuilder('orders')
@@ -33,16 +32,12 @@ class BookBadgeStatus
                 ->setParameter('book_id', $book->getId())
                 ->getQuery()
                 ->getResult();
-            if(!empty($orders))
-            {
+            if (!empty($orders)) {
                 $books[$key]->badge = false; // book is taken
-            }
-            else
-            {
+            } else {
                 $books[$key]->badge = true; // book is available
             }
         }
         return $books;
     }
-
 }

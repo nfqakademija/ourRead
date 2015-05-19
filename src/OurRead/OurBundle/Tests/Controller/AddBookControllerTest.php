@@ -12,7 +12,7 @@ use Symfony\Bundle\FrameworkBundle\Test\WebTestCase;
 
 class AddBookControllerTest extends WebTestCase
 {
-    public function testAddBook ()
+    public function testAddBook()
     {
         $client = static::createClient();
 
@@ -23,5 +23,4 @@ class AddBookControllerTest extends WebTestCase
             $crawler->filter('html:contains("Fill book data by ISBN")')->count()
         );
     }
-
-} 
+}

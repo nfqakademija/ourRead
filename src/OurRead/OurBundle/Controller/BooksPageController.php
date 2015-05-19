@@ -9,7 +9,8 @@ namespace OurRead\OurBundle\Controller;
 
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 use Symfony\Component\HttpFoundation\Request;
-use OurRead\LibraryBundle\Entity\Book;
+use Doctrine\ORM\EntityRepository;
+use OurRead\LibraryBundle\Form\CategoryFilterType;
 use Symfony\Component\HttpFoundation\Response;
 
 class BooksPageController extends Controller
@@ -17,10 +18,8 @@ class BooksPageController extends Controller
 
     public function indexAction(Request $request)
     {
-
-
-        //How many readers are requesting for your books
-        $requests = $this->get('news_status')->getNewsStatus();
+        $filter = $this->createForm(new CategoryFilterType());
+        $filter->handleRequest($request);
 
         $em = $this->getDoctrine()->getManager();
         $repository = $em->getRepository('LibraryBundle:Book');
@@ -28,6 +27,7 @@ class BooksPageController extends Controller
         $query = $repository->createQueryBuilder('book')
             ->leftJoin('book.categories', 'c')
             ->getQuery();
+
         $pagination  = $this->get('knp_paginator')
             ->paginate(
                 $query,
@@ -36,7 +36,28 @@ class BooksPageController extends Controller
             );
         return $this->render('OurBundle:BooksPage:books.html.twig', array(
                 'pagination' => $pagination,
-                'requests' =>$requests
+                'filter' => $filter->createView()
+            )
+        );
+    }
+
+    public function categoryFilterAction(Request $request)
+    {
+        $em = $this->getDoctrine()->getManager();
+        $repository = $em->getRepository('LibraryBundle:Book');
+        $query = $repository->createQueryBuilder('book')
+            ->leftJoin('book.categories', 'c')
+            ->where('c.category IN (:categories)')
+            ->setParameter('categories', $request->query->get('category'))
+            ->getQuery();
+        $pagination  = $this->get('knp_paginator')
+            ->paginate(
+                $query,
+                $request->query->get('page', 1)/*page number*/,
+                10/*limit per page*/
+            );
+        return $this->render('OurBundle:BooksPage:categories.html.twig', array(
+                'pagination' => $pagination,
             )
         );
     }

@@ -37,7 +37,7 @@ class MainPageController extends Controller
             ->getQuery()
             ->setMaxResults(8)
             ->getResult();
-            $newBooks = $this->get('badge_status')->addBadgeStatus($newBooks);
+        $newBooks = $this->get('badge_status')->addBadgeStatus($newBooks);
         // most popular books
         $popularBooks = $repository->createQueryBuilder('book')
             ->orderBy('book.popularity', 'DESC')
@@ -136,5 +136,4 @@ class MainPageController extends Controller
         }
         return $form->createView();
     }
-
 }

@@ -95,7 +95,6 @@ class Book
     private $isbn;
 
     /**
-     * @var integer
      *
      * @ORM\ManyToOne(targetEntity="OurRead\UserBundle\Entity\Users", inversedBy="orders")
      * @ORM\JoinColumn(name="owner", referencedColumnName="id")

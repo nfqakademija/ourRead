@@ -15,7 +15,6 @@ use Symfony\Component\DependencyInjection\ContainerAwareInterface;
 use Symfony\Component\DependencyInjection\ContainerInterface;
 use OurRead\OrderBundle\Entity\Orders;
 
-
 class LoadOrderData  extends AbstractFixture implements OrderedFixtureInterface, ContainerAwareInterface
 {
     private $container;
@@ -33,7 +32,6 @@ class LoadOrderData  extends AbstractFixture implements OrderedFixtureInterface,
      */
     public function load(ObjectManager $manager)
     {
-
         $order = new Orders();
         $order->setUserId($this->getReference('user1'));
         $order->setBookId($this->getReference('book3'));
@@ -57,7 +55,6 @@ class LoadOrderData  extends AbstractFixture implements OrderedFixtureInterface,
         $manager->persist($order);
 
         $manager->flush();
-
     }
 
     public function getOrder()
@@ -73,4 +70,4 @@ class LoadOrderData  extends AbstractFixture implements OrderedFixtureInterface,
 
         return $date->format('Y-m-d');
     }
-} 
+}

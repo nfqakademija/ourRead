@@ -12,6 +12,7 @@ use Doctrine\ORM\Mapping as ORM;
 use FOS\CommentBundle\Entity\Comment as BaseComment;
 use FOS\CommentBundle\Model\SignedCommentInterface;
 use Symfony\Component\Security\Core\User\UserInterface;
+
 /**
  * @ORM\Entity
  * @ORM\ChangeTrackingPolicy("DEFERRED_EXPLICIT")
@@ -59,5 +60,4 @@ class Comment extends BaseComment implements SignedCommentInterface
 
         return $this->getAuthor()->getUsername();
     }
-
 }

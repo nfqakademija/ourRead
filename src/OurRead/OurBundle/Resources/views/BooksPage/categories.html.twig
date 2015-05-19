@@ -4,9 +4,6 @@
 {% block body %}
     </br></br></br></br>
     <h2><small>Total {{ pagination.getTotalItemCount }} book(s)</small></h2>
-        {{ form_start(filter)}}
-        {{ form_errors(filter) }}
-        {{ form_end(filter) }}
     <p><a href="/addBook" class="btn btn-primary category-filter-button">Filter</a></p>
 
     {% if  pagination.getTotalItemCount >0 %}
@@ -87,6 +84,8 @@
             </div>
 
         {% endfor %}
-
+        <div class="navigation">
+            {{ knp_pagination_render(pagination) }}
+        </div>
     {% endif %}
 {% endblock %}

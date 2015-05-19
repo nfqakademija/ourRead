@@ -58,3 +58,6 @@ CancelAndOrder:
     path:     /cancelAndOrder/{id}
     defaults: { _controller: OurBundle:Order:cancelAndOrder }
     condition: "request.headers.get('X-Requested-With') == 'XMLHttpRequest'"
+CategoryFilter:
+    path:     /categoryFilter/{category}
+    defaults: { _controller: OurBundle:BooksPage:categoryFilter }

@@ -308,6 +308,49 @@ $(document).ready(function() {
             }
         });
     });
+    $('.category-filter-button').click(function(e) {
+        e.preventDefault();
+        var categories = '';
+        var selected = $('.category-filter').val();
+        if(selected == null) {
+            $.confirm({
+
+                content: 'If you want to filter by category, select it',
+                cancelButton: 'OK',
+                confirmButton: false,
+                confirm: function(){
+                },
+                cancel: function(){
+                }
+            })
+        }
+        else{
+            for (var i = 0; i < selected.length; i++) {
+                if(i == selected.length-1) {
+                    categories += 'category['+[i]+']='+selected[i];
+                }
+                else {
+                    categories += 'category['+[i]+']='+selected[i]+'&';
+                }
+            }
+            console.log(categories);
+            $.get( '/categoryFilter/result?'+categories)
+                .success(function () {
+                })
+                .fail(function () {
+                    $.confirm({
+                        icon: 'fa fa-warning',
+                        title: 'Warning!',
+                        content: 'Something goes wrong. Try again later',
+                        cancelButton: 'Stay on this page',
+                        confirm: function(){
+                        },
+                        cancel: function(){
+                        }
+                    })
+                });
+        }
+    });
 });
 
 $('#form-isbn').submit(function() {
@@ -333,6 +376,19 @@ $(document).ready(function() {
         $('#book_type_bookCoverByUser').prop('required',true);
         $('#add-book-cover').hide();
     }
+    $('#reg-info').ready(function() {
+
+        if($('#reg-info').html()){
+            if ($('#reg-info').html().trim()) {
+                $('#reg-title').text('Sign-up');
+            }
+        }
+        else
+        {
+            $('#reg-title').text('Sign-up');
+            $("#reg-info").hide();
+        }
+    });
 });
 
 
@@ -361,14 +417,3 @@ $('.delete-action').click(function(e) {
 });
 
 
-$('#reg-info').ready(function() {
-
-    if ($('#reg-info').html().trim()) {
-        $('#reg-title').text('Sign-up');
-    }
-    else
-    {
-        $('#reg-title').text('Sign-up');
-        $("#reg-info").hide();
-    }
-});

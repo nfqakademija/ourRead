@@ -12,7 +12,7 @@ use Symfony\Bundle\FrameworkBundle\Test\WebTestCase;
 
 class SearchResultControllerTest extends WebTestCase
 {
-    public function testSearchResult ()
+    public function testSearchResult()
     {
         $client = static::createClient();
 
@@ -23,4 +23,4 @@ class SearchResultControllerTest extends WebTestCase
             $crawler->filter('html:contains("The Girl on the Train")')->count()
         );
     }
-} 
+}

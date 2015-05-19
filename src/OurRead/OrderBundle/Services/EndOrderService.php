@@ -21,7 +21,7 @@ class EndOrderService
         $this->managerRegistry = $managerRegistry;
     }
 
-    public function endOrder(Book $book, Users $user,$orderType)
+    public function endOrder(Book $book, Users $user, $orderType)
     {
         $entityManager = $this->managerRegistry->getManager();
         $repository = $entityManager

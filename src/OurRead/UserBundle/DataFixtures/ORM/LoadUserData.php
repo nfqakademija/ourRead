@@ -9,6 +9,7 @@ use Doctrine\Common\Persistence\ObjectManager;
 use Symfony\Component\DependencyInjection\ContainerAwareInterface;
 use Symfony\Component\DependencyInjection\ContainerInterface;
 use OurRead\UserBundle\Entity\Users;
+
 class LoadUserData extends AbstractFixture implements FixtureInterface, ContainerAwareInterface,OrderedFixtureInterface
 {
     /**
@@ -25,7 +26,6 @@ class LoadUserData extends AbstractFixture implements FixtureInterface, Containe
     }
     public function load(ObjectManager $manager)
     {
-
         $user0 = new Users();
         $user0->setUsername('Povilas');
         $user0->setEmail('kruger99@gmail.com');
