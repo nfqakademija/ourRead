@@ -17,6 +17,8 @@
 
                 <div class="panel-body">
 
+
+
                     {% if error is defined and not is_granted("IS_AUTHENTICATED_REMEMBERED") %}
                         {% if error %}
                             <div class="alert alert-danger">{{ error.messageKey|trans(error.messageData, 'security') }}</div>
@@ -41,18 +43,12 @@
                             </div>
 
                             <input type="checkbox" id="remember_me" name="_remember_me" value="on"/>
-                            <label for="remember_me">{{ 'security.login.remember_me'|trans }}</label>
+                            <label for="remember_me" id="label">{{ 'security.login.remember_me'|trans }}</label>
+                            </br>
                             <a href="#"> Forgotten password?</a>
 
                             </br>
 
-                            <div class="col-md-6" id="btn-fb">
-                                <a class="btn btn-block btn-social btn-facebook col-lg-4">
-                                    <i class="fa fa-facebook"></i> Sign in with Facebook
-                                </a>
-                            </div>
-                            </br>
-                            </br>
                             </br>
 
 
