@@ -35,8 +35,7 @@ class BookAvailabilityService
             ->setParameter('book_id', $book->getId())
             ->getQuery()
             ->getResult();
-
-        if ($book->getOwner() === $user->getId()) {
+        if (($book->getOwner()->getId() === $user->getId())) {
             return 'owner';
         }
         if (empty($orders)) {

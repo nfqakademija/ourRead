@@ -28,6 +28,9 @@ class BooksPageController extends Controller
             ->leftJoin('book.categories', 'c')
             ->getQuery();
 
+        //How many people requesting for books
+        $requests = $this->get('news_status')->getNewsStatus();
+
         $pagination  = $this->get('knp_paginator')
             ->paginate(
                 $query,
@@ -36,7 +39,8 @@ class BooksPageController extends Controller
             );
         return $this->render('OurBundle:BooksPage:books.html.twig', array(
                 'pagination' => $pagination,
-                'filter' => $filter->createView()
+                'filter' => $filter->createView(),
+                'requests' => $requests
             )
         );
     }
