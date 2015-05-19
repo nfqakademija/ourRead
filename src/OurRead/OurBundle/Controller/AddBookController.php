@@ -46,7 +46,7 @@ class AddBookController extends Controller
 
         if ($form2->isValid()) {
             $user = $this->container->get('security.context')->getToken()->getUser();
-            $book->setOwner($user->getId());
+            $book->setOwner($user);
             $book->setPopularity(0);
             $book->setCreatedDate(new \DateTime());
             $em = $this->getDoctrine()->getManager();
