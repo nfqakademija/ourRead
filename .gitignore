@@ -19,3 +19,4 @@ Vagrantfile
 /web/bundles/
 /web/test/
 /web/upload/
+/web/.htaccess
